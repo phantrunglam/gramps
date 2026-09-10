@@ -28,6 +28,7 @@ Provide calendar to sdn (serial date number) conversion.
 # -------------------------------------------------------------------------
 import math
 
+# from gramps.gen.datehandler.vietnamese_lunar import vietnamese_sdn, vietnamese_ymd
 # -------------------------------------------------------------------------
 #
 # Constants
@@ -653,3 +654,62 @@ def swedish_ymd(sdn):
     if sdn >= 2361390:
         return gregorian_ymd(sdn)
     return julian_ymd(sdn)
+
+# Bổ sung vào cuối file gramps/gen/lib/gcalendar.py
+
+def vietnameselunar_sdn(year, month, day, leap=False):
+    from gramps.gen.datehandler.vietnamese_lunar import vietnamese_sdn
+    return vietnamese_sdn(year, month, day, leap=leap)
+
+
+def vietnameselunar_ymd(jdn):
+    from gramps.gen.datehandler.vietnamese_lunar import vietnamese_ymd
+    return vietnamese_ymd(jdn)
+
+""" def vietnameselunar_sdn(year, month, day, leap=False):
+    from gramps.gen.datehandler.vietnamese_lunar import (
+        LunarDate,
+        lunar_to_gregorian,
+        _jd_from_date,
+    )
+
+    lunar_date = LunarDate(
+        year=year,
+        month=month,
+        day=day,
+        is_leap_month=leap,
+    )
+
+    gregorian_date = lunar_to_gregorian(lunar_date)
+
+    return _jd_from_date(
+        gregorian_date.day,
+        gregorian_date.month,
+        gregorian_date.year,
+    )
+
+
+def vietnameselunar_ymd(jdn):
+    from gramps.gen.datehandler.vietnamese_lunar import (
+        _universal_from_jd,
+        gregorian_to_lunar,
+    )
+
+    # BỔ SUNG: Kiểm tra an toàn cho jdn
+    # sortval / jdn <= 0 là giá trị mặc định của một Date rỗng (chưa nhập ngày) trong Gramps
+    if not jdn or jdn <= 0:
+        return (0, 0, 0)
+
+    day, month, year = _universal_from_jd(jdn)
+
+    lunar_date = gregorian_to_lunar(
+        year,
+        month,
+        day,
+    )
+
+    return (
+        lunar_date.year,
+        lunar_date.month,
+        lunar_date.day,
+    ) """

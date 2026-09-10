@@ -1,0 +1,10 @@
+Get-ChildItem -Path "D:\prejects\gramps" -Include *.py, *.docx -File -Recurse | Select-Object FullName > file_tai_lieu.txt
+
+Get-ChildItem -Path "D:\projects\gramps" -Exclude *.pyc -Recurse | Where-Object { $_.FullName -notmatch "\\build(\\|$)|\\node_modules(\\|$)|\\\.git|\\\images|\\\snap" } | Select-Object FullName > ketqua.txt
+
+Get-ChildItem -Path "D:\projects\gramps" -Include -Exclude *.pyc, *.log, *.tmp -Recurse | Where-Object { $_.FullName -notmatch "\\(\.github|images|po|examples|build|dist|docs|data)(\\|$)" } | Select-Object FullName > d:\projects\gramps\cautruc_duan.txt
+Get-ChildItem -Path "D:\projects\gramps" -Include "\\(gen|test|$)" -Exclude *.pyc, *.log, *.tmp -Recurse | Where-Object { $_.FullName -notmatch "\\(\.github|images|po|examples|build|dist|docs|data)(\\|$)" } | Select-Object FullName > d:\projects\gramps\cautruc_duan.txt
+
+Get-ChildItem -Path "D:\projects\gramps\gen", "D:\projects\gramps\test" -Exclude *.pyc, *.log, *.tmp -Recurse | tree > d:\projects\gramps\cautruc_gen_test.txt
+
+Get-ChildItem -Path "D:\projects\gramps\gen", "D:\projects\gramps\test" -Exclude *.pyc, *.log, *.tmp -Recurse | tree > d:\projects\gramps\cautruc_gen_test.txt

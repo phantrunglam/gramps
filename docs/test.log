@@ -1,0 +1,43 @@
+
+
+24371: ERROR: grampsapp.py: line 188: Unhandled exception
+Traceback (most recent call last):
+  File "D:\projects\gramps\gramps\gui\widgets\monitoredwidgets.py", line 674, in invoke_date_editor
+    self.update_after_editor(the_date)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\projects\gramps\gramps\gui\widgets\monitoredwidgets.py", line 683, in update_after_editor
+    self.text_obj.set_text(displayer.display(date_obj))
+                           ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "D:\projects\gramps\gramps\gen\datehandler\_datedisplay.py", line 558, in display_formatted
+    scal = self.format_extras(cal, newyear)
+  File "D:\projects\gramps\gramps\gen\datehandler\_datedisplay.py", line 337, in format_extras
+    scal = self.calendar[cal]
+           ~~~~~~~~~~~~~^^^^^
+IndexError: tuple index out of range
+
+
+1817509: ERROR: grampsapp.py: line 188: Unhandled exception
+Traceback (most recent call last):
+  File "D:/projects/gramps/gramps/gui/widgets/monitoredwidgets.py", line 651, in set_date
+    date = parser.parse(str(self.text_obj.get_text()))
+  File "D:/projects/gramps/gramps/gen/datehandler/_dateparser.py", line 1225, in parse
+    self.set_date(new_date, text)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "D:/projects/gramps/gramps/gen/datehandler/_dateparser.py", line 1214, in set_date
+    date.set(qual, Date.MOD_NONE, cal, subdate, newyear=newyear)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:/projects/gramps/gramps/gen/lib/date.py", line 1833, in set
+    self._calc_sort_value()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:/projects/gramps/gramps/gen/lib/date.py", line 1918, in _calc_sort_value
+    self.sortval = func(year, month, day)
+                   ~~~~^^^^^^^^^^^^^^^^^^
+  File "D:/projects/gramps/gramps/gen/lib/gcalendar.py", line 662, in vietnameselunar_sdn
+    return vietnamese_sdn(year, month, day, leap=leap)
+  File "D:/projects/gramps/gramps/gen/datehandler/vietnamese_lunar.py", line 455, in vietnamese_sdn
+    gregorian_date = lunar_to_gregorian(lunar_date)
+  File "D:/projects/gramps/gramps/gen/datehandler/vietnamese_lunar.py", line 380, in lunar_to_gregorian
+    raise ValueError(
+        f"Invalid lunar month: {lunar_month}"
+    )
+ValueError: Invalid lunar month: 15

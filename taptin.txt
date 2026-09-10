@@ -1,0 +1,4334 @@
+Folder PATH listing for volume New Volume
+Volume serial number is 00000040 103C:D042
+D:.
+|   .git-blame-ignore-revs
+|   .gitattributes
+|   .gitignore
+|   .mailmap
+|   .pylintrc
+|   AGENTS.md
+|   AUTHORS
+|   ChangeLog
+|   CONTRIBUTING
+|   COPYING
+|   FAQ
+|   Gramps.py
+|   INSTALL
+|   MANIFEST.in
+|   mypy.ini
+|   NEWS
+|   py.typed
+|   pyproject.toml
+|   README.md
+|   RELEASE_NOTES
+|   taptin.txt
+|   TestPlan.txt
+|   TODO
+|   
++---.github
+|   \---workflows
+|           black.yml
+|           build_deb.yml
+|           gramps-ci.yml
+|           pypi-upload.yml
+|           windows-aio-pyinstaller.yml
+|           windows-aio.yml
+|           
++---.vscode
+|       launch.json
+|       settings.json
+|       
++---aio
+|       build.sh
+|       gramps.ico
+|       grampsaio64.nsi.template
+|       grampsaioc.py
+|       grampsaiocd.py
+|       grampsaiow.py
+|       grampsc.ico
+|       grampsd.ico
+|       README.md
+|       setup.py
+|       
++---bash
+|       command-completion
+|       
++---build
+|   \---share
+|       +---applications
+|       |       org.gramps_project.Gramps.desktop
+|       |       
+|       +---doc
+|       |   \---gramps
+|       |       |   AUTHORS
+|       |       |   COPYING
+|       |       |   FAQ
+|       |       |   INSTALL
+|       |       |   NEWS
+|       |       |   README.md
+|       |       |   TODO
+|       |       |   
+|       |       \---example
+|       |           +---csv
+|       |           |       example.csv
+|       |           |       
+|       |           +---gedcom
+|       |           |       sample.ged
+|       |           |       
+|       |           \---gramps
+|       |                   1897_expeditionsmannschaft_rio_a.jpg
+|       |                   654px-Aksel_Andersson.jpg
+|       |                   Alimehemet.jpg
+|       |                   andrews-county-tx-zip-codes.kml
+|       |                   andrews-county-tx.kml
+|       |                   AntoineClaudet.png
+|       |                   data.gramps
+|       |                   example.gramps
+|       |                   E_W_Dahlgren.jpg
+|       |                   Gunnlaugur_Larusson_-_Yawn.jpg
+|       |                   image_credits.md
+|       |                   jefferson-county-tx.kml
+|       |                   nebraska.kml
+|       |                   new-york.kml
+|       |                   O0.jpg
+|       |                   O1.jpg
+|       |                   O2.jpg
+|       |                   O3.jpg
+|       |                   O4.jpg
+|       |                   O5.jpg
+|       |                   Route_to_lexington.kml
+|       |                   scanned_microfilm.png
+|       |                   texas.kml
+|       |                   zip-code-14213.kml
+|       |                   zip-code-68850.kml
+|       |                   
+|       +---gramps
+|       |   |   authors.xml
+|       |   |   familysearch.css
+|       |   |   gramps.css
+|       |   |   grampsxml.dtd
+|       |   |   grampsxml.rng
+|       |   |   gramps_canonicalize.xsl
+|       |   |   holidays.xml
+|       |   |   lds.xml
+|       |   |   papersize.xml
+|       |   |   tips.xml
+|       |   |   
+|       |   +---css
+|       |   |   |   ancestortree.css
+|       |   |   |   behaviour.css
+|       |   |   |   jquery.flexbox.css
+|       |   |   |   lightbox.css
+|       |   |   |   lightbox.js
+|       |   |   |   narrative-maps.css
+|       |   |   |   Web_Basic-Ash.css
+|       |   |   |   Web_Basic-Blue.css
+|       |   |   |   Web_Basic-Cypress.css
+|       |   |   |   Web_Basic-Lilac.css
+|       |   |   |   Web_Basic-Peach.css
+|       |   |   |   Web_Basic-Spruce.css
+|       |   |   |   Web_Citations-Animated.css
+|       |   |   |   Web_Citations-Outline.css
+|       |   |   |   Web_DropDown-Menus.css
+|       |   |   |   Web_Fade-Menus.css
+|       |   |   |   Web_Horizontal-Menus.css
+|       |   |   |   Web_Mainz.css
+|       |   |   |   Web_Nebraska.css
+|       |   |   |   Web_Print-Default.css
+|       |   |   |   Web_Vertical-Menus.css
+|       |   |   |   Web_Visually.css
+|       |   |   |   
+|       |   |   \---swanky-purse
+|       |   |       |   jquery-ui-1.7.2.custom.css
+|       |   |       |   jquery-ui-1.7.3.custom.css
+|       |   |       |   
+|       |   |       \---images
+|       |   |               ui-bg_diamond_10_4f4221_10x8.png
+|       |   |               ui-bg_diamond_20_372806_10x8.png
+|       |   |               ui-bg_diamond_25_675423_10x8.png
+|       |   |               ui-bg_diamond_25_d5ac5d_10x8.png
+|       |   |               ui-bg_diamond_8_261803_10x8.png
+|       |   |               ui-bg_diamond_8_443113_10x8.png
+|       |   |               ui-bg_flat_75_ddd4b0_40x100.png
+|       |   |               ui-bg_highlight-hard_65_fee4bd_1x100.png
+|       |   |               ui-icons_070603_256x240.png
+|       |   |               ui-icons_e8e2b5_256x240.png
+|       |   |               ui-icons_e9cd86_256x240.png
+|       |   |               ui-icons_efec9f_256x240.png
+|       |   |               ui-icons_f2ec64_256x240.png
+|       |   |               ui-icons_f9f2bd_256x240.png
+|       |   |               ui-icons_ff7519_256x240.png
+|       |   |               
+|       |   \---images
+|       |       |   add-parent-existing-family.png
+|       |       |   add.png
+|       |       |   bad.png
+|       |       |   caution.png
+|       |       |   document.png
+|       |       |   down.png
+|       |       |   fs_logo.png
+|       |       |   good.png
+|       |       |   gramps-export.png
+|       |       |   gramps-import.png
+|       |       |   gramps-parents-add.png
+|       |       |   gramps-parents-open.png
+|       |       |   gramps-parents.png
+|       |       |   gramps-undo-history.png
+|       |       |   gramps-url.png
+|       |       |   gramps.png
+|       |       |   gramps.svg
+|       |       |   gtk-remove.png
+|       |       |   image-missing.png
+|       |       |   LICENSE
+|       |       |   logo.png
+|       |       |   next.png
+|       |       |   ped24.ico
+|       |       |   previous.png
+|       |       |   splash.jpg
+|       |       |   stock_index_24.png
+|       |       |   stock_link.png
+|       |       |   stock_new-html.png
+|       |       |   stock_notes.png
+|       |       |   text-editor.png
+|       |       |   up.png
+|       |       |   
+|       |       +---hicolor
+|       |       |   +---16x16
+|       |       |   |   \---actions
+|       |       |   |           FS-BLA-16.png
+|       |       |   |           FS-G-16.png
+|       |       |   |           geo-fixed-zoom.png
+|       |       |   |           geo-free-zoom.png
+|       |       |   |           geo-place-add.png
+|       |       |   |           geo-place-link.png
+|       |       |   |           geo-show-event.png
+|       |       |   |           geo-show-family-down.png
+|       |       |   |           geo-show-family-up.png
+|       |       |   |           geo-show-family.png
+|       |       |   |           geo-show-person.png
+|       |       |   |           geo-show-place.png
+|       |       |   |           gramps-addon.png
+|       |       |   |           gramps-address.png
+|       |       |   |           gramps-attribute.png
+|       |       |   |           gramps-bookmark-delete.png
+|       |       |   |           gramps-bookmark-edit.png
+|       |       |   |           gramps-bookmark-new.png
+|       |       |   |           gramps-bookmark.png
+|       |       |   |           gramps-citation.png
+|       |       |   |           gramps-config.png
+|       |       |   |           gramps-date-edit.png
+|       |       |   |           gramps-date.png
+|       |       |   |           gramps-event.png
+|       |       |   |           gramps-family.png
+|       |       |   |           gramps-fanchart.png
+|       |       |   |           gramps-fanchart2way.png
+|       |       |   |           gramps-fanchartdesc.png
+|       |       |   |           gramps-font-bgcolor.png
+|       |       |   |           gramps-font-color.png
+|       |       |   |           gramps-font.png
+|       |       |   |           gramps-geo.png
+|       |       |   |           gramps-gramplet.png
+|       |       |   |           gramps-lock.png
+|       |       |   |           gramps-media.png
+|       |       |   |           gramps-merge.png
+|       |       |   |           gramps-notes.png
+|       |       |   |           gramps-parents-add.png
+|       |       |   |           gramps-parents-open.png
+|       |       |   |           gramps-parents.png
+|       |       |   |           gramps-pedigree.png
+|       |       |   |           gramps-person.png
+|       |       |   |           gramps-place.png
+|       |       |   |           gramps-preferences.png
+|       |       |   |           gramps-relation.png
+|       |       |   |           gramps-reports.png
+|       |       |   |           gramps-repository.png
+|       |       |   |           gramps-source.png
+|       |       |   |           gramps-spouse.png
+|       |       |   |           gramps-tag-new.png
+|       |       |   |           gramps-tag.png
+|       |       |   |           gramps-tools.png
+|       |       |   |           gramps-tree-group.png
+|       |       |   |           gramps-tree-list.png
+|       |       |   |           gramps-tree-select.png
+|       |       |   |           gramps-unlock.png
+|       |       |   |           gramps-view.png
+|       |       |   |           gramps-viewmedia.png
+|       |       |   |           gramps-zoom-best-fit.png
+|       |       |   |           gramps-zoom-fit-width.png
+|       |       |   |           gramps-zoom-in.png
+|       |       |   |           gramps-zoom-out.png
+|       |       |   |           
+|       |       |   +---22x22
+|       |       |   |   \---actions
+|       |       |   |           geo-fixed-zoom.png
+|       |       |   |           geo-free-zoom.png
+|       |       |   |           geo-place-add.png
+|       |       |   |           geo-place-link.png
+|       |       |   |           geo-show-event.png
+|       |       |   |           geo-show-family-down.png
+|       |       |   |           geo-show-family-up.png
+|       |       |   |           geo-show-family.png
+|       |       |   |           geo-show-person.png
+|       |       |   |           geo-show-place.png
+|       |       |   |           gramps-addon.png
+|       |       |   |           gramps-address.png
+|       |       |   |           gramps-attribute.png
+|       |       |   |           gramps-bookmark-delete.png
+|       |       |   |           gramps-bookmark-edit.png
+|       |       |   |           gramps-bookmark-new.png
+|       |       |   |           gramps-bookmark.png
+|       |       |   |           gramps-citation.png
+|       |       |   |           gramps-config.png
+|       |       |   |           gramps-date-edit.png
+|       |       |   |           gramps-date.png
+|       |       |   |           gramps-event.png
+|       |       |   |           gramps-family.png
+|       |       |   |           gramps-fanchart.png
+|       |       |   |           gramps-fanchart2way.png
+|       |       |   |           gramps-fanchartdesc.png
+|       |       |   |           gramps-font-bgcolor.png
+|       |       |   |           gramps-font-color.png
+|       |       |   |           gramps-font.png
+|       |       |   |           gramps-geo-altmap.png
+|       |       |   |           gramps-geo-birth.png
+|       |       |   |           gramps-geo-death.png
+|       |       |   |           gramps-geo-mainmap.png
+|       |       |   |           gramps-geo-marriage.png
+|       |       |   |           gramps-geo.png
+|       |       |   |           gramps-gramplet.png
+|       |       |   |           gramps-lock.png
+|       |       |   |           gramps-media.png
+|       |       |   |           gramps-merge.png
+|       |       |   |           gramps-notes.png
+|       |       |   |           gramps-parents-add.png
+|       |       |   |           gramps-parents-open.png
+|       |       |   |           gramps-parents.png
+|       |       |   |           gramps-pedigree.png
+|       |       |   |           gramps-person.png
+|       |       |   |           gramps-place.png
+|       |       |   |           gramps-preferences.png
+|       |       |   |           gramps-relation.png
+|       |       |   |           gramps-reports.png
+|       |       |   |           gramps-repository.png
+|       |       |   |           gramps-source.png
+|       |       |   |           gramps-spouse.png
+|       |       |   |           gramps-tag-new.png
+|       |       |   |           gramps-tag.png
+|       |       |   |           gramps-tools.png
+|       |       |   |           gramps-tree-group.png
+|       |       |   |           gramps-tree-list.png
+|       |       |   |           gramps-tree-select.png
+|       |       |   |           gramps-unlock.png
+|       |       |   |           gramps-view.png
+|       |       |   |           gramps-viewmedia.png
+|       |       |   |           gramps-zoom-best-fit.png
+|       |       |   |           gramps-zoom-fit-width.png
+|       |       |   |           gramps-zoom-in.png
+|       |       |   |           gramps-zoom-out.png
+|       |       |   |           
+|       |       |   +---24x24
+|       |       |   |   \---actions
+|       |       |   |           geo-fixed-zoom.png
+|       |       |   |           geo-free-zoom.png
+|       |       |   |           geo-place-add.png
+|       |       |   |           geo-place-link.png
+|       |       |   |           geo-show-event.png
+|       |       |   |           geo-show-family-down.png
+|       |       |   |           geo-show-family-up.png
+|       |       |   |           geo-show-family.png
+|       |       |   |           geo-show-person.png
+|       |       |   |           geo-show-place.png
+|       |       |   |           gramps-addon.png
+|       |       |   |           gramps-address.png
+|       |       |   |           gramps-attribute.png
+|       |       |   |           gramps-bookmark-delete.png
+|       |       |   |           gramps-bookmark-edit.png
+|       |       |   |           gramps-bookmark-new.png
+|       |       |   |           gramps-bookmark.png
+|       |       |   |           gramps-citation.png
+|       |       |   |           gramps-config.png
+|       |       |   |           gramps-date-edit.png
+|       |       |   |           gramps-date.png
+|       |       |   |           gramps-event.png
+|       |       |   |           gramps-family.png
+|       |       |   |           gramps-fanchart.png
+|       |       |   |           gramps-fanchart2way.png
+|       |       |   |           gramps-fanchartdesc.png
+|       |       |   |           gramps-font-bgcolor.png
+|       |       |   |           gramps-font-color.png
+|       |       |   |           gramps-font.png
+|       |       |   |           gramps-geo-altmap.png
+|       |       |   |           gramps-geo-birth.png
+|       |       |   |           gramps-geo-death.png
+|       |       |   |           gramps-geo-mainmap.png
+|       |       |   |           gramps-geo-marriage.png
+|       |       |   |           gramps-geo.png
+|       |       |   |           gramps-gramplet.png
+|       |       |   |           gramps-lock.png
+|       |       |   |           gramps-media.png
+|       |       |   |           gramps-merge.png
+|       |       |   |           gramps-notes.png
+|       |       |   |           gramps-parents-add.png
+|       |       |   |           gramps-parents-open.png
+|       |       |   |           gramps-parents.png
+|       |       |   |           gramps-pedigree.png
+|       |       |   |           gramps-person.png
+|       |       |   |           gramps-place.png
+|       |       |   |           gramps-preferences.png
+|       |       |   |           gramps-relation.png
+|       |       |   |           gramps-reports.png
+|       |       |   |           gramps-repository.png
+|       |       |   |           gramps-source.png
+|       |       |   |           gramps-spouse.png
+|       |       |   |           gramps-tag-new.png
+|       |       |   |           gramps-tag.png
+|       |       |   |           gramps-tools.png
+|       |       |   |           gramps-tree-group.png
+|       |       |   |           gramps-tree-list.png
+|       |       |   |           gramps-tree-select.png
+|       |       |   |           gramps-unlock.png
+|       |       |   |           gramps-view.png
+|       |       |   |           gramps-viewmedia.png
+|       |       |   |           gramps-zoom-best-fit.png
+|       |       |   |           gramps-zoom-fit-width.png
+|       |       |   |           gramps-zoom-in.png
+|       |       |   |           gramps-zoom-out.png
+|       |       |   |           
+|       |       |   +---48x48
+|       |       |   |   \---actions
+|       |       |   |           geo-fixed-zoom.png
+|       |       |   |           geo-free-zoom.png
+|       |       |   |           geo-place-add.png
+|       |       |   |           geo-place-link.png
+|       |       |   |           geo-show-event.png
+|       |       |   |           geo-show-family-down.png
+|       |       |   |           geo-show-family-up.png
+|       |       |   |           geo-show-family.png
+|       |       |   |           geo-show-person.png
+|       |       |   |           geo-show-place.png
+|       |       |   |           gramps-addon.png
+|       |       |   |           gramps-address.png
+|       |       |   |           gramps-attribute.png
+|       |       |   |           gramps-bookmark-delete.png
+|       |       |   |           gramps-bookmark-edit.png
+|       |       |   |           gramps-bookmark-new.png
+|       |       |   |           gramps-bookmark.png
+|       |       |   |           gramps-citation.png
+|       |       |   |           gramps-config.png
+|       |       |   |           gramps-date-edit.png
+|       |       |   |           gramps-date.png
+|       |       |   |           gramps-event.png
+|       |       |   |           gramps-family.png
+|       |       |   |           gramps-fanchart.png
+|       |       |   |           gramps-fanchart2way.png
+|       |       |   |           gramps-fanchartdesc.png
+|       |       |   |           gramps-font-bgcolor.png
+|       |       |   |           gramps-font-color.png
+|       |       |   |           gramps-font.png
+|       |       |   |           gramps-geo-altmap.png
+|       |       |   |           gramps-geo-birth.png
+|       |       |   |           gramps-geo-death.png
+|       |       |   |           gramps-geo-mainmap.png
+|       |       |   |           gramps-geo-marriage.png
+|       |       |   |           gramps-geo.png
+|       |       |   |           gramps-gramplet.png
+|       |       |   |           gramps-lock.png
+|       |       |   |           gramps-media.png
+|       |       |   |           gramps-merge.png
+|       |       |   |           gramps-notes.png
+|       |       |   |           gramps-parents-add.png
+|       |       |   |           gramps-parents-open.png
+|       |       |   |           gramps-parents.png
+|       |       |   |           gramps-pedigree.png
+|       |       |   |           gramps-person.png
+|       |       |   |           gramps-place.png
+|       |       |   |           gramps-preferences.png
+|       |       |   |           gramps-relation.png
+|       |       |   |           gramps-reports.png
+|       |       |   |           gramps-repository.png
+|       |       |   |           gramps-source.png
+|       |       |   |           gramps-spouse.png
+|       |       |   |           gramps-tag-new.png
+|       |       |   |           gramps-tag.png
+|       |       |   |           gramps-tools.png
+|       |       |   |           gramps-tree-group.png
+|       |       |   |           gramps-tree-list.png
+|       |       |   |           gramps-tree-select.png
+|       |       |   |           gramps-unlock.png
+|       |       |   |           gramps-view.png
+|       |       |   |           gramps-viewmedia.png
+|       |       |   |           gramps-zoom-best-fit.png
+|       |       |   |           gramps-zoom-fit-width.png
+|       |       |   |           gramps-zoom-in.png
+|       |       |   |           gramps-zoom-out.png
+|       |       |   |           
+|       |       |   \---scalable
+|       |       |       \---actions
+|       |       |               add-parent-existing-family.svg
+|       |       |               format-text-subscript-symbolic.svg
+|       |       |               format-text-superscript-symbolic.svg
+|       |       |               geo-fixed-zoom.svg
+|       |       |               geo-free-zoom.svg
+|       |       |               geo-place-add.svg
+|       |       |               geo-place-link.svg
+|       |       |               geo-show-event.svg
+|       |       |               geo-show-family-down.svg
+|       |       |               geo-show-family-up.svg
+|       |       |               geo-show-family.svg
+|       |       |               geo-show-person.svg
+|       |       |               geo-show-place.svg
+|       |       |               gramps-addon.svg
+|       |       |               gramps-address.svg
+|       |       |               gramps-attribute.svg
+|       |       |               gramps-bookmark-delete.svg
+|       |       |               gramps-bookmark-edit.svg
+|       |       |               gramps-bookmark-new.svg
+|       |       |               gramps-bookmark.svg
+|       |       |               gramps-citation.svg
+|       |       |               gramps-config.svg
+|       |       |               gramps-date-edit.svg
+|       |       |               gramps-date.svg
+|       |       |               gramps-event.svg
+|       |       |               gramps-family.svg
+|       |       |               gramps-fanchart.svg
+|       |       |               gramps-fanchart2way.svg
+|       |       |               gramps-fanchartdesc.svg
+|       |       |               gramps-font-bgcolor.svg
+|       |       |               gramps-font-color.svg
+|       |       |               gramps-font.svg
+|       |       |               gramps-geo-altmap.svg
+|       |       |               gramps-geo-birth.svg
+|       |       |               gramps-geo-death.svg
+|       |       |               gramps-geo-mainmap.svg
+|       |       |               gramps-geo-marriage.svg
+|       |       |               gramps-geo.svg
+|       |       |               gramps-gramplet.svg
+|       |       |               gramps-lock.svg
+|       |       |               gramps-media.svg
+|       |       |               gramps-merge.svg
+|       |       |               gramps-notes.svg
+|       |       |               gramps-parents-add.svg
+|       |       |               gramps-parents-open.svg
+|       |       |               gramps-parents.svg
+|       |       |               gramps-pedigree.svg
+|       |       |               gramps-person.svg
+|       |       |               gramps-place.svg
+|       |       |               gramps-preferences.svg
+|       |       |               gramps-relation.svg
+|       |       |               gramps-reports.svg
+|       |       |               gramps-repository.svg
+|       |       |               gramps-source.svg
+|       |       |               gramps-spouse.svg
+|       |       |               gramps-tag-new.svg
+|       |       |               gramps-tag.svg
+|       |       |               gramps-tools.svg
+|       |       |               gramps-tree-group.svg
+|       |       |               gramps-tree-list.svg
+|       |       |               gramps-tree-select.svg
+|       |       |               gramps-unlock.svg
+|       |       |               gramps-view.svg
+|       |       |               gramps-viewmedia.svg
+|       |       |               gramps-zoom-best-fit.svg
+|       |       |               gramps-zoom-fit-width.svg
+|       |       |               gramps-zoom-in.svg
+|       |       |               gramps-zoom-out.svg
+|       |       |               
+|       |       \---webstuff
+|       |               blank.gif
+|       |               crosshairs.png
+|       |               favicon.ico
+|       |               favicon2.ico
+|       |               gramps-geo-altmap.png
+|       |               gramps-geo-birth.png
+|       |               gramps-geo-death.png
+|       |               gramps-geo-mainmap.png
+|       |               gramps-geo-marriage.png
+|       |               somerights20.gif
+|       |               Web_Gender_Female.png
+|       |               Web_Gender_Male.png
+|       |               Web_Gender_Other.png
+|       |               Web_Mainz_Bkgd.png
+|       |               Web_Mainz_Header.png
+|       |               Web_Mainz_Mid.png
+|       |               Web_Mainz_MidLight.png
+|       |               
+|       +---icons
+|       |   \---hicolor
+|       |       +---128x128
+|       |       |   \---apps
+|       |       |           org.gramps_project.Gramps.png
+|       |       |           
+|       |       +---16x16
+|       |       |   \---apps
+|       |       |           org.gramps_project.Gramps.png
+|       |       |           
+|       |       +---22x22
+|       |       |   \---apps
+|       |       |           org.gramps_project.Gramps.png
+|       |       |           
+|       |       +---24x24
+|       |       |   \---apps
+|       |       |           org.gramps_project.Gramps.png
+|       |       |           
+|       |       +---256x256
+|       |       |   \---apps
+|       |       |           org.gramps_project.Gramps.png
+|       |       |           
+|       |       +---48x48
+|       |       |   +---apps
+|       |       |   |       org.gramps_project.Gramps.png
+|       |       |   |       
+|       |       |   \---mimetypes
+|       |       |           application-x-gedcom.png
+|       |       |           application-x-geneweb.png
+|       |       |           application-x-gramps-package.png
+|       |       |           application-x-gramps-xml.png
+|       |       |           application-x-gramps.png
+|       |       |           
+|       |       \---scalable
+|       |           +---apps
+|       |           |       org.gramps_project.Gramps.svg
+|       |           |       
+|       |           \---mimetypes
+|       |                   application-x-gedcom.svg
+|       |                   application-x-geneweb.svg
+|       |                   application-x-gramps-package.svg
+|       |                   application-x-gramps-xml.svg
+|       |                   application-x-gramps.svg
+|       |                   
+|       +---locale
+|       |   +---ar
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---ba
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---bg
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---ca
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---cs
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---da
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---de
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---de_AT
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---el
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---en_GB
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---eo
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---es
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---fi
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---fr
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---ga
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---he
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---hr
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---hu
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---is
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---it
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---ja
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---ko
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---lt
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---nb
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---nl
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---nn
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---pl
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---pt_BR
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---pt_PT
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---ru
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---sk
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---sl
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---sq
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---sr
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---sv
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---ta
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---tr
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---uk
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---vi
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---zh_CN
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   +---zh_HK
+|       |   |   \---LC_MESSAGES
+|       |   |           gramps.mo
+|       |   |           
+|       |   \---zh_TW
+|       |       \---LC_MESSAGES
+|       |               gramps.mo
+|       |               
+|       +---metainfo
+|       |       org.gramps_project.Gramps.metainfo.xml
+|       |       
+|       \---mime
+|           \---packages
+|                   org.gramps_project.Gramps.xml
+|                   
++---data
+|   |   authors.xml
+|   |   familysearch.css
+|   |   gramps.css
+|   |   grampsxml.dtd
+|   |   grampsxml.rng
+|   |   gramps_canonicalize.xsl
+|   |   holidays.xml
+|   |   lds.xml
+|   |   org.gramps_project.Gramps.desktop.in
+|   |   org.gramps_project.Gramps.metainfo.xml.in
+|   |   org.gramps_project.Gramps.xml.in
+|   |   papersize.xml
+|   |   tips.xml
+|   |   
+|   +---css
+|   |   |   ancestortree.css
+|   |   |   behaviour.css
+|   |   |   jquery.flexbox.css
+|   |   |   lightbox.css
+|   |   |   lightbox.js
+|   |   |   narrative-maps.css
+|   |   |   Web_Basic-Ash.css
+|   |   |   Web_Basic-Blue.css
+|   |   |   Web_Basic-Cypress.css
+|   |   |   Web_Basic-Lilac.css
+|   |   |   Web_Basic-Peach.css
+|   |   |   Web_Basic-Spruce.css
+|   |   |   Web_Citations-Animated.css
+|   |   |   Web_Citations-Outline.css
+|   |   |   Web_DropDown-Menus.css
+|   |   |   Web_Fade-Menus.css
+|   |   |   Web_Horizontal-Menus.css
+|   |   |   Web_Mainz.css
+|   |   |   Web_Nebraska.css
+|   |   |   Web_Print-Default.css
+|   |   |   Web_Vertical-Menus.css
+|   |   |   Web_Visually.css
+|   |   |   
+|   |   \---swanky-purse
+|   |       |   jquery-ui-1.7.2.custom.css
+|   |       |   jquery-ui-1.7.3.custom.css
+|   |       |   
+|   |       \---images
+|   |               ui-bg_diamond_10_4f4221_10x8.png
+|   |               ui-bg_diamond_20_372806_10x8.png
+|   |               ui-bg_diamond_25_675423_10x8.png
+|   |               ui-bg_diamond_25_d5ac5d_10x8.png
+|   |               ui-bg_diamond_8_261803_10x8.png
+|   |               ui-bg_diamond_8_443113_10x8.png
+|   |               ui-bg_flat_75_ddd4b0_40x100.png
+|   |               ui-bg_highlight-hard_65_fee4bd_1x100.png
+|   |               ui-icons_070603_256x240.png
+|   |               ui-icons_e8e2b5_256x240.png
+|   |               ui-icons_e9cd86_256x240.png
+|   |               ui-icons_efec9f_256x240.png
+|   |               ui-icons_f2ec64_256x240.png
+|   |               ui-icons_f9f2bd_256x240.png
+|   |               ui-icons_ff7519_256x240.png
+|   |               
+|   +---images
+|   |       blank.gif
+|   |       crosshairs.png
+|   |       favicon.ico
+|   |       favicon2.ico
+|   |       gramps-geo-altmap.png
+|   |       gramps-geo-birth.png
+|   |       gramps-geo-death.png
+|   |       gramps-geo-mainmap.png
+|   |       gramps-geo-marriage.png
+|   |       somerights20.gif
+|   |       Web_Gender_Female.png
+|   |       Web_Gender_Male.png
+|   |       Web_Mainz_Bkgd.png
+|   |       Web_Mainz_Header.png
+|   |       Web_Mainz_Mid.png
+|   |       Web_Mainz_MidLight.png
+|   |       
+|   +---man
+|   |   |   conf.py
+|   |   |   en.rst
+|   |   |   gramps.1.in
+|   |   |   index.rst
+|   |   |   update_man.py
+|   |   |   
+|   |   +---cs
+|   |   |       conf.py
+|   |   |       cs.rst
+|   |   |       gramps.1.in
+|   |   |       
+|   |   +---fr
+|   |   |       conf.py
+|   |   |       fr.rst
+|   |   |       gramps.1.in
+|   |   |       
+|   |   +---nl
+|   |   |       conf.py
+|   |   |       gramps.1.in
+|   |   |       nl.rst
+|   |   |       
+|   |   +---pl
+|   |   |       conf.py
+|   |   |       gramps.1.in
+|   |   |       pl.rst
+|   |   |       
+|   |   +---pt_BR
+|   |   |       conf.py
+|   |   |       gramps.1.in
+|   |   |       pt_BR.rst
+|   |   |       
+|   |   \---sv
+|   |           conf.py
+|   |           gramps.1.in
+|   |           sv.rst
+|   |           
+|   \---tests
+|           all_relations.csv
+|           child-father-child-loop.gramps
+|           data.gramps
+|           datetest.gramps
+|           example.gramps
+|           exp_sample.gramps
+|           exp_sample.gw
+|           exp_sample.vcf
+|           exp_sample.vcs
+|           exp_sample.wft
+|           exp_sample_csv.csv
+|           exp_sample_csv.gramps
+|           exp_sample_ged.ged
+|           imp_3.4.5.gramps
+|           imp_3.4.5.zip
+|           imp_4.1.3.gramps
+|           imp_4.1.3.zip
+|           imp_4.2.8.gramps
+|           imp_4.2.8.zip
+|           imp_5.0.1.gramps
+|           imp_5.0.1.zip
+|           imp_5.0.1bsd.gramps
+|           imp_5.0.1bsd.zip
+|           imp_5.1.2bsd.gramps
+|           imp_5.1.2bsd.zip
+|           imp_5.2.4.gramps
+|           imp_5.2.4.zip
+|           imp_ANSEL_CR.ged
+|           imp_ANSEL_CR.gramps
+|           imp_ANSEL_CRLF.ged
+|           imp_ANSEL_CRLF.gramps
+|           imp_ANSEL_LF.ged
+|           imp_ANSEL_LF.gramps
+|           imp_bug_8322_test.ged
+|           imp_bug_8322_test.gramps
+|           imp_cp1252_CR.ged
+|           imp_cp1252_CR.gramps
+|           imp_cp1252_CRLF.ged
+|           imp_cp1252_CRLF.gramps
+|           imp_cp1252_LF.ged
+|           imp_cp1252_LF.gramps
+|           imp_CustTags.ged
+|           imp_CustTags.gramps
+|           imp_FTM_16dec2015a-mod1.ged
+|           imp_FTM_16dec2015a-mod1.gramps
+|           imp_FTM_LINK.ged
+|           imp_FTM_LINK.gramps
+|           imp_FTM_OCCU_bug.ged
+|           imp_FTM_OCCU_bug.gramps
+|           imp_FTM_PHOTO.ged
+|           imp_FTM_PHOTO.gramps
+|           imp_Latin_1_CR.ged
+|           imp_Latin_1_CR.gramps
+|           imp_Latin_1_CRLF.ged
+|           imp_Latin_1_CRLF.gramps
+|           imp_Latin_1_LF.ged
+|           imp_Latin_1_LF.gramps
+|           imp_MediaTest.ged
+|           imp_MediaTest.gramps
+|           imp_MixInlineXrefNote.ged
+|           imp_MixInlineXrefNote.gramps
+|           imp_notetest_dfs.ged
+|           imp_notetest_dfs.gramps
+|           imp_Paris.ged
+|           imp_Paris.gramps
+|           imp_PhonFax_dfs.ged
+|           imp_PhonFax_dfs.gramps
+|           imp_sample.ged
+|           imp_sample.gramps
+|           imp_sample_csv.csv
+|           imp_sample_csv.gramps
+|           imp_test_FTM_CONC.ged
+|           imp_test_FTM_CONC.gramps
+|           imp_UTF_16_BE_BOM_CR.ged
+|           imp_UTF_16_BE_BOM_CR.gramps
+|           imp_UTF_16_BE_BOM_CRLF.ged
+|           imp_UTF_16_BE_BOM_CRLF.gramps
+|           imp_UTF_16_BE_BOM_LF.ged
+|           imp_UTF_16_BE_BOM_LF.gramps
+|           imp_UTF_16_LE_BOM_CR.ged
+|           imp_UTF_16_LE_BOM_CR.gramps
+|           imp_UTF_16_LE_BOM_CRLF.ged
+|           imp_UTF_16_LE_BOM_CRLF.gramps
+|           imp_UTF_16_LE_BOM_LF.ged
+|           imp_UTF_16_LE_BOM_LF.gramps
+|           imp_UTF_8_BOM_CR.ged
+|           imp_UTF_8_BOM_CR.gramps
+|           imp_UTF_8_BOM_CRLF.ged
+|           imp_UTF_8_BOM_CRLF.gramps
+|           imp_UTF_8_BOM_LF.ged
+|           imp_UTF_8_BOM_LF.gramps
+|           imp_UTF_8_NOBOM_CR.ged
+|           imp_UTF_8_NOBOM_CR.gramps
+|           imp_UTF_8_NOBOM_CRLF.ged
+|           imp_UTF_8_NOBOM_CRLF.gramps
+|           imp_UTF_8_NOBOM_LF.ged
+|           imp_UTF_8_NOBOM_LF.gramps
+|           imp_vcard.gramps
+|           imp_vcard.vcf
+|           O0.jpg
+|           PG30-1GB.DEF
+|           SAMPLE.DEF
+|           SAMPLE.gramps
+|           SAMPLE.IXI
+|           SAMPLE.IXP
+|           SAMPLE.IXR
+|           SAMPLE.MEM
+|           SAMPLE.PER
+|           SAMPLE.REL
+|           SAMPLE.REM
+|           SAMPLE.X11
+|           SAMPLE.X21
+|           test_complex_loop.gramps
+|           
++---debian
+|   |   changelog
+|   |   compat
+|   |   control
+|   |   copyright
+|   |   gramps.docs
+|   |   gramps.install
+|   |   gramps.xpm
+|   |   README.Debian
+|   |   README.test
+|   |   rules
+|   |   watch
+|   |   
+|   +---source
+|   |       format
+|   |       local-options
+|   |       
+|   +---tests
+|   |       control
+|   |       gramps-import-export
+|   |       
+|   \---upstream
+|           metadata
+|           
++---dist
+|       gramps-6.1.0-py3-none-any.whl
+|       
++---docs
+|   |   api.rst
+|   |   conf.py
+|   |   date.rst
+|   |   developer_guide.rst
+|   |   html.rst
+|   |   index.rst
+|   |   make.bat
+|   |   Makefile
+|   |   README.txt
+|   |   relationship.rst
+|   |   simple.rst
+|   |   test.log
+|   |   update_doc.py
+|   |   user_guide.rst
+|   |   
+|   +---corecli
+|   |       cli.rst
+|   |       
+|   +---coregui
+|   |       gui.rst
+|   |       gui_widgets.rst
+|   |       
+|   +---gen
+|   |       gen.rst
+|   |       gen_db.rst
+|   |       gen_display.rst
+|   |       gen_lib.rst
+|   |       gen_plug.rst
+|   |       gen_proxy.rst
+|   |       gen_utils.rst
+|   |       
+|   \---_templates
+|           layout.html
+|           
++---example
+|   +---csv
+|   |       example.csv
+|   |       
+|   +---gedcom
+|   |       sample.ged
+|   |       
+|   \---gramps
+|           1897_expeditionsmannschaft_rio_a.jpg
+|           654px-Aksel_Andersson.jpg
+|           Alimehemet.jpg
+|           andrews-county-tx-zip-codes.kml
+|           andrews-county-tx.kml
+|           AntoineClaudet.png
+|           data.gramps
+|           example.gramps
+|           E_W_Dahlgren.jpg
+|           Gunnlaugur_Larusson_-_Yawn.jpg
+|           image_credits.md
+|           jefferson-county-tx.kml
+|           nebraska.kml
+|           new-york.kml
+|           O0.jpg
+|           O1.jpg
+|           O2.jpg
+|           O3.jpg
+|           O4.jpg
+|           O5.jpg
+|           Route_to_lexington.kml
+|           scanned_microfilm.png
+|           texas.kml
+|           zip-code-14213.kml
+|           zip-code-68850.kml
+|           
++---gramps
+|   |   grampsapp.py
+|   |   version.py
+|   |   __init__.py
+|   |   __main__.py
+|   |   
+|   +---cli
+|   |   |   arghandler.py
+|   |   |   argparser.py
+|   |   |   clidbman.py
+|   |   |   grampscli.py
+|   |   |   user.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---plug
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---test
+|   |   |       argparser_test.py
+|   |   |       cli_test.py
+|   |   |       user_test.py
+|   |   |       __init__.py
+|   |   |       
+|   |   \---__pycache__
+|   |           arghandler.cpython-314.pyc
+|   |           argparser.cpython-314.pyc
+|   |           clidbman.cpython-314.pyc
+|   |           grampscli.cpython-314.pyc
+|   |           user.cpython-314.pyc
+|   |           __init__.cpython-314.pyc
+|   |           
+|   +---gen
+|   |   |   config.py
+|   |   |   const.py
+|   |   |   constfunc.py
+|   |   |   dbstate.py
+|   |   |   errors.py
+|   |   |   git_revision.py
+|   |   |   recentfiles.py
+|   |   |   relationship.py
+|   |   |   sort.py
+|   |   |   soundex.py
+|   |   |   types.py
+|   |   |   updatecallback.py
+|   |   |   user.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---datehandler
+|   |   |   |   _datedisplay.py
+|   |   |   |   _datehandler.py
+|   |   |   |   _dateparser.py
+|   |   |   |   _datestrings.py
+|   |   |   |   _dateutils.py
+|   |   |   |   _datevietnameselunar.py
+|   |   |   |   _date_ar.py
+|   |   |   |   _date_bg.py
+|   |   |   |   _date_ca.py
+|   |   |   |   _date_cs.py
+|   |   |   |   _date_da.py
+|   |   |   |   _date_de.py
+|   |   |   |   _date_el.py
+|   |   |   |   _date_es.py
+|   |   |   |   _date_fi.py
+|   |   |   |   _date_fr.py
+|   |   |   |   _date_he.py
+|   |   |   |   _date_hr.py
+|   |   |   |   _date_hu.py
+|   |   |   |   _date_is.py
+|   |   |   |   _date_it.py
+|   |   |   |   _date_ja.py
+|   |   |   |   _date_lt.py
+|   |   |   |   _date_nb.py
+|   |   |   |   _date_nl.py
+|   |   |   |   _date_pl.py
+|   |   |   |   _date_pt.py
+|   |   |   |   _date_ru.py
+|   |   |   |   _date_sk.py
+|   |   |   |   _date_sl.py
+|   |   |   |   _date_sr.py
+|   |   |   |   _date_sv.py
+|   |   |   |   _date_uk.py
+|   |   |   |   _date_vi.py
+|   |   |   |   _date_zh_CN.py
+|   |   |   |   _date_zh_TW.py
+|   |   |   |   _grampslocale.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---test
+|   |   |   |       datedisplay_test.py
+|   |   |   |       datehandler_test.py
+|   |   |   |       dateparser_test.py
+|   |   |   |       datestrings_test.py
+|   |   |   |       date_fi_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           _datedisplay.cpython-314.pyc
+|   |   |           _datehandler.cpython-314.pyc
+|   |   |           _dateparser.cpython-314.pyc
+|   |   |           _datestrings.cpython-314.pyc
+|   |   |           _dateutils.cpython-314.pyc
+|   |   |           _datevietnameselunar.cpython-314.pyc
+|   |   |           _date_ar.cpython-314.pyc
+|   |   |           _date_bg.cpython-314.pyc
+|   |   |           _date_ca.cpython-314.pyc
+|   |   |           _date_cs.cpython-314.pyc
+|   |   |           _date_da.cpython-314.pyc
+|   |   |           _date_de.cpython-314.pyc
+|   |   |           _date_el.cpython-314.pyc
+|   |   |           _date_es.cpython-314.pyc
+|   |   |           _date_fi.cpython-314.pyc
+|   |   |           _date_fr.cpython-314.pyc
+|   |   |           _date_he.cpython-314.pyc
+|   |   |           _date_hr.cpython-314.pyc
+|   |   |           _date_hu.cpython-314.pyc
+|   |   |           _date_is.cpython-314.pyc
+|   |   |           _date_it.cpython-314.pyc
+|   |   |           _date_ja.cpython-314.pyc
+|   |   |           _date_lt.cpython-314.pyc
+|   |   |           _date_nb.cpython-314.pyc
+|   |   |           _date_nl.cpython-314.pyc
+|   |   |           _date_pl.cpython-314.pyc
+|   |   |           _date_pt.cpython-314.pyc
+|   |   |           _date_ru.cpython-314.pyc
+|   |   |           _date_sk.cpython-314.pyc
+|   |   |           _date_sl.cpython-314.pyc
+|   |   |           _date_sr.cpython-314.pyc
+|   |   |           _date_sv.cpython-314.pyc
+|   |   |           _date_uk.cpython-314.pyc
+|   |   |           _date_vi.cpython-314.pyc
+|   |   |           _date_zh_CN.cpython-314.pyc
+|   |   |           _date_zh_TW.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---db
+|   |   |   |   base.py
+|   |   |   |   bookmarks.py
+|   |   |   |   dbconst.py
+|   |   |   |   dummydb.py
+|   |   |   |   exceptions.py
+|   |   |   |   generic.py
+|   |   |   |   txn.py
+|   |   |   |   undoredo.py
+|   |   |   |   upgrade.py
+|   |   |   |   utils.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---conversion_tools
+|   |   |   |   |   conversion_21.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           conversion_21.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   \---__pycache__
+|   |   |           base.cpython-314.pyc
+|   |   |           bookmarks.cpython-314.pyc
+|   |   |           dbconst.cpython-314.pyc
+|   |   |           dummydb.cpython-314.pyc
+|   |   |           exceptions.cpython-314.pyc
+|   |   |           generic.cpython-314.pyc
+|   |   |           txn.cpython-314.pyc
+|   |   |           undoredo.cpython-314.pyc
+|   |   |           upgrade.cpython-314.pyc
+|   |   |           utils.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---display
+|   |   |   |   name.py
+|   |   |   |   place.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---test
+|   |   |   |       name_test.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           name.cpython-314.pyc
+|   |   |           place.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---filters
+|   |   |   |   optimizer.py
+|   |   |   |   _filterlist.py
+|   |   |   |   _filterparser.py
+|   |   |   |   _genericfilter.py
+|   |   |   |   _paramfilter.py
+|   |   |   |   _searchfilter.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---rules
+|   |   |   |   |   _changedsincebase.py
+|   |   |   |   |   _everything.py
+|   |   |   |   |   _hasattributebase.py
+|   |   |   |   |   _hascitationbase.py
+|   |   |   |   |   _haseventbase.py
+|   |   |   |   |   _hasgallerybase.py
+|   |   |   |   |   _hasgrampsid.py
+|   |   |   |   |   _hasldsbase.py
+|   |   |   |   |   _hasnotebase.py
+|   |   |   |   |   _hasnoteregexbase.py
+|   |   |   |   |   _hasnotesubstrbase.py
+|   |   |   |   |   _hasnotetagbase.py
+|   |   |   |   |   _hasnotetypebase.py
+|   |   |   |   |   _hasreferencecountbase.py
+|   |   |   |   |   _hassourcebase.py
+|   |   |   |   |   _hassourcecountbase.py
+|   |   |   |   |   _hassourceofbase.py
+|   |   |   |   |   _hastagbase.py
+|   |   |   |   |   _hastextmatchingregexpof.py
+|   |   |   |   |   _hastextmatchingsubstringof.py
+|   |   |   |   |   _isprivate.py
+|   |   |   |   |   _ispublic.py
+|   |   |   |   |   _matchescitationfilterbase.py
+|   |   |   |   |   _matcheseventfilterbase.py
+|   |   |   |   |   _matchesfilterbase.py
+|   |   |   |   |   _matchessourceconfidencebase.py
+|   |   |   |   |   _matchessourcefilterbase.py
+|   |   |   |   |   _regexpidbase.py
+|   |   |   |   |   _rule.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   +---citation
+|   |   |   |   |   |   _allcitations.py
+|   |   |   |   |   |   _changedsince.py
+|   |   |   |   |   |   _citationprivate.py
+|   |   |   |   |   |   _hasattribute.py
+|   |   |   |   |   |   _hascitation.py
+|   |   |   |   |   |   _hasgallery.py
+|   |   |   |   |   |   _hasidof.py
+|   |   |   |   |   |   _hasnote.py
+|   |   |   |   |   |   _hasnotematchingsubstringof.py
+|   |   |   |   |   |   _hasnoteregexp.py
+|   |   |   |   |   |   _hasnotetag.py
+|   |   |   |   |   |   _hasnotetype.py
+|   |   |   |   |   |   _hasreferencecountof.py
+|   |   |   |   |   |   _hassource.py
+|   |   |   |   |   |   _hassourceidof.py
+|   |   |   |   |   |   _hassourcenoteregexp.py
+|   |   |   |   |   |   _hastag.py
+|   |   |   |   |   |   _matchesfilter.py
+|   |   |   |   |   |   _matchespagesubstringof.py
+|   |   |   |   |   |   _matchesrepositoryfilter.py
+|   |   |   |   |   |   _matchessourcefilter.py
+|   |   |   |   |   |   _regexpidof.py
+|   |   |   |   |   |   _regexpsourceidof.py
+|   |   |   |   |   |   __init__.py
+|   |   |   |   |   |   
+|   |   |   |   |   \---__pycache__
+|   |   |   |   |           _allcitations.cpython-314.pyc
+|   |   |   |   |           _changedsince.cpython-314.pyc
+|   |   |   |   |           _citationprivate.cpython-314.pyc
+|   |   |   |   |           _hasattribute.cpython-314.pyc
+|   |   |   |   |           _hascitation.cpython-314.pyc
+|   |   |   |   |           _hasgallery.cpython-314.pyc
+|   |   |   |   |           _hasidof.cpython-314.pyc
+|   |   |   |   |           _hasnote.cpython-314.pyc
+|   |   |   |   |           _hasnotematchingsubstringof.cpython-314.pyc
+|   |   |   |   |           _hasnoteregexp.cpython-314.pyc
+|   |   |   |   |           _hasnotetag.cpython-314.pyc
+|   |   |   |   |           _hasnotetype.cpython-314.pyc
+|   |   |   |   |           _hasreferencecountof.cpython-314.pyc
+|   |   |   |   |           _hassource.cpython-314.pyc
+|   |   |   |   |           _hassourceidof.cpython-314.pyc
+|   |   |   |   |           _hassourcenoteregexp.cpython-314.pyc
+|   |   |   |   |           _hastag.cpython-314.pyc
+|   |   |   |   |           _matchesfilter.cpython-314.pyc
+|   |   |   |   |           _matchespagesubstringof.cpython-314.pyc
+|   |   |   |   |           _matchesrepositoryfilter.cpython-314.pyc
+|   |   |   |   |           _matchessourcefilter.cpython-314.pyc
+|   |   |   |   |           _regexpidof.cpython-314.pyc
+|   |   |   |   |           _regexpsourceidof.cpython-314.pyc
+|   |   |   |   |           __init__.cpython-314.pyc
+|   |   |   |   |           
+|   |   |   |   +---event
+|   |   |   |   |   |   _allevents.py
+|   |   |   |   |   |   _changedsince.py
+|   |   |   |   |   |   _eventprivate.py
+|   |   |   |   |   |   _hasattribute.py
+|   |   |   |   |   |   _hascitation.py
+|   |   |   |   |   |   _hasdata.py
+|   |   |   |   |   |   _hasdayofweek.py
+|   |   |   |   |   |   _hasevent.py
+|   |   |   |   |   |   _hasgallery.py
+|   |   |   |   |   |   _hasidof.py
+|   |   |   |   |   |   _hasnote.py
+|   |   |   |   |   |   _hasnotematchingsubstringof.py
+|   |   |   |   |   |   _hasnoteregexp.py
+|   |   |   |   |   |   _hasnotetag.py
+|   |   |   |   |   |   _hasnotetype.py
+|   |   |   |   |   |   _hasreferencecountof.py
+|   |   |   |   |   |   _hassourcecount.py
+|   |   |   |   |   |   _hastag.py
+|   |   |   |   |   |   _hastype.py
+|   |   |   |   |   |   _matchesfilter.py
+|   |   |   |   |   |   _matchespersonfilter.py
+|   |   |   |   |   |   _matchesplacefilter.py
+|   |   |   |   |   |   _matchessourceconfidence.py
+|   |   |   |   |   |   _matchessourcefilter.py
+|   |   |   |   |   |   _regexpidof.py
+|   |   |   |   |   |   __init__.py
+|   |   |   |   |   |   
+|   |   |   |   |   \---__pycache__
+|   |   |   |   |           _allevents.cpython-314.pyc
+|   |   |   |   |           _changedsince.cpython-314.pyc
+|   |   |   |   |           _eventprivate.cpython-314.pyc
+|   |   |   |   |           _hasattribute.cpython-314.pyc
+|   |   |   |   |           _hascitation.cpython-314.pyc
+|   |   |   |   |           _hasdata.cpython-314.pyc
+|   |   |   |   |           _hasdayofweek.cpython-314.pyc
+|   |   |   |   |           _hasevent.cpython-314.pyc
+|   |   |   |   |           _hasgallery.cpython-314.pyc
+|   |   |   |   |           _hasidof.cpython-314.pyc
+|   |   |   |   |           _hasnote.cpython-314.pyc
+|   |   |   |   |           _hasnotematchingsubstringof.cpython-314.pyc
+|   |   |   |   |           _hasnoteregexp.cpython-314.pyc
+|   |   |   |   |           _hasnotetag.cpython-314.pyc
+|   |   |   |   |           _hasnotetype.cpython-314.pyc
+|   |   |   |   |           _hasreferencecountof.cpython-314.pyc
+|   |   |   |   |           _hassourcecount.cpython-314.pyc
+|   |   |   |   |           _hastag.cpython-314.pyc
+|   |   |   |   |           _hastype.cpython-314.pyc
+|   |   |   |   |           _matchesfilter.cpython-314.pyc
+|   |   |   |   |           _matchespersonfilter.cpython-314.pyc
+|   |   |   |   |           _matchesplacefilter.cpython-314.pyc
+|   |   |   |   |           _matchessourceconfidence.cpython-314.pyc
+|   |   |   |   |           _matchessourcefilter.cpython-314.pyc
+|   |   |   |   |           _regexpidof.cpython-314.pyc
+|   |   |   |   |           __init__.cpython-314.pyc
+|   |   |   |   |           
+|   |   |   |   +---family
+|   |   |   |   |   |   _allfamilies.py
+|   |   |   |   |   |   _changedsince.py
+|   |   |   |   |   |   _childhasidof.py
+|   |   |   |   |   |   _childhasnameof.py
+|   |   |   |   |   |   _familyprivate.py
+|   |   |   |   |   |   _fatherhasidof.py
+|   |   |   |   |   |   _fatherhasnameof.py
+|   |   |   |   |   |   _hasattribute.py
+|   |   |   |   |   |   _hascitation.py
+|   |   |   |   |   |   _hasevent.py
+|   |   |   |   |   |   _hasgallery.py
+|   |   |   |   |   |   _hasidof.py
+|   |   |   |   |   |   _haslds.py
+|   |   |   |   |   |   _hasnote.py
+|   |   |   |   |   |   _hasnotematchingsubstringof.py
+|   |   |   |   |   |   _hasnoteregexp.py
+|   |   |   |   |   |   _hasnotetag.py
+|   |   |   |   |   |   _hasnotetype.py
+|   |   |   |   |   |   _hasreferencecountof.py
+|   |   |   |   |   |   _hasreltype.py
+|   |   |   |   |   |   _hassourcecount.py
+|   |   |   |   |   |   _hassourceof.py
+|   |   |   |   |   |   _hastag.py
+|   |   |   |   |   |   _hastwins.py
+|   |   |   |   |   |   _isancestorof.py
+|   |   |   |   |   |   _isbookmarked.py
+|   |   |   |   |   |   _isdescendantof.py
+|   |   |   |   |   |   _matchesfilter.py
+|   |   |   |   |   |   _matchessourceconfidence.py
+|   |   |   |   |   |   _motherhasidof.py
+|   |   |   |   |   |   _motherhasnameof.py
+|   |   |   |   |   |   _regexpchildname.py
+|   |   |   |   |   |   _regexpfathername.py
+|   |   |   |   |   |   _regexpidof.py
+|   |   |   |   |   |   _regexpmothername.py
+|   |   |   |   |   |   _searchchildname.py
+|   |   |   |   |   |   _searchfathername.py
+|   |   |   |   |   |   _searchmothername.py
+|   |   |   |   |   |   __init__.py
+|   |   |   |   |   |   
+|   |   |   |   |   \---__pycache__
+|   |   |   |   |           _allfamilies.cpython-314.pyc
+|   |   |   |   |           _changedsince.cpython-314.pyc
+|   |   |   |   |           _childhasidof.cpython-314.pyc
+|   |   |   |   |           _childhasnameof.cpython-314.pyc
+|   |   |   |   |           _familyprivate.cpython-314.pyc
+|   |   |   |   |           _fatherhasidof.cpython-314.pyc
+|   |   |   |   |           _fatherhasnameof.cpython-314.pyc
+|   |   |   |   |           _hasattribute.cpython-314.pyc
+|   |   |   |   |           _hascitation.cpython-314.pyc
+|   |   |   |   |           _hasevent.cpython-314.pyc
+|   |   |   |   |           _hasgallery.cpython-314.pyc
+|   |   |   |   |           _hasidof.cpython-314.pyc
+|   |   |   |   |           _haslds.cpython-314.pyc
+|   |   |   |   |           _hasnote.cpython-314.pyc
+|   |   |   |   |           _hasnotematchingsubstringof.cpython-314.pyc
+|   |   |   |   |           _hasnoteregexp.cpython-314.pyc
+|   |   |   |   |           _hasnotetag.cpython-314.pyc
+|   |   |   |   |           _hasnotetype.cpython-314.pyc
+|   |   |   |   |           _hasreferencecountof.cpython-314.pyc
+|   |   |   |   |           _hasreltype.cpython-314.pyc
+|   |   |   |   |           _hassourcecount.cpython-314.pyc
+|   |   |   |   |           _hassourceof.cpython-314.pyc
+|   |   |   |   |           _hastag.cpython-314.pyc
+|   |   |   |   |           _hastwins.cpython-314.pyc
+|   |   |   |   |           _isancestorof.cpython-314.pyc
+|   |   |   |   |           _isbookmarked.cpython-314.pyc
+|   |   |   |   |           _isdescendantof.cpython-314.pyc
+|   |   |   |   |           _matchesfilter.cpython-314.pyc
+|   |   |   |   |           _matchessourceconfidence.cpython-314.pyc
+|   |   |   |   |           _motherhasidof.cpython-314.pyc
+|   |   |   |   |           _motherhasnameof.cpython-314.pyc
+|   |   |   |   |           _regexpchildname.cpython-314.pyc
+|   |   |   |   |           _regexpfathername.cpython-314.pyc
+|   |   |   |   |           _regexpidof.cpython-314.pyc
+|   |   |   |   |           _regexpmothername.cpython-314.pyc
+|   |   |   |   |           _searchchildname.cpython-314.pyc
+|   |   |   |   |           _searchfathername.cpython-314.pyc
+|   |   |   |   |           _searchmothername.cpython-314.pyc
+|   |   |   |   |           __init__.cpython-314.pyc
+|   |   |   |   |           
+|   |   |   |   +---media
+|   |   |   |   |   |   _allmedia.py
+|   |   |   |   |   |   _changedsince.py
+|   |   |   |   |   |   _hasattribute.py
+|   |   |   |   |   |   _hascitation.py
+|   |   |   |   |   |   _hasidof.py
+|   |   |   |   |   |   _hasmedia.py
+|   |   |   |   |   |   _hasnotematchingsubstringof.py
+|   |   |   |   |   |   _hasnoteregexp.py
+|   |   |   |   |   |   _hasnotetag.py
+|   |   |   |   |   |   _hasnotetype.py
+|   |   |   |   |   |   _hasreferencecountof.py
+|   |   |   |   |   |   _hassourcecount.py
+|   |   |   |   |   |   _hassourceof.py
+|   |   |   |   |   |   _hastag.py
+|   |   |   |   |   |   _matchesfilter.py
+|   |   |   |   |   |   _matchessourceconfidence.py
+|   |   |   |   |   |   _mediaprivate.py
+|   |   |   |   |   |   _regexpidof.py
+|   |   |   |   |   |   __init__.py
+|   |   |   |   |   |   
+|   |   |   |   |   \---__pycache__
+|   |   |   |   |           _allmedia.cpython-314.pyc
+|   |   |   |   |           _changedsince.cpython-314.pyc
+|   |   |   |   |           _hasattribute.cpython-314.pyc
+|   |   |   |   |           _hascitation.cpython-314.pyc
+|   |   |   |   |           _hasidof.cpython-314.pyc
+|   |   |   |   |           _hasmedia.cpython-314.pyc
+|   |   |   |   |           _hasnotematchingsubstringof.cpython-314.pyc
+|   |   |   |   |           _hasnoteregexp.cpython-314.pyc
+|   |   |   |   |           _hasnotetag.cpython-314.pyc
+|   |   |   |   |           _hasnotetype.cpython-314.pyc
+|   |   |   |   |           _hasreferencecountof.cpython-314.pyc
+|   |   |   |   |           _hassourcecount.cpython-314.pyc
+|   |   |   |   |           _hassourceof.cpython-314.pyc
+|   |   |   |   |           _hastag.cpython-314.pyc
+|   |   |   |   |           _matchesfilter.cpython-314.pyc
+|   |   |   |   |           _matchessourceconfidence.cpython-314.pyc
+|   |   |   |   |           _mediaprivate.cpython-314.pyc
+|   |   |   |   |           _regexpidof.cpython-314.pyc
+|   |   |   |   |           __init__.cpython-314.pyc
+|   |   |   |   |           
+|   |   |   |   +---note
+|   |   |   |   |   |   _allnotes.py
+|   |   |   |   |   |   _changedsince.py
+|   |   |   |   |   |   _hasidof.py
+|   |   |   |   |   |   _hasnote.py
+|   |   |   |   |   |   _hasreferencecountof.py
+|   |   |   |   |   |   _hastag.py
+|   |   |   |   |   |   _hastype.py
+|   |   |   |   |   |   _matchesfilter.py
+|   |   |   |   |   |   _matchesregexpof.py
+|   |   |   |   |   |   _matchessubstringof.py
+|   |   |   |   |   |   _noteprivate.py
+|   |   |   |   |   |   _regexpidof.py
+|   |   |   |   |   |   __init__.py
+|   |   |   |   |   |   
+|   |   |   |   |   \---__pycache__
+|   |   |   |   |           _allnotes.cpython-314.pyc
+|   |   |   |   |           _changedsince.cpython-314.pyc
+|   |   |   |   |           _hasidof.cpython-314.pyc
+|   |   |   |   |           _hasnote.cpython-314.pyc
+|   |   |   |   |           _hasreferencecountof.cpython-314.pyc
+|   |   |   |   |           _hastag.cpython-314.pyc
+|   |   |   |   |           _hastype.cpython-314.pyc
+|   |   |   |   |           _matchesfilter.cpython-314.pyc
+|   |   |   |   |           _matchesregexpof.cpython-314.pyc
+|   |   |   |   |           _matchessubstringof.cpython-314.pyc
+|   |   |   |   |           _noteprivate.cpython-314.pyc
+|   |   |   |   |           _regexpidof.cpython-314.pyc
+|   |   |   |   |           __init__.cpython-314.pyc
+|   |   |   |   |           
+|   |   |   |   +---person
+|   |   |   |   |   |   _changedsince.py
+|   |   |   |   |   |   _deeprelationshippathbetween.py
+|   |   |   |   |   |   _disconnected.py
+|   |   |   |   |   |   _everyone.py
+|   |   |   |   |   |   _familywithincompleteevent.py
+|   |   |   |   |   |   _hasaddress.py
+|   |   |   |   |   |   _hasaddresstext.py
+|   |   |   |   |   |   _hasalternatename.py
+|   |   |   |   |   |   _hasassociation.py
+|   |   |   |   |   |   _hasattribute.py
+|   |   |   |   |   |   _hasbirth.py
+|   |   |   |   |   |   _hascitation.py
+|   |   |   |   |   |   _hascommonancestorwith.py
+|   |   |   |   |   |   _hascommonancestorwithfiltermatch.py
+|   |   |   |   |   |   _hasdeath.py
+|   |   |   |   |   |   _hasevent.py
+|   |   |   |   |   |   _hasfamilyattribute.py
+|   |   |   |   |   |   _hasfamilyevent.py
+|   |   |   |   |   |   _hasgallery.py
+|   |   |   |   |   |   _hasidof.py
+|   |   |   |   |   |   _haslds.py
+|   |   |   |   |   |   _hasnameof.py
+|   |   |   |   |   |   _hasnameorigintype.py
+|   |   |   |   |   |   _hasnametype.py
+|   |   |   |   |   |   _hasnickname.py
+|   |   |   |   |   |   _hasnote.py
+|   |   |   |   |   |   _hasnotematchingsubstringof.py
+|   |   |   |   |   |   _hasnoteregexp.py
+|   |   |   |   |   |   _hasnotetag.py
+|   |   |   |   |   |   _hasnotetype.py
+|   |   |   |   |   |   _hasothergender.py
+|   |   |   |   |   |   _hasrelationship.py
+|   |   |   |   |   |   _hassoundexname.py
+|   |   |   |   |   |   _hassourcecount.py
+|   |   |   |   |   |   _hassourceof.py
+|   |   |   |   |   |   _hastag.py
+|   |   |   |   |   |   _hastextmatchingregexpof.py
+|   |   |   |   |   |   _hastextmatchingsubstringof.py
+|   |   |   |   |   |   _hasunknowngender.py
+|   |   |   |   |   |   _havealtfamilies.py
+|   |   |   |   |   |   _havechildren.py
+|   |   |   |   |   |   _incompletenames.py
+|   |   |   |   |   |   _isancestorof.py
+|   |   |   |   |   |   _isancestoroffiltermatch.py
+|   |   |   |   |   |   _isbookmarked.py
+|   |   |   |   |   |   _ischildoffiltermatch.py
+|   |   |   |   |   |   _isdefaultperson.py
+|   |   |   |   |   |   _isdescendantfamilyof.py
+|   |   |   |   |   |   _isdescendantfamilyoffiltermatch.py
+|   |   |   |   |   |   _isdescendantof.py
+|   |   |   |   |   |   _isdescendantoffiltermatch.py
+|   |   |   |   |   |   _isduplicatedancestorof.py
+|   |   |   |   |   |   _isfemale.py
+|   |   |   |   |   |   _islessthannthgenerationancestorof.py
+|   |   |   |   |   |   _islessthannthgenerationancestorofbookmarked.py
+|   |   |   |   |   |   _islessthannthgenerationancestorofdefaultperson.py
+|   |   |   |   |   |   _islessthannthgenerationdescendantof.py
+|   |   |   |   |   |   _ismale.py
+|   |   |   |   |   |   _ismorethannthgenerationancestorof.py
+|   |   |   |   |   |   _ismorethannthgenerationdescendantof.py
+|   |   |   |   |   |   _isparentoffiltermatch.py
+|   |   |   |   |   |   _isrelatedwith.py
+|   |   |   |   |   |   _issiblingoffiltermatch.py
+|   |   |   |   |   |   _isspouseoffiltermatch.py
+|   |   |   |   |   |   _iswitness.py
+|   |   |   |   |   |   _matcheseventfilter.py
+|   |   |   |   |   |   _matchesfilter.py
+|   |   |   |   |   |   _matchessourceconfidence.py
+|   |   |   |   |   |   _matchidof.py
+|   |   |   |   |   |   _missingparent.py
+|   |   |   |   |   |   _multiplemarriages.py
+|   |   |   |   |   |   _nevermarried.py
+|   |   |   |   |   |   _nobirthdate.py
+|   |   |   |   |   |   _nodeathdate.py
+|   |   |   |   |   |   _peopleprivate.py
+|   |   |   |   |   |   _peoplepublic.py
+|   |   |   |   |   |   _personwithincompleteevent.py
+|   |   |   |   |   |   _probablyalive.py
+|   |   |   |   |   |   _regexpidof.py
+|   |   |   |   |   |   _regexpname.py
+|   |   |   |   |   |   _relationshippathbetween.py
+|   |   |   |   |   |   _relationshippathbetweenbookmarks.py
+|   |   |   |   |   |   _searchname.py
+|   |   |   |   |   |   __init__.py
+|   |   |   |   |   |   
+|   |   |   |   |   \---__pycache__
+|   |   |   |   |           _changedsince.cpython-314.pyc
+|   |   |   |   |           _deeprelationshippathbetween.cpython-314.pyc
+|   |   |   |   |           _disconnected.cpython-314.pyc
+|   |   |   |   |           _everyone.cpython-314.pyc
+|   |   |   |   |           _familywithincompleteevent.cpython-314.pyc
+|   |   |   |   |           _hasaddress.cpython-314.pyc
+|   |   |   |   |           _hasaddresstext.cpython-314.pyc
+|   |   |   |   |           _hasalternatename.cpython-314.pyc
+|   |   |   |   |           _hasassociation.cpython-314.pyc
+|   |   |   |   |           _hasattribute.cpython-314.pyc
+|   |   |   |   |           _hasbirth.cpython-314.pyc
+|   |   |   |   |           _hascitation.cpython-314.pyc
+|   |   |   |   |           _hascommonancestorwith.cpython-314.pyc
+|   |   |   |   |           _hascommonancestorwithfiltermatch.cpython-314.pyc
+|   |   |   |   |           _hasdeath.cpython-314.pyc
+|   |   |   |   |           _hasevent.cpython-314.pyc
+|   |   |   |   |           _hasfamilyattribute.cpython-314.pyc
+|   |   |   |   |           _hasfamilyevent.cpython-314.pyc
+|   |   |   |   |           _hasgallery.cpython-314.pyc
+|   |   |   |   |           _hasidof.cpython-314.pyc
+|   |   |   |   |           _haslds.cpython-314.pyc
+|   |   |   |   |           _hasnameof.cpython-314.pyc
+|   |   |   |   |           _hasnameorigintype.cpython-314.pyc
+|   |   |   |   |           _hasnametype.cpython-314.pyc
+|   |   |   |   |           _hasnickname.cpython-314.pyc
+|   |   |   |   |           _hasnote.cpython-314.pyc
+|   |   |   |   |           _hasnotematchingsubstringof.cpython-314.pyc
+|   |   |   |   |           _hasnoteregexp.cpython-314.pyc
+|   |   |   |   |           _hasnotetag.cpython-314.pyc
+|   |   |   |   |           _hasnotetype.cpython-314.pyc
+|   |   |   |   |           _hasothergender.cpython-314.pyc
+|   |   |   |   |           _hasrelationship.cpython-314.pyc
+|   |   |   |   |           _hassoundexname.cpython-314.pyc
+|   |   |   |   |           _hassourcecount.cpython-314.pyc
+|   |   |   |   |           _hassourceof.cpython-314.pyc
+|   |   |   |   |           _hastag.cpython-314.pyc
+|   |   |   |   |           _hastextmatchingregexpof.cpython-314.pyc
+|   |   |   |   |           _hastextmatchingsubstringof.cpython-314.pyc
+|   |   |   |   |           _hasunknowngender.cpython-314.pyc
+|   |   |   |   |           _havealtfamilies.cpython-314.pyc
+|   |   |   |   |           _havechildren.cpython-314.pyc
+|   |   |   |   |           _incompletenames.cpython-314.pyc
+|   |   |   |   |           _isancestorof.cpython-314.pyc
+|   |   |   |   |           _isancestoroffiltermatch.cpython-314.pyc
+|   |   |   |   |           _isbookmarked.cpython-314.pyc
+|   |   |   |   |           _ischildoffiltermatch.cpython-314.pyc
+|   |   |   |   |           _isdefaultperson.cpython-314.pyc
+|   |   |   |   |           _isdescendantfamilyof.cpython-314.pyc
+|   |   |   |   |           _isdescendantfamilyoffiltermatch.cpython-314.pyc
+|   |   |   |   |           _isdescendantof.cpython-314.pyc
+|   |   |   |   |           _isdescendantoffiltermatch.cpython-314.pyc
+|   |   |   |   |           _isduplicatedancestorof.cpython-314.pyc
+|   |   |   |   |           _isfemale.cpython-314.pyc
+|   |   |   |   |           _islessthannthgenerationancestorof.cpython-314.pyc
+|   |   |   |   |           _islessthannthgenerationancestorofbookmarked.cpython-314.pyc
+|   |   |   |   |           _islessthannthgenerationancestorofdefaultperson.cpython-314.pyc
+|   |   |   |   |           _islessthannthgenerationdescendantof.cpython-314.pyc
+|   |   |   |   |           _ismale.cpython-314.pyc
+|   |   |   |   |           _ismorethannthgenerationancestorof.cpython-314.pyc
+|   |   |   |   |           _ismorethannthgenerationdescendantof.cpython-314.pyc
+|   |   |   |   |           _isparentoffiltermatch.cpython-314.pyc
+|   |   |   |   |           _isrelatedwith.cpython-314.pyc
+|   |   |   |   |           _issiblingoffiltermatch.cpython-314.pyc
+|   |   |   |   |           _isspouseoffiltermatch.cpython-314.pyc
+|   |   |   |   |           _iswitness.cpython-314.pyc
+|   |   |   |   |           _matcheseventfilter.cpython-314.pyc
+|   |   |   |   |           _matchesfilter.cpython-314.pyc
+|   |   |   |   |           _matchessourceconfidence.cpython-314.pyc
+|   |   |   |   |           _matchidof.cpython-314.pyc
+|   |   |   |   |           _missingparent.cpython-314.pyc
+|   |   |   |   |           _multiplemarriages.cpython-314.pyc
+|   |   |   |   |           _nevermarried.cpython-314.pyc
+|   |   |   |   |           _nobirthdate.cpython-314.pyc
+|   |   |   |   |           _nodeathdate.cpython-314.pyc
+|   |   |   |   |           _peopleprivate.cpython-314.pyc
+|   |   |   |   |           _peoplepublic.cpython-314.pyc
+|   |   |   |   |           _personwithincompleteevent.cpython-314.pyc
+|   |   |   |   |           _probablyalive.cpython-314.pyc
+|   |   |   |   |           _regexpidof.cpython-314.pyc
+|   |   |   |   |           _regexpname.cpython-314.pyc
+|   |   |   |   |           _relationshippathbetween.cpython-314.pyc
+|   |   |   |   |           _relationshippathbetweenbookmarks.cpython-314.pyc
+|   |   |   |   |           _searchname.cpython-314.pyc
+|   |   |   |   |           __init__.cpython-314.pyc
+|   |   |   |   |           
+|   |   |   |   +---place
+|   |   |   |   |   |   _allplaces.py
+|   |   |   |   |   |   _changedsince.py
+|   |   |   |   |   |   _hascitation.py
+|   |   |   |   |   |   _hasdata.py
+|   |   |   |   |   |   _hasgallery.py
+|   |   |   |   |   |   _hasidof.py
+|   |   |   |   |   |   _hasnolatorlon.py
+|   |   |   |   |   |   _hasnote.py
+|   |   |   |   |   |   _hasnotematchingsubstringof.py
+|   |   |   |   |   |   _hasnoteregexp.py
+|   |   |   |   |   |   _hasnotetag.py
+|   |   |   |   |   |   _hasnotetype.py
+|   |   |   |   |   |   _hasplace.py
+|   |   |   |   |   |   _hasreferencecountof.py
+|   |   |   |   |   |   _hassourcecount.py
+|   |   |   |   |   |   _hassourceof.py
+|   |   |   |   |   |   _hastag.py
+|   |   |   |   |   |   _hastitle.py
+|   |   |   |   |   |   _inlatlonneighborhood.py
+|   |   |   |   |   |   _isenclosedby.py
+|   |   |   |   |   |   _matcheseventfilter.py
+|   |   |   |   |   |   _matchesfilter.py
+|   |   |   |   |   |   _matchessourceconfidence.py
+|   |   |   |   |   |   _placeprivate.py
+|   |   |   |   |   |   _regexpidof.py
+|   |   |   |   |   |   _withinarea.py
+|   |   |   |   |   |   __init__.py
+|   |   |   |   |   |   
+|   |   |   |   |   \---__pycache__
+|   |   |   |   |           _allplaces.cpython-314.pyc
+|   |   |   |   |           _changedsince.cpython-314.pyc
+|   |   |   |   |           _hascitation.cpython-314.pyc
+|   |   |   |   |           _hasdata.cpython-314.pyc
+|   |   |   |   |           _hasgallery.cpython-314.pyc
+|   |   |   |   |           _hasidof.cpython-314.pyc
+|   |   |   |   |           _hasnolatorlon.cpython-314.pyc
+|   |   |   |   |           _hasnote.cpython-314.pyc
+|   |   |   |   |           _hasnotematchingsubstringof.cpython-314.pyc
+|   |   |   |   |           _hasnoteregexp.cpython-314.pyc
+|   |   |   |   |           _hasnotetag.cpython-314.pyc
+|   |   |   |   |           _hasnotetype.cpython-314.pyc
+|   |   |   |   |           _hasplace.cpython-314.pyc
+|   |   |   |   |           _hasreferencecountof.cpython-314.pyc
+|   |   |   |   |           _hassourcecount.cpython-314.pyc
+|   |   |   |   |           _hassourceof.cpython-314.pyc
+|   |   |   |   |           _hastag.cpython-314.pyc
+|   |   |   |   |           _hastitle.cpython-314.pyc
+|   |   |   |   |           _inlatlonneighborhood.cpython-314.pyc
+|   |   |   |   |           _isenclosedby.cpython-314.pyc
+|   |   |   |   |           _matcheseventfilter.cpython-314.pyc
+|   |   |   |   |           _matchesfilter.cpython-314.pyc
+|   |   |   |   |           _matchessourceconfidence.cpython-314.pyc
+|   |   |   |   |           _placeprivate.cpython-314.pyc
+|   |   |   |   |           _regexpidof.cpython-314.pyc
+|   |   |   |   |           _withinarea.cpython-314.pyc
+|   |   |   |   |           __init__.cpython-314.pyc
+|   |   |   |   |           
+|   |   |   |   +---repository
+|   |   |   |   |   |   _allrepos.py
+|   |   |   |   |   |   _changedsince.py
+|   |   |   |   |   |   _hasattribute.py
+|   |   |   |   |   |   _hasidof.py
+|   |   |   |   |   |   _hasnotematchingsubstringof.py
+|   |   |   |   |   |   _hasnoteregexp.py
+|   |   |   |   |   |   _hasnotetag.py
+|   |   |   |   |   |   _hasnotetype.py
+|   |   |   |   |   |   _hasreferencecountof.py
+|   |   |   |   |   |   _hasrepo.py
+|   |   |   |   |   |   _hastag.py
+|   |   |   |   |   |   _matchesfilter.py
+|   |   |   |   |   |   _matchesnamesubstringof.py
+|   |   |   |   |   |   _regexpidof.py
+|   |   |   |   |   |   _repoprivate.py
+|   |   |   |   |   |   __init__.py
+|   |   |   |   |   |   
+|   |   |   |   |   \---__pycache__
+|   |   |   |   |           _allrepos.cpython-314.pyc
+|   |   |   |   |           _changedsince.cpython-314.pyc
+|   |   |   |   |           _hasattribute.cpython-314.pyc
+|   |   |   |   |           _hasidof.cpython-314.pyc
+|   |   |   |   |           _hasnotematchingsubstringof.cpython-314.pyc
+|   |   |   |   |           _hasnoteregexp.cpython-314.pyc
+|   |   |   |   |           _hasnotetag.cpython-314.pyc
+|   |   |   |   |           _hasnotetype.cpython-314.pyc
+|   |   |   |   |           _hasreferencecountof.cpython-314.pyc
+|   |   |   |   |           _hasrepo.cpython-314.pyc
+|   |   |   |   |           _hastag.cpython-314.pyc
+|   |   |   |   |           _matchesfilter.cpython-314.pyc
+|   |   |   |   |           _matchesnamesubstringof.cpython-314.pyc
+|   |   |   |   |           _regexpidof.cpython-314.pyc
+|   |   |   |   |           _repoprivate.cpython-314.pyc
+|   |   |   |   |           __init__.cpython-314.pyc
+|   |   |   |   |           
+|   |   |   |   +---source
+|   |   |   |   |   |   _allsources.py
+|   |   |   |   |   |   _changedsince.py
+|   |   |   |   |   |   _hasattribute.py
+|   |   |   |   |   |   _hasgallery.py
+|   |   |   |   |   |   _hasidof.py
+|   |   |   |   |   |   _hasnote.py
+|   |   |   |   |   |   _hasnotematchingsubstringof.py
+|   |   |   |   |   |   _hasnoteregexp.py
+|   |   |   |   |   |   _hasnotetag.py
+|   |   |   |   |   |   _hasnotetype.py
+|   |   |   |   |   |   _hasreferencecountof.py
+|   |   |   |   |   |   _hasrepository.py
+|   |   |   |   |   |   _hasrepositorycallnumberref.py
+|   |   |   |   |   |   _hassource.py
+|   |   |   |   |   |   _hastag.py
+|   |   |   |   |   |   _matchesfilter.py
+|   |   |   |   |   |   _matchesrepositoryfilter.py
+|   |   |   |   |   |   _matchestitlesubstringof.py
+|   |   |   |   |   |   _regexpidof.py
+|   |   |   |   |   |   _sourceprivate.py
+|   |   |   |   |   |   __init__.py
+|   |   |   |   |   |   
+|   |   |   |   |   \---__pycache__
+|   |   |   |   |           _allsources.cpython-314.pyc
+|   |   |   |   |           _changedsince.cpython-314.pyc
+|   |   |   |   |           _hasattribute.cpython-314.pyc
+|   |   |   |   |           _hasgallery.cpython-314.pyc
+|   |   |   |   |           _hasidof.cpython-314.pyc
+|   |   |   |   |           _hasnote.cpython-314.pyc
+|   |   |   |   |           _hasnotematchingsubstringof.cpython-314.pyc
+|   |   |   |   |           _hasnoteregexp.cpython-314.pyc
+|   |   |   |   |           _hasnotetag.cpython-314.pyc
+|   |   |   |   |           _hasnotetype.cpython-314.pyc
+|   |   |   |   |           _hasreferencecountof.cpython-314.pyc
+|   |   |   |   |           _hasrepository.cpython-314.pyc
+|   |   |   |   |           _hasrepositorycallnumberref.cpython-314.pyc
+|   |   |   |   |           _hassource.cpython-314.pyc
+|   |   |   |   |           _hastag.cpython-314.pyc
+|   |   |   |   |           _matchesfilter.cpython-314.pyc
+|   |   |   |   |           _matchesrepositoryfilter.cpython-314.pyc
+|   |   |   |   |           _matchestitlesubstringof.cpython-314.pyc
+|   |   |   |   |           _regexpidof.cpython-314.pyc
+|   |   |   |   |           _sourceprivate.cpython-314.pyc
+|   |   |   |   |           __init__.cpython-314.pyc
+|   |   |   |   |           
+|   |   |   |   +---test
+|   |   |   |   |       event_rules_test.py
+|   |   |   |   |       family_rules_test.py
+|   |   |   |   |       media_rules_test.py
+|   |   |   |   |       note_rules_test.py
+|   |   |   |   |       person_rules_test.py
+|   |   |   |   |       place_rules_test.py
+|   |   |   |   |       repository_rules_test.py
+|   |   |   |   |       __init__.py
+|   |   |   |   |       
+|   |   |   |   \---__pycache__
+|   |   |   |           _changedsincebase.cpython-314.pyc
+|   |   |   |           _everything.cpython-314.pyc
+|   |   |   |           _hasattributebase.cpython-314.pyc
+|   |   |   |           _hascitationbase.cpython-314.pyc
+|   |   |   |           _haseventbase.cpython-314.pyc
+|   |   |   |           _hasgallerybase.cpython-314.pyc
+|   |   |   |           _hasgrampsid.cpython-314.pyc
+|   |   |   |           _hasldsbase.cpython-314.pyc
+|   |   |   |           _hasnotebase.cpython-314.pyc
+|   |   |   |           _hasnoteregexbase.cpython-314.pyc
+|   |   |   |           _hasnotesubstrbase.cpython-314.pyc
+|   |   |   |           _hasnotetagbase.cpython-314.pyc
+|   |   |   |           _hasnotetypebase.cpython-314.pyc
+|   |   |   |           _hasreferencecountbase.cpython-314.pyc
+|   |   |   |           _hassourcebase.cpython-314.pyc
+|   |   |   |           _hassourcecountbase.cpython-314.pyc
+|   |   |   |           _hassourceofbase.cpython-314.pyc
+|   |   |   |           _hastagbase.cpython-314.pyc
+|   |   |   |           _hastextmatchingregexpof.cpython-314.pyc
+|   |   |   |           _hastextmatchingsubstringof.cpython-314.pyc
+|   |   |   |           _isprivate.cpython-314.pyc
+|   |   |   |           _ispublic.cpython-314.pyc
+|   |   |   |           _matchescitationfilterbase.cpython-314.pyc
+|   |   |   |           _matcheseventfilterbase.cpython-314.pyc
+|   |   |   |           _matchesfilterbase.cpython-314.pyc
+|   |   |   |           _matchessourceconfidencebase.cpython-314.pyc
+|   |   |   |           _matchessourcefilterbase.cpython-314.pyc
+|   |   |   |           _regexpidbase.cpython-314.pyc
+|   |   |   |           _rule.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---test
+|   |   |   |       filter_optimizer_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           optimizer.cpython-314.pyc
+|   |   |           _filterlist.cpython-314.pyc
+|   |   |           _filterparser.cpython-314.pyc
+|   |   |           _genericfilter.cpython-314.pyc
+|   |   |           _paramfilter.cpython-314.pyc
+|   |   |           _searchfilter.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---fs
+|   |   |   |   actions.py
+|   |   |   |   constants.py
+|   |   |   |   db_familysearch.py
+|   |   |   |   session.py
+|   |   |   |   sync_directions.py
+|   |   |   |   tags.py
+|   |   |   |   tree.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---compare
+|   |   |   |   |   aggregate.py
+|   |   |   |   |   comparators.py
+|   |   |   |   |   formatters.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   +---test
+|   |   |   |   |       comparators_test.py
+|   |   |   |   |       datmod_attr_test.py
+|   |   |   |   |       __init__.py
+|   |   |   |   |       
+|   |   |   |   \---__pycache__
+|   |   |   |           aggregate.cpython-314.pyc
+|   |   |   |           comparators.cpython-314.pyc
+|   |   |   |           formatters.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---fs_import
+|   |   |   |   |   deserializer.py
+|   |   |   |   |   events.py
+|   |   |   |   |   importer.py
+|   |   |   |   |   names.py
+|   |   |   |   |   notes.py
+|   |   |   |   |   places.py
+|   |   |   |   |   sources.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   +---test
+|   |   |   |   |       importer_test.py
+|   |   |   |   |       __init__.py
+|   |   |   |   |       
+|   |   |   |   \---__pycache__
+|   |   |   |           deserializer.cpython-314.pyc
+|   |   |   |           events.cpython-314.pyc
+|   |   |   |           importer.cpython-314.pyc
+|   |   |   |           names.cpython-314.pyc
+|   |   |   |           notes.cpython-314.pyc
+|   |   |   |           places.cpython-314.pyc
+|   |   |   |           sources.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---person
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   +---mixins
+|   |   |   |   |   |   cache.py
+|   |   |   |   |   |   helpers.py
+|   |   |   |   |   |   __init__.py
+|   |   |   |   |   |   
+|   |   |   |   |   +---test
+|   |   |   |   |   |       cache_test.py
+|   |   |   |   |   |       __init__.py
+|   |   |   |   |   |       
+|   |   |   |   |   \---__pycache__
+|   |   |   |   |           cache.cpython-314.pyc
+|   |   |   |   |           helpers.cpython-314.pyc
+|   |   |   |   |           __init__.cpython-314.pyc
+|   |   |   |   |           
+|   |   |   |   \---__pycache__
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---test
+|   |   |   |       tags_test.py
+|   |   |   |       tree_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   +---utils
+|   |   |   |   |   attributes.py
+|   |   |   |   |   dates.py
+|   |   |   |   |   events.py
+|   |   |   |   |   index.py
+|   |   |   |   |   linking.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           attributes.cpython-314.pyc
+|   |   |   |           dates.cpython-314.pyc
+|   |   |   |           events.cpython-314.pyc
+|   |   |   |           index.cpython-314.pyc
+|   |   |   |           linking.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   \---__pycache__
+|   |   |           actions.cpython-314.pyc
+|   |   |           constants.cpython-314.pyc
+|   |   |           db_familysearch.cpython-314.pyc
+|   |   |           session.cpython-314.pyc
+|   |   |           sync_directions.cpython-314.pyc
+|   |   |           tags.cpython-314.pyc
+|   |   |           tree.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---lib
+|   |   |   |   address.py
+|   |   |   |   addressbase.py
+|   |   |   |   attrbase.py
+|   |   |   |   attribute.py
+|   |   |   |   attrtype.py
+|   |   |   |   baseobj.py
+|   |   |   |   childref.py
+|   |   |   |   childreftype.py
+|   |   |   |   citation.py
+|   |   |   |   citationbase.py
+|   |   |   |   const.py
+|   |   |   |   date.py
+|   |   |   |   datebase.py
+|   |   |   |   event.py
+|   |   |   |   eventbase.py
+|   |   |   |   eventref.py
+|   |   |   |   eventroletype.py
+|   |   |   |   eventtype.py
+|   |   |   |   family.py
+|   |   |   |   familyreltype.py
+|   |   |   |   gcalendar.py
+|   |   |   |   genderstats.py
+|   |   |   |   grampstype.py
+|   |   |   |   json_utils.py
+|   |   |   |   ldsord.py
+|   |   |   |   ldsordbase.py
+|   |   |   |   location.py
+|   |   |   |   locationbase.py
+|   |   |   |   markertype.py
+|   |   |   |   media.py
+|   |   |   |   mediabase.py
+|   |   |   |   mediaref.py
+|   |   |   |   name.py
+|   |   |   |   nameorigintype.py
+|   |   |   |   nametype.py
+|   |   |   |   note.py
+|   |   |   |   notebase.py
+|   |   |   |   notetype.py
+|   |   |   |   person.py
+|   |   |   |   personref.py
+|   |   |   |   place.py
+|   |   |   |   placebase.py
+|   |   |   |   placename.py
+|   |   |   |   placeref.py
+|   |   |   |   placetype.py
+|   |   |   |   primaryobj.py
+|   |   |   |   privacybase.py
+|   |   |   |   refbase.py
+|   |   |   |   repo.py
+|   |   |   |   reporef.py
+|   |   |   |   repotype.py
+|   |   |   |   researcher.py
+|   |   |   |   secondaryobj.py
+|   |   |   |   serialize.py
+|   |   |   |   src.py
+|   |   |   |   srcattribute.py
+|   |   |   |   srcattrtype.py
+|   |   |   |   srcmediatype.py
+|   |   |   |   styledtext.py
+|   |   |   |   styledtexttag.py
+|   |   |   |   styledtexttagtype.py
+|   |   |   |   surname.py
+|   |   |   |   surnamebase.py
+|   |   |   |   tableobj.py
+|   |   |   |   tag.py
+|   |   |   |   tagbase.py
+|   |   |   |   url.py
+|   |   |   |   urlbase.py
+|   |   |   |   urltype.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---fs
+|   |   |   |   |   familysearchsync.py
+|   |   |   |   |   familysearchsyncbase.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           familysearchsync.cpython-314.pyc
+|   |   |   |           familysearchsyncbase.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---test
+|   |   |   |       datadict_test.py
+|   |   |   |       date_test.py
+|   |   |   |       family_referenced_handles_test.py
+|   |   |   |       grampstype_test.py
+|   |   |   |       handleref_test.py
+|   |   |   |       merge_test.py
+|   |   |   |       person_familysearchsync_test.py
+|   |   |   |       schema_test.py
+|   |   |   |       serialize_test.py
+|   |   |   |       styledtext_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           address.cpython-314.pyc
+|   |   |           addressbase.cpython-314.pyc
+|   |   |           attrbase.cpython-314.pyc
+|   |   |           attribute.cpython-314.pyc
+|   |   |           attrtype.cpython-314.pyc
+|   |   |           baseobj.cpython-314.pyc
+|   |   |           childref.cpython-314.pyc
+|   |   |           childreftype.cpython-314.pyc
+|   |   |           citation.cpython-314.pyc
+|   |   |           citationbase.cpython-314.pyc
+|   |   |           const.cpython-314.pyc
+|   |   |           date.cpython-314.pyc
+|   |   |           datebase.cpython-314.pyc
+|   |   |           event.cpython-314.pyc
+|   |   |           eventbase.cpython-314.pyc
+|   |   |           eventref.cpython-314.pyc
+|   |   |           eventroletype.cpython-314.pyc
+|   |   |           eventtype.cpython-314.pyc
+|   |   |           family.cpython-314.pyc
+|   |   |           familyreltype.cpython-314.pyc
+|   |   |           gcalendar.cpython-314.pyc
+|   |   |           genderstats.cpython-314.pyc
+|   |   |           grampstype.cpython-314.pyc
+|   |   |           json_utils.cpython-314.pyc
+|   |   |           ldsord.cpython-314.pyc
+|   |   |           ldsordbase.cpython-314.pyc
+|   |   |           location.cpython-314.pyc
+|   |   |           locationbase.cpython-314.pyc
+|   |   |           markertype.cpython-314.pyc
+|   |   |           media.cpython-314.pyc
+|   |   |           mediabase.cpython-314.pyc
+|   |   |           mediaref.cpython-314.pyc
+|   |   |           name.cpython-314.pyc
+|   |   |           nameorigintype.cpython-314.pyc
+|   |   |           nametype.cpython-314.pyc
+|   |   |           note.cpython-314.pyc
+|   |   |           notebase.cpython-314.pyc
+|   |   |           notetype.cpython-314.pyc
+|   |   |           person.cpython-314.pyc
+|   |   |           personref.cpython-314.pyc
+|   |   |           place.cpython-314.pyc
+|   |   |           placebase.cpython-314.pyc
+|   |   |           placename.cpython-314.pyc
+|   |   |           placeref.cpython-314.pyc
+|   |   |           placetype.cpython-314.pyc
+|   |   |           primaryobj.cpython-314.pyc
+|   |   |           privacybase.cpython-314.pyc
+|   |   |           refbase.cpython-314.pyc
+|   |   |           repo.cpython-314.pyc
+|   |   |           reporef.cpython-314.pyc
+|   |   |           repotype.cpython-314.pyc
+|   |   |           researcher.cpython-314.pyc
+|   |   |           secondaryobj.cpython-314.pyc
+|   |   |           serialize.cpython-314.pyc
+|   |   |           src.cpython-314.pyc
+|   |   |           srcattribute.cpython-314.pyc
+|   |   |           srcattrtype.cpython-314.pyc
+|   |   |           srcmediatype.cpython-314.pyc
+|   |   |           styledtext.cpython-314.pyc
+|   |   |           styledtexttag.cpython-314.pyc
+|   |   |           styledtexttagtype.cpython-314.pyc
+|   |   |           surname.cpython-314.pyc
+|   |   |           surnamebase.cpython-314.pyc
+|   |   |           tableobj.cpython-314.pyc
+|   |   |           tag.cpython-314.pyc
+|   |   |           tagbase.cpython-314.pyc
+|   |   |           url.cpython-314.pyc
+|   |   |           urlbase.cpython-314.pyc
+|   |   |           urltype.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---merge
+|   |   |   |   diff.py
+|   |   |   |   mergecitationquery.py
+|   |   |   |   mergeeventquery.py
+|   |   |   |   mergefamilyquery.py
+|   |   |   |   mergemediaquery.py
+|   |   |   |   mergenotequery.py
+|   |   |   |   mergepersonquery.py
+|   |   |   |   mergeplacequery.py
+|   |   |   |   mergerepositoryquery.py
+|   |   |   |   mergesourcequery.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---test
+|   |   |   |       merge_ref_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           mergecitationquery.cpython-314.pyc
+|   |   |           mergeeventquery.cpython-314.pyc
+|   |   |           mergefamilyquery.cpython-314.pyc
+|   |   |           mergemediaquery.cpython-314.pyc
+|   |   |           mergenotequery.cpython-314.pyc
+|   |   |           mergepersonquery.cpython-314.pyc
+|   |   |           mergeplacequery.cpython-314.pyc
+|   |   |           mergerepositoryquery.cpython-314.pyc
+|   |   |           mergesourcequery.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---mime
+|   |   |   |   _pythonmime.py
+|   |   |   |   _winmime.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           _pythonmime.cpython-314.pyc
+|   |   |           _winmime.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---plug
+|   |   |   |   utils.py
+|   |   |   |   _docgenplugin.py
+|   |   |   |   _export.py
+|   |   |   |   _gramplet.py
+|   |   |   |   _import.py
+|   |   |   |   _manager.py
+|   |   |   |   _options.py
+|   |   |   |   _plugin.py
+|   |   |   |   _pluginreg.py
+|   |   |   |   _thumbnailer.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---docbackend
+|   |   |   |       cairobackend.py
+|   |   |   |       docbackend.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   +---docgen
+|   |   |   |   |   basedoc.py
+|   |   |   |   |   drawdoc.py
+|   |   |   |   |   fontscale.py
+|   |   |   |   |   fontstyle.py
+|   |   |   |   |   graphdoc.py
+|   |   |   |   |   graphicstyle.py
+|   |   |   |   |   paperstyle.py
+|   |   |   |   |   paragraphstyle.py
+|   |   |   |   |   stylesheet.py
+|   |   |   |   |   tablestyle.py
+|   |   |   |   |   textdoc.py
+|   |   |   |   |   treedoc.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   +---test
+|   |   |   |   |       graphdoc_test.py
+|   |   |   |   |       __init__.py
+|   |   |   |   |       
+|   |   |   |   \---__pycache__
+|   |   |   |           basedoc.cpython-314.pyc
+|   |   |   |           drawdoc.cpython-314.pyc
+|   |   |   |           fontscale.cpython-314.pyc
+|   |   |   |           fontstyle.cpython-314.pyc
+|   |   |   |           graphdoc.cpython-314.pyc
+|   |   |   |           graphicstyle.cpython-314.pyc
+|   |   |   |           paperstyle.cpython-314.pyc
+|   |   |   |           paragraphstyle.cpython-314.pyc
+|   |   |   |           stylesheet.cpython-314.pyc
+|   |   |   |           tablestyle.cpython-314.pyc
+|   |   |   |           textdoc.cpython-314.pyc
+|   |   |   |           treedoc.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---menu
+|   |   |   |   |   _boolean.py
+|   |   |   |   |   _booleanlist.py
+|   |   |   |   |   _color.py
+|   |   |   |   |   _destination.py
+|   |   |   |   |   _enumeratedlist.py
+|   |   |   |   |   _family.py
+|   |   |   |   |   _filter.py
+|   |   |   |   |   _media.py
+|   |   |   |   |   _menu.py
+|   |   |   |   |   _note.py
+|   |   |   |   |   _number.py
+|   |   |   |   |   _option.py
+|   |   |   |   |   _person.py
+|   |   |   |   |   _personlist.py
+|   |   |   |   |   _placelist.py
+|   |   |   |   |   _string.py
+|   |   |   |   |   _style.py
+|   |   |   |   |   _surnamecolor.py
+|   |   |   |   |   _text.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           _boolean.cpython-314.pyc
+|   |   |   |           _booleanlist.cpython-314.pyc
+|   |   |   |           _color.cpython-314.pyc
+|   |   |   |           _destination.cpython-314.pyc
+|   |   |   |           _enumeratedlist.cpython-314.pyc
+|   |   |   |           _family.cpython-314.pyc
+|   |   |   |           _filter.cpython-314.pyc
+|   |   |   |           _media.cpython-314.pyc
+|   |   |   |           _menu.cpython-314.pyc
+|   |   |   |           _note.cpython-314.pyc
+|   |   |   |           _number.cpython-314.pyc
+|   |   |   |           _option.cpython-314.pyc
+|   |   |   |           _person.cpython-314.pyc
+|   |   |   |           _personlist.cpython-314.pyc
+|   |   |   |           _placelist.cpython-314.pyc
+|   |   |   |           _string.cpython-314.pyc
+|   |   |   |           _style.cpython-314.pyc
+|   |   |   |           _surnamecolor.cpython-314.pyc
+|   |   |   |           _text.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---report
+|   |   |   |   |   endnotes.py
+|   |   |   |   |   stdoptions.py
+|   |   |   |   |   utils.py
+|   |   |   |   |   _bibliography.py
+|   |   |   |   |   _book.py
+|   |   |   |   |   _constants.py
+|   |   |   |   |   _options.py
+|   |   |   |   |   _paper.py
+|   |   |   |   |   _reportbase.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           utils.cpython-314.pyc
+|   |   |   |           _bibliography.cpython-314.pyc
+|   |   |   |           _book.cpython-314.pyc
+|   |   |   |           _constants.cpython-314.pyc
+|   |   |   |           _options.cpython-314.pyc
+|   |   |   |           _paper.cpython-314.pyc
+|   |   |   |           _reportbase.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---test
+|   |   |   |       _manager_symlinks_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           utils.cpython-314.pyc
+|   |   |           _docgenplugin.cpython-314.pyc
+|   |   |           _export.cpython-314.pyc
+|   |   |           _gramplet.cpython-314.pyc
+|   |   |           _import.cpython-314.pyc
+|   |   |           _manager.cpython-314.pyc
+|   |   |           _options.cpython-314.pyc
+|   |   |           _plugin.cpython-314.pyc
+|   |   |           _pluginreg.cpython-314.pyc
+|   |   |           _thumbnailer.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---proxy
+|   |   |   |   cache.py
+|   |   |   |   filter.py
+|   |   |   |   living.py
+|   |   |   |   private.py
+|   |   |   |   proxybase.py
+|   |   |   |   referencedbyselection.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---test
+|   |   |   |       proxies_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           cache.cpython-314.pyc
+|   |   |           filter.cpython-314.pyc
+|   |   |           living.cpython-314.pyc
+|   |   |           private.cpython-314.pyc
+|   |   |           proxybase.cpython-314.pyc
+|   |   |           referencedbyselection.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---simple
+|   |   |   |   _simpleaccess.py
+|   |   |   |   _simpledoc.py
+|   |   |   |   _simpletable.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           _simpleaccess.cpython-314.pyc
+|   |   |           _simpledoc.cpython-314.pyc
+|   |   |           _simpletable.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---test
+|   |   |       config_test.py
+|   |   |       constfunc_test.py
+|   |   |       __init__.py
+|   |   |       
+|   |   +---utils
+|   |   |   |   alive.py
+|   |   |   |   callback.py
+|   |   |   |   callman.py
+|   |   |   |   cast.py
+|   |   |   |   config.py
+|   |   |   |   configmanager.py
+|   |   |   |   db.py
+|   |   |   |   debug.py
+|   |   |   |   file.py
+|   |   |   |   grampslocale.py
+|   |   |   |   grampstranslation.py
+|   |   |   |   id.py
+|   |   |   |   image.py
+|   |   |   |   keyword.py
+|   |   |   |   lds.py
+|   |   |   |   libformatting.py
+|   |   |   |   location.py
+|   |   |   |   lru.py
+|   |   |   |   maclocale.py
+|   |   |   |   place.py
+|   |   |   |   pypi.py
+|   |   |   |   requirements.py
+|   |   |   |   resourcepath.py
+|   |   |   |   string.py
+|   |   |   |   symbols.py
+|   |   |   |   thumbnails.py
+|   |   |   |   unittest.py
+|   |   |   |   unknown.py
+|   |   |   |   win32locale.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---docgen
+|   |   |   |       csvtab.py
+|   |   |   |       odstab.py
+|   |   |   |       tabbeddoc.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   +---test
+|   |   |   |   |   alive_test.py
+|   |   |   |   |   callback_test.py
+|   |   |   |   |   file_test.py
+|   |   |   |   |   grampslocale_test.py
+|   |   |   |   |   keyword_test.py
+|   |   |   |   |   maclocale_test.py
+|   |   |   |   |   place_test.py
+|   |   |   |   |   pypi_e2e_test.py
+|   |   |   |   |   pypi_test.py
+|   |   |   |   |   requirements_test.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---locale
+|   |   |   |       \---fr
+|   |   |   |           \---LC_MESSAGES
+|   |   |   |                   addon.mo
+|   |   |   |                   addon.po
+|   |   |   |                   
+|   |   |   \---__pycache__
+|   |   |           alive.cpython-314.pyc
+|   |   |           callback.cpython-314.pyc
+|   |   |           callman.cpython-314.pyc
+|   |   |           cast.cpython-314.pyc
+|   |   |           config.cpython-314.pyc
+|   |   |           configmanager.cpython-314.pyc
+|   |   |           db.cpython-314.pyc
+|   |   |           debug.cpython-314.pyc
+|   |   |           file.cpython-314.pyc
+|   |   |           grampslocale.cpython-314.pyc
+|   |   |           grampstranslation.cpython-314.pyc
+|   |   |           id.cpython-314.pyc
+|   |   |           keyword.cpython-314.pyc
+|   |   |           lds.cpython-314.pyc
+|   |   |           libformatting.cpython-314.pyc
+|   |   |           location.cpython-314.pyc
+|   |   |           lru.cpython-314.pyc
+|   |   |           place.cpython-314.pyc
+|   |   |           pypi.cpython-314.pyc
+|   |   |           requirements.cpython-314.pyc
+|   |   |           resourcepath.cpython-314.pyc
+|   |   |           string.cpython-314.pyc
+|   |   |           symbols.cpython-314.pyc
+|   |   |           thumbnails.cpython-314.pyc
+|   |   |           win32locale.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           config.cpython-314.pyc
+|   |           const.cpython-314.pyc
+|   |           constfunc.cpython-314.pyc
+|   |           dbstate.cpython-314.pyc
+|   |           errors.cpython-314.pyc
+|   |           git_revision.cpython-314.pyc
+|   |           recentfiles.cpython-314.pyc
+|   |           relationship.cpython-314.pyc
+|   |           soundex.cpython-314.pyc
+|   |           types.cpython-314.pyc
+|   |           updatecallback.cpython-314.pyc
+|   |           user.cpython-314.pyc
+|   |           __init__.cpython-314.pyc
+|   |           
+|   +---gui
+|   |   |   aboutdialog.py
+|   |   |   autocomp.py
+|   |   |   basesidebar.py
+|   |   |   clipboard.py
+|   |   |   columnorder.py
+|   |   |   configure.py
+|   |   |   csvdialect.py
+|   |   |   dbguielement.py
+|   |   |   dbloader.py
+|   |   |   dbman.py
+|   |   |   ddtargets.py
+|   |   |   dialog.py
+|   |   |   display.py
+|   |   |   displaystate.py
+|   |   |   glade.py
+|   |   |   grampsgui.py
+|   |   |   listmodel.py
+|   |   |   makefilter.py
+|   |   |   managedwindow.py
+|   |   |   navigator.py
+|   |   |   pluginmanager.py
+|   |   |   spell.py
+|   |   |   tipofday.py
+|   |   |   uimanager.py
+|   |   |   undohistory.py
+|   |   |   user.py
+|   |   |   utils.py
+|   |   |   utilscairo.py
+|   |   |   viewmanager.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---editors
+|   |   |   |   addmedia.py
+|   |   |   |   editaddress.py
+|   |   |   |   editattribute.py
+|   |   |   |   editchildref.py
+|   |   |   |   editcitation.py
+|   |   |   |   editdate.py
+|   |   |   |   editevent.py
+|   |   |   |   editeventref.py
+|   |   |   |   editfamily.py
+|   |   |   |   editldsord.py
+|   |   |   |   editlink.py
+|   |   |   |   editlocation.py
+|   |   |   |   editmedia.py
+|   |   |   |   editmediaref.py
+|   |   |   |   editname.py
+|   |   |   |   editnote.py
+|   |   |   |   editperson.py
+|   |   |   |   editpersonref.py
+|   |   |   |   editplace.py
+|   |   |   |   editplaceformat.py
+|   |   |   |   editplacename.py
+|   |   |   |   editplaceref.py
+|   |   |   |   editprimary.py
+|   |   |   |   editreference.py
+|   |   |   |   editreporef.py
+|   |   |   |   editrepository.py
+|   |   |   |   editsecondary.py
+|   |   |   |   editsource.py
+|   |   |   |   edittaglist.py
+|   |   |   |   editurl.py
+|   |   |   |   filtereditor.py
+|   |   |   |   objectentries.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---displaytabs
+|   |   |   |   |   addrembedlist.py
+|   |   |   |   |   addressmodel.py
+|   |   |   |   |   attrembedlist.py
+|   |   |   |   |   attrmodel.py
+|   |   |   |   |   backreflist.py
+|   |   |   |   |   backrefmodel.py
+|   |   |   |   |   buttontab.py
+|   |   |   |   |   childmodel.py
+|   |   |   |   |   citationbackreflist.py
+|   |   |   |   |   citationembedlist.py
+|   |   |   |   |   citationrefmodel.py
+|   |   |   |   |   embeddedlist.py
+|   |   |   |   |   eventattrembedlist.py
+|   |   |   |   |   eventbackreflist.py
+|   |   |   |   |   eventembedlist.py
+|   |   |   |   |   eventrefmodel.py
+|   |   |   |   |   familyattrembedlist.py
+|   |   |   |   |   familybackreflist.py
+|   |   |   |   |   familyldsembedlist.py
+|   |   |   |   |   gallerytab.py
+|   |   |   |   |   grampstab.py
+|   |   |   |   |   groupembeddedlist.py
+|   |   |   |   |   ldsembedlist.py
+|   |   |   |   |   ldsmodel.py
+|   |   |   |   |   locationembedlist.py
+|   |   |   |   |   locationmodel.py
+|   |   |   |   |   mediaattrembedlist.py
+|   |   |   |   |   mediabackreflist.py
+|   |   |   |   |   nameembedlist.py
+|   |   |   |   |   namemodel.py
+|   |   |   |   |   notebackreflist.py
+|   |   |   |   |   notemodel.py
+|   |   |   |   |   notetab.py
+|   |   |   |   |   personbackreflist.py
+|   |   |   |   |   personeventembedlist.py
+|   |   |   |   |   personrefembedlist.py
+|   |   |   |   |   personrefmodel.py
+|   |   |   |   |   placebackreflist.py
+|   |   |   |   |   placenameembedlist.py
+|   |   |   |   |   placenamemodel.py
+|   |   |   |   |   placerefembedlist.py
+|   |   |   |   |   placerefmodel.py
+|   |   |   |   |   repoembedlist.py
+|   |   |   |   |   reporefmodel.py
+|   |   |   |   |   sourcebackreflist.py
+|   |   |   |   |   srcattrembedlist.py
+|   |   |   |   |   srcattrmodel.py
+|   |   |   |   |   surnamemodel.py
+|   |   |   |   |   surnametab.py
+|   |   |   |   |   webembedlist.py
+|   |   |   |   |   webmodel.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   +---test
+|   |   |   |   |       gallerytab_test.py
+|   |   |   |   |       __init__.py
+|   |   |   |   |       
+|   |   |   |   \---__pycache__
+|   |   |   |           addrembedlist.cpython-314.pyc
+|   |   |   |           addressmodel.cpython-314.pyc
+|   |   |   |           attrembedlist.cpython-314.pyc
+|   |   |   |           attrmodel.cpython-314.pyc
+|   |   |   |           backreflist.cpython-314.pyc
+|   |   |   |           backrefmodel.cpython-314.pyc
+|   |   |   |           buttontab.cpython-314.pyc
+|   |   |   |           childmodel.cpython-314.pyc
+|   |   |   |           citationbackreflist.cpython-314.pyc
+|   |   |   |           citationembedlist.cpython-314.pyc
+|   |   |   |           citationrefmodel.cpython-314.pyc
+|   |   |   |           embeddedlist.cpython-314.pyc
+|   |   |   |           eventattrembedlist.cpython-314.pyc
+|   |   |   |           eventbackreflist.cpython-314.pyc
+|   |   |   |           eventembedlist.cpython-314.pyc
+|   |   |   |           eventrefmodel.cpython-314.pyc
+|   |   |   |           familyattrembedlist.cpython-314.pyc
+|   |   |   |           familybackreflist.cpython-314.pyc
+|   |   |   |           familyldsembedlist.cpython-314.pyc
+|   |   |   |           gallerytab.cpython-314.pyc
+|   |   |   |           grampstab.cpython-314.pyc
+|   |   |   |           groupembeddedlist.cpython-314.pyc
+|   |   |   |           ldsembedlist.cpython-314.pyc
+|   |   |   |           ldsmodel.cpython-314.pyc
+|   |   |   |           locationembedlist.cpython-314.pyc
+|   |   |   |           locationmodel.cpython-314.pyc
+|   |   |   |           mediaattrembedlist.cpython-314.pyc
+|   |   |   |           mediabackreflist.cpython-314.pyc
+|   |   |   |           nameembedlist.cpython-314.pyc
+|   |   |   |           namemodel.cpython-314.pyc
+|   |   |   |           notebackreflist.cpython-314.pyc
+|   |   |   |           notemodel.cpython-314.pyc
+|   |   |   |           notetab.cpython-314.pyc
+|   |   |   |           personbackreflist.cpython-314.pyc
+|   |   |   |           personeventembedlist.cpython-314.pyc
+|   |   |   |           personrefembedlist.cpython-314.pyc
+|   |   |   |           personrefmodel.cpython-314.pyc
+|   |   |   |           placebackreflist.cpython-314.pyc
+|   |   |   |           placenameembedlist.cpython-314.pyc
+|   |   |   |           placenamemodel.cpython-314.pyc
+|   |   |   |           placerefembedlist.cpython-314.pyc
+|   |   |   |           placerefmodel.cpython-314.pyc
+|   |   |   |           repoembedlist.cpython-314.pyc
+|   |   |   |           reporefmodel.cpython-314.pyc
+|   |   |   |           sourcebackreflist.cpython-314.pyc
+|   |   |   |           srcattrembedlist.cpython-314.pyc
+|   |   |   |           srcattrmodel.cpython-314.pyc
+|   |   |   |           surnamemodel.cpython-314.pyc
+|   |   |   |           surnametab.cpython-314.pyc
+|   |   |   |           webembedlist.cpython-314.pyc
+|   |   |   |           webmodel.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---test
+|   |   |   |       editreference_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           addmedia.cpython-314.pyc
+|   |   |           editaddress.cpython-314.pyc
+|   |   |           editattribute.cpython-314.pyc
+|   |   |           editchildref.cpython-314.pyc
+|   |   |           editcitation.cpython-314.pyc
+|   |   |           editdate.cpython-314.pyc
+|   |   |           editevent.cpython-314.pyc
+|   |   |           editeventref.cpython-314.pyc
+|   |   |           editfamily.cpython-314.pyc
+|   |   |           editldsord.cpython-314.pyc
+|   |   |           editlink.cpython-314.pyc
+|   |   |           editlocation.cpython-314.pyc
+|   |   |           editmedia.cpython-314.pyc
+|   |   |           editmediaref.cpython-314.pyc
+|   |   |           editname.cpython-314.pyc
+|   |   |           editnote.cpython-314.pyc
+|   |   |           editperson.cpython-314.pyc
+|   |   |           editpersonref.cpython-314.pyc
+|   |   |           editplace.cpython-314.pyc
+|   |   |           editplaceformat.cpython-314.pyc
+|   |   |           editplacename.cpython-314.pyc
+|   |   |           editplaceref.cpython-314.pyc
+|   |   |           editprimary.cpython-314.pyc
+|   |   |           editreference.cpython-314.pyc
+|   |   |           editreporef.cpython-314.pyc
+|   |   |           editrepository.cpython-314.pyc
+|   |   |           editsecondary.cpython-314.pyc
+|   |   |           editsource.cpython-314.pyc
+|   |   |           edittaglist.cpython-314.pyc
+|   |   |           editurl.cpython-314.pyc
+|   |   |           filtereditor.cpython-314.pyc
+|   |   |           objectentries.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---filters
+|   |   |   |   _filtercombobox.py
+|   |   |   |   _filtermenu.py
+|   |   |   |   _filterstore.py
+|   |   |   |   _searchbar.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---sidebar
+|   |   |   |   |   _citationsidebarfilter.py
+|   |   |   |   |   _eventsidebarfilter.py
+|   |   |   |   |   _familysidebarfilter.py
+|   |   |   |   |   _mediasidebarfilter.py
+|   |   |   |   |   _notesidebarfilter.py
+|   |   |   |   |   _personsidebarfilter.py
+|   |   |   |   |   _placesidebarfilter.py
+|   |   |   |   |   _reposidebarfilter.py
+|   |   |   |   |   _sidebarfilter.py
+|   |   |   |   |   _sourcesidebarfilter.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           _citationsidebarfilter.cpython-314.pyc
+|   |   |   |           _eventsidebarfilter.cpython-314.pyc
+|   |   |   |           _familysidebarfilter.cpython-314.pyc
+|   |   |   |           _mediasidebarfilter.cpython-314.pyc
+|   |   |   |           _notesidebarfilter.cpython-314.pyc
+|   |   |   |           _personsidebarfilter.cpython-314.pyc
+|   |   |   |           _placesidebarfilter.cpython-314.pyc
+|   |   |   |           _reposidebarfilter.cpython-314.pyc
+|   |   |   |           _sidebarfilter.cpython-314.pyc
+|   |   |   |           _sourcesidebarfilter.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   \---__pycache__
+|   |   |           _filtercombobox.cpython-314.pyc
+|   |   |           _filtermenu.cpython-314.pyc
+|   |   |           _filterstore.cpython-314.pyc
+|   |   |           _searchbar.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---fs
+|   |   |   |   actions.py
+|   |   |   |   constants.py
+|   |   |   |   db_familysearch.py
+|   |   |   |   fs_source_image.py
+|   |   |   |   manager.py
+|   |   |   |   session.py
+|   |   |   |   sync_directions.py
+|   |   |   |   tags.py
+|   |   |   |   tools_window.py
+|   |   |   |   ui.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---compare
+|   |   |   |   |   options.py
+|   |   |   |   |   window.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           options.cpython-314.pyc
+|   |   |   |           window.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---fs_import
+|   |   |   |   |   importer.py
+|   |   |   |   |   options.py
+|   |   |   |   |   tool.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           importer.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---person
+|   |   |   |   |   fsg_sync.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   +---mixins
+|   |   |   |   |   |   compare_gtk.py
+|   |   |   |   |   |   helpers.py
+|   |   |   |   |   |   sources_dialog.py
+|   |   |   |   |   |   source_import.py
+|   |   |   |   |   |   __init__.py
+|   |   |   |   |   |   
+|   |   |   |   |   +---test
+|   |   |   |   |   |       __init__.py
+|   |   |   |   |   |       
+|   |   |   |   |   \---__pycache__
+|   |   |   |   |           compare_gtk.cpython-314.pyc
+|   |   |   |   |           helpers.cpython-314.pyc
+|   |   |   |   |           sources_dialog.cpython-314.pyc
+|   |   |   |   |           source_import.cpython-314.pyc
+|   |   |   |   |           __init__.cpython-314.pyc
+|   |   |   |   |           
+|   |   |   |   \---__pycache__
+|   |   |   |           fsg_sync.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---test
+|   |   |   |       compare_gtk_test.py
+|   |   |   |       manager_test.py
+|   |   |   |       
+|   |   |   +---utils
+|   |   |   |   |   index.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           index.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   \---__pycache__
+|   |   |           actions.cpython-314.pyc
+|   |   |           fs_source_image.cpython-314.pyc
+|   |   |           manager.cpython-314.pyc
+|   |   |           session.cpython-314.pyc
+|   |   |           sync_directions.cpython-314.pyc
+|   |   |           tags.cpython-314.pyc
+|   |   |           tools_window.cpython-314.pyc
+|   |   |           ui.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---glade
+|   |   |   |   addmedia.glade
+|   |   |   |   baseselector.glade
+|   |   |   |   book.glade
+|   |   |   |   clipboard.glade
+|   |   |   |   configure.glade
+|   |   |   |   dbman.glade
+|   |   |   |   dialog.glade
+|   |   |   |   displaystate.glade
+|   |   |   |   editaddress.glade
+|   |   |   |   editattribute.glade
+|   |   |   |   editchildref.glade
+|   |   |   |   editcitation.glade
+|   |   |   |   editdate.glade
+|   |   |   |   editevent.glade
+|   |   |   |   editeventref.glade
+|   |   |   |   editfamily.glade
+|   |   |   |   editldsord.glade
+|   |   |   |   editlink.glade
+|   |   |   |   editlocation.glade
+|   |   |   |   editmedia.glade
+|   |   |   |   editmediaref.glade
+|   |   |   |   editname.glade
+|   |   |   |   editnote.glade
+|   |   |   |   editperson.glade
+|   |   |   |   editpersonref.glade
+|   |   |   |   editplace.glade
+|   |   |   |   editplaceformat.glade
+|   |   |   |   editplacename.glade
+|   |   |   |   editplaceref.glade
+|   |   |   |   editreporef.glade
+|   |   |   |   editrepository.glade
+|   |   |   |   editsource.glade
+|   |   |   |   editurl.glade
+|   |   |   |   grampletpane.glade
+|   |   |   |   gramps.glade
+|   |   |   |   mergecitation.glade
+|   |   |   |   mergedata.glade
+|   |   |   |   mergeevent.glade
+|   |   |   |   mergefamily.glade
+|   |   |   |   mergemedia.glade
+|   |   |   |   mergenote.glade
+|   |   |   |   mergeperson.glade
+|   |   |   |   mergeplace.glade
+|   |   |   |   mergerepository.glade
+|   |   |   |   mergesource.glade
+|   |   |   |   papermenu.glade
+|   |   |   |   plugins.glade
+|   |   |   |   reorder.glade
+|   |   |   |   rule.glade
+|   |   |   |   styleeditor.glade
+|   |   |   |   tipofday.glade
+|   |   |   |   updateaddons.glade
+|   |   |   |   
+|   |   |   \---catalog
+|   |   |           grampswidgets.py
+|   |   |           grampswidgets.xml
+|   |   |           README
+|   |   |           
+|   |   +---logger
+|   |   |   |   _errorreportassistant.py
+|   |   |   |   _errorview.py
+|   |   |   |   _gtkhandler.py
+|   |   |   |   _rotatehandler.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---test
+|   |   |   |       rotate_handler_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           _errorreportassistant.cpython-314.pyc
+|   |   |           _errorview.cpython-314.pyc
+|   |   |           _gtkhandler.cpython-314.pyc
+|   |   |           _rotatehandler.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---merge
+|   |   |   |   mergecitation.py
+|   |   |   |   mergeevent.py
+|   |   |   |   mergefamily.py
+|   |   |   |   mergemedia.py
+|   |   |   |   mergenote.py
+|   |   |   |   mergeperson.py
+|   |   |   |   mergeplace.py
+|   |   |   |   mergerepository.py
+|   |   |   |   mergesource.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           mergecitation.cpython-314.pyc
+|   |   |           mergeevent.cpython-314.pyc
+|   |   |           mergefamily.cpython-314.pyc
+|   |   |           mergemedia.cpython-314.pyc
+|   |   |           mergenote.cpython-314.pyc
+|   |   |           mergeperson.cpython-314.pyc
+|   |   |           mergeplace.cpython-314.pyc
+|   |   |           mergerepository.cpython-314.pyc
+|   |   |           mergesource.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---plug
+|   |   |   |   tool.py
+|   |   |   |   _dialogs.py
+|   |   |   |   _guioptions.py
+|   |   |   |   _windows.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---export
+|   |   |   |   |   _exportassistant.py
+|   |   |   |   |   _exportoptions.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           _exportassistant.cpython-314.pyc
+|   |   |   |           _exportoptions.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---quick
+|   |   |   |   |   _quickreports.py
+|   |   |   |   |   _quicktable.py
+|   |   |   |   |   _textbufdoc.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           _quickreports.cpython-314.pyc
+|   |   |   |           _quicktable.cpython-314.pyc
+|   |   |   |           _textbufdoc.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---report
+|   |   |   |   |   _bookdialog.py
+|   |   |   |   |   _docreportdialog.py
+|   |   |   |   |   _drawreportdialog.py
+|   |   |   |   |   _fileentry.py
+|   |   |   |   |   _graphreportdialog.py
+|   |   |   |   |   _graphvizreportdialog.py
+|   |   |   |   |   _papermenu.py
+|   |   |   |   |   _reportdialog.py
+|   |   |   |   |   _stylecombobox.py
+|   |   |   |   |   _styleeditor.py
+|   |   |   |   |   _textreportdialog.py
+|   |   |   |   |   _treereportdialog.py
+|   |   |   |   |   _webreportdialog.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           _bookdialog.cpython-314.pyc
+|   |   |   |           _docreportdialog.cpython-314.pyc
+|   |   |   |           _drawreportdialog.cpython-314.pyc
+|   |   |   |           _fileentry.cpython-314.pyc
+|   |   |   |           _papermenu.cpython-314.pyc
+|   |   |   |           _reportdialog.cpython-314.pyc
+|   |   |   |           _stylecombobox.cpython-314.pyc
+|   |   |   |           _styleeditor.cpython-314.pyc
+|   |   |   |           _textreportdialog.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   +---test
+|   |   |   |       windows_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           tool.cpython-314.pyc
+|   |   |           _dialogs.cpython-314.pyc
+|   |   |           _guioptions.cpython-314.pyc
+|   |   |           _windows.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---selectors
+|   |   |   |   baseselector.py
+|   |   |   |   selectcitation.py
+|   |   |   |   selectevent.py
+|   |   |   |   selectfamily.py
+|   |   |   |   selectnote.py
+|   |   |   |   selectobject.py
+|   |   |   |   selectorexceptions.py
+|   |   |   |   selectorfactory.py
+|   |   |   |   selectperson.py
+|   |   |   |   selectplace.py
+|   |   |   |   selectrepository.py
+|   |   |   |   selectsource.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           baseselector.cpython-314.pyc
+|   |   |           selectorexceptions.cpython-314.pyc
+|   |   |           selectorfactory.cpython-314.pyc
+|   |   |           selectperson.cpython-314.pyc
+|   |   |           selectplace.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---test
+|   |   |       display_test.py
+|   |   |       user_test.py
+|   |   |       utils_test.py
+|   |   |       viewmanager_fs_test.py
+|   |   |       __init__.py
+|   |   |       
+|   |   +---views
+|   |   |   |   bookmarks.py
+|   |   |   |   listview.py
+|   |   |   |   navigationview.py
+|   |   |   |   pageview.py
+|   |   |   |   tags.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---treemodels
+|   |   |   |   |   basemodel.py
+|   |   |   |   |   citationbasemodel.py
+|   |   |   |   |   citationlistmodel.py
+|   |   |   |   |   citationtreemodel.py
+|   |   |   |   |   eventmodel.py
+|   |   |   |   |   familymodel.py
+|   |   |   |   |   flatbasemodel.py
+|   |   |   |   |   mediamodel.py
+|   |   |   |   |   notemodel.py
+|   |   |   |   |   peoplemodel.py
+|   |   |   |   |   placemodel.py
+|   |   |   |   |   repomodel.py
+|   |   |   |   |   sourcemodel.py
+|   |   |   |   |   treebasemodel.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   +---test
+|   |   |   |   |       node_test.py
+|   |   |   |   |       treebasemodel_test.py
+|   |   |   |   |       __init__.py
+|   |   |   |   |       
+|   |   |   |   \---__pycache__
+|   |   |   |           basemodel.cpython-314.pyc
+|   |   |   |           citationbasemodel.cpython-314.pyc
+|   |   |   |           citationlistmodel.cpython-314.pyc
+|   |   |   |           citationtreemodel.cpython-314.pyc
+|   |   |   |           eventmodel.cpython-314.pyc
+|   |   |   |           familymodel.cpython-314.pyc
+|   |   |   |           flatbasemodel.cpython-314.pyc
+|   |   |   |           mediamodel.cpython-314.pyc
+|   |   |   |           notemodel.cpython-314.pyc
+|   |   |   |           peoplemodel.cpython-314.pyc
+|   |   |   |           placemodel.cpython-314.pyc
+|   |   |   |           repomodel.cpython-314.pyc
+|   |   |   |           sourcemodel.cpython-314.pyc
+|   |   |   |           treebasemodel.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   \---__pycache__
+|   |   |           bookmarks.cpython-314.pyc
+|   |   |           listview.cpython-314.pyc
+|   |   |           navigationview.cpython-314.pyc
+|   |   |           pageview.cpython-314.pyc
+|   |   |           tags.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---widgets
+|   |   |   |   basicentry.py
+|   |   |   |   buttons.py
+|   |   |   |   cellrenderertextedit.py
+|   |   |   |   dateentry.py
+|   |   |   |   expandcollapsearrow.py
+|   |   |   |   fanchart.py
+|   |   |   |   fanchart2way.py
+|   |   |   |   fanchartdesc.py
+|   |   |   |   grabbers.py
+|   |   |   |   grampletbar.py
+|   |   |   |   grampletpane.py
+|   |   |   |   histogram.py
+|   |   |   |   interactivesearchbox.py
+|   |   |   |   labels.py
+|   |   |   |   linkbox.py
+|   |   |   |   menuitem.py
+|   |   |   |   monitoredwidgets.py
+|   |   |   |   multitreeview.py
+|   |   |   |   persistenttreeview.py
+|   |   |   |   photo.py
+|   |   |   |   placeentry.py
+|   |   |   |   placewithin.py
+|   |   |   |   progressdialog.py
+|   |   |   |   reorderfam.py
+|   |   |   |   selectionwidget.py
+|   |   |   |   shadebox.py
+|   |   |   |   shortlistcomboentry.py
+|   |   |   |   statusbar.py
+|   |   |   |   styledtextbuffer.py
+|   |   |   |   styledtexteditor.py
+|   |   |   |   undoablebuffer.py
+|   |   |   |   undoableentry.py
+|   |   |   |   undoablestyledbuffer.py
+|   |   |   |   validatedcomboentry.py
+|   |   |   |   validatedmaskedentry.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---test
+|   |   |   |       fanchart_test.py
+|   |   |   |       selectionwidget_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           basicentry.cpython-314.pyc
+|   |   |           buttons.cpython-314.pyc
+|   |   |           cellrenderertextedit.cpython-314.pyc
+|   |   |           dateentry.cpython-314.pyc
+|   |   |           expandcollapsearrow.cpython-314.pyc
+|   |   |           fanchart.cpython-314.pyc
+|   |   |           fanchart2way.cpython-314.pyc
+|   |   |           fanchartdesc.cpython-314.pyc
+|   |   |           grabbers.cpython-314.pyc
+|   |   |           grampletbar.cpython-314.pyc
+|   |   |           grampletpane.cpython-314.pyc
+|   |   |           histogram.cpython-314.pyc
+|   |   |           interactivesearchbox.cpython-314.pyc
+|   |   |           labels.cpython-314.pyc
+|   |   |           linkbox.cpython-314.pyc
+|   |   |           menuitem.cpython-314.pyc
+|   |   |           monitoredwidgets.cpython-314.pyc
+|   |   |           multitreeview.cpython-314.pyc
+|   |   |           persistenttreeview.cpython-314.pyc
+|   |   |           photo.cpython-314.pyc
+|   |   |           placeentry.cpython-314.pyc
+|   |   |           placewithin.cpython-314.pyc
+|   |   |           progressdialog.cpython-314.pyc
+|   |   |           reorderfam.cpython-314.pyc
+|   |   |           selectionwidget.cpython-314.pyc
+|   |   |           shadebox.cpython-314.pyc
+|   |   |           shortlistcomboentry.cpython-314.pyc
+|   |   |           statusbar.cpython-314.pyc
+|   |   |           styledtextbuffer.cpython-314.pyc
+|   |   |           styledtexteditor.cpython-314.pyc
+|   |   |           undoablebuffer.cpython-314.pyc
+|   |   |           undoableentry.cpython-314.pyc
+|   |   |           undoablestyledbuffer.cpython-314.pyc
+|   |   |           validatedcomboentry.cpython-314.pyc
+|   |   |           validatedmaskedentry.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           aboutdialog.cpython-314.pyc
+|   |           autocomp.cpython-314.pyc
+|   |           basesidebar.cpython-314.pyc
+|   |           clipboard.cpython-314.pyc
+|   |           columnorder.cpython-314.pyc
+|   |           configure.cpython-314.pyc
+|   |           csvdialect.cpython-314.pyc
+|   |           dbguielement.cpython-314.pyc
+|   |           dbloader.cpython-314.pyc
+|   |           dbman.cpython-314.pyc
+|   |           ddtargets.cpython-314.pyc
+|   |           dialog.cpython-314.pyc
+|   |           display.cpython-314.pyc
+|   |           displaystate.cpython-314.pyc
+|   |           glade.cpython-314.pyc
+|   |           grampsgui.cpython-314.pyc
+|   |           listmodel.cpython-314.pyc
+|   |           makefilter.cpython-314.pyc
+|   |           managedwindow.cpython-314.pyc
+|   |           navigator.cpython-314.pyc
+|   |           pluginmanager.cpython-314.pyc
+|   |           spell.cpython-314.pyc
+|   |           tipofday.cpython-314.pyc
+|   |           uimanager.cpython-314.pyc
+|   |           undohistory.cpython-314.pyc
+|   |           user.cpython-314.pyc
+|   |           utils.cpython-314.pyc
+|   |           utilscairo.cpython-314.pyc
+|   |           viewmanager.cpython-314.pyc
+|   |           __init__.cpython-314.pyc
+|   |           
+|   +---plugins
+|   |   |   __init__.py
+|   |   |   
+|   |   +---cite
+|   |   |       cite.gpr.py
+|   |   |       legacy.py
+|   |   |       __init__.py
+|   |   |       
+|   |   +---db
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---bsddb
+|   |   |   |       bsddb.gpr.py
+|   |   |   |       bsddb.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   +---dbapi
+|   |   |   |   |   dbapi.py
+|   |   |   |   |   sqlite.gpr.py
+|   |   |   |   |   sqlite.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   +---test
+|   |   |   |   |       db_test.py
+|   |   |   |   |       familysearch_status_test.py
+|   |   |   |   |       upgrade_test.py
+|   |   |   |   |       __init__.py
+|   |   |   |   |       
+|   |   |   |   \---__pycache__
+|   |   |   |           dbapi.cpython-314.pyc
+|   |   |   |           sqlite.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   \---__pycache__
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---docgen
+|   |   |   |   asciidoc.py
+|   |   |   |   cairodoc.py
+|   |   |   |   docgen.gpr.py
+|   |   |   |   gtkprint.glade
+|   |   |   |   gtkprint.py
+|   |   |   |   htmldoc.py
+|   |   |   |   latexdoc.py
+|   |   |   |   odfdoc.py
+|   |   |   |   rtfdoc.py
+|   |   |   |   svgdrawdoc.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---test
+|   |   |           latexdoc_test.py
+|   |   |           __init__.py
+|   |   |           
+|   |   +---drawreport
+|   |   |       ancestortree.py
+|   |   |       calendarreport.py
+|   |   |       descendtree.py
+|   |   |       drawplugins.gpr.py
+|   |   |       fanchart.py
+|   |   |       statisticschart.py
+|   |   |       timeline.py
+|   |   |       __init__.py
+|   |   |       
+|   |   +---export
+|   |   |   |   export.gpr.py
+|   |   |   |   exportcsv.py
+|   |   |   |   exportftree.py
+|   |   |   |   exportgedcom.py
+|   |   |   |   exportgeneweb.py
+|   |   |   |   exportpkg.py
+|   |   |   |   exportvcalendar.py
+|   |   |   |   exportvcard.py
+|   |   |   |   exportxml.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---test
+|   |   |   |       exportvcard_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           exportxml.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---gramplet
+|   |   |   |   ageondategramplet.py
+|   |   |   |   agestats.py
+|   |   |   |   ancestor.py
+|   |   |   |   attributes.py
+|   |   |   |   backlinks.py
+|   |   |   |   calendargramplet.py
+|   |   |   |   children.py
+|   |   |   |   citations.py
+|   |   |   |   coordinates.py
+|   |   |   |   descendant.py
+|   |   |   |   eval.py
+|   |   |   |   events.py
+|   |   |   |   fanchart2waygramplet.py
+|   |   |   |   fanchartdescgramplet.py
+|   |   |   |   fanchartgramplet.py
+|   |   |   |   faqgramplet.py
+|   |   |   |   filter.py
+|   |   |   |   gallery.py
+|   |   |   |   givennamegramplet.py
+|   |   |   |   gramplet.gpr.py
+|   |   |   |   leak.py
+|   |   |   |   locations.py
+|   |   |   |   mediapreview.py
+|   |   |   |   metadataviewer.py
+|   |   |   |   notes.py
+|   |   |   |   pedigreegramplet.py
+|   |   |   |   persondetails.py
+|   |   |   |   personresidence.py
+|   |   |   |   placedetails.py
+|   |   |   |   quickviewgramplet.py
+|   |   |   |   recordsgramplet.py
+|   |   |   |   relativegramplet.py
+|   |   |   |   repositorydetails.py
+|   |   |   |   sessionloggramplet.py
+|   |   |   |   soundgen.py
+|   |   |   |   statsgramplet.py
+|   |   |   |   surnamecloudgramplet.py
+|   |   |   |   todo.py
+|   |   |   |   todogramplet.py
+|   |   |   |   topsurnamesgramplet.py
+|   |   |   |   welcomegramplet.py
+|   |   |   |   whatsnext.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---test
+|   |   |   |       topsurnamesgramplet_test.py
+|   |   |   |       __init__.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           attributes.cpython-314.pyc
+|   |   |           backlinks.cpython-314.pyc
+|   |   |           calendargramplet.cpython-314.pyc
+|   |   |           children.cpython-314.pyc
+|   |   |           citations.cpython-314.pyc
+|   |   |           events.cpython-314.pyc
+|   |   |           filter.cpython-314.pyc
+|   |   |           gallery.cpython-314.pyc
+|   |   |           notes.cpython-314.pyc
+|   |   |           persondetails.cpython-314.pyc
+|   |   |           topsurnamesgramplet.cpython-314.pyc
+|   |   |           welcomegramplet.cpython-314.pyc
+|   |   |           
+|   |   +---graph
+|   |   |   |   graphplugins.gpr.py
+|   |   |   |   gvfamilylines.py
+|   |   |   |   gvhourglass.py
+|   |   |   |   gvrelgraph.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---test
+|   |   |           year_only_date_test.py
+|   |   |           __init__.py
+|   |   |           
+|   |   +---importer
+|   |   |   |   import.gpr.py
+|   |   |   |   importcsv.py
+|   |   |   |   importgedcom.glade
+|   |   |   |   importgedcom.py
+|   |   |   |   importgeneweb.py
+|   |   |   |   importgpkg.py
+|   |   |   |   importgrdb.py
+|   |   |   |   importprogen.glade
+|   |   |   |   importprogen.py
+|   |   |   |   importvcard.py
+|   |   |   |   importxml.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---test
+|   |   |           importgedcom_ambiguous_date_test.py
+|   |   |           importgeneweb_test.py
+|   |   |           importvcard_test.py
+|   |   |           __init__.py
+|   |   |           
+|   |   +---lib
+|   |   |   |   libcairodoc.py
+|   |   |   |   libgedcom.py
+|   |   |   |   libgrampsxml.py
+|   |   |   |   libholiday.py
+|   |   |   |   libhtml.py
+|   |   |   |   libhtmlbackend.py
+|   |   |   |   libhtmlconst.py
+|   |   |   |   libmapservice.py
+|   |   |   |   libmetadata.py
+|   |   |   |   libmixin.py
+|   |   |   |   libnarrate.py
+|   |   |   |   libodfbackend.py
+|   |   |   |   libpersonview.py
+|   |   |   |   libplaceimport.py
+|   |   |   |   libplaceview.py
+|   |   |   |   libplugins.gpr.py
+|   |   |   |   libprogen.py
+|   |   |   |   librecords.py
+|   |   |   |   librecurse.py
+|   |   |   |   libsourceview.py
+|   |   |   |   libsubstkeyword.py
+|   |   |   |   libtreebase.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---maps
+|   |   |   |   |   cairoprint.py
+|   |   |   |   |   constants.py
+|   |   |   |   |   datelayer.py
+|   |   |   |   |   dummylayer.py
+|   |   |   |   |   dummynogps.py
+|   |   |   |   |   geography.py
+|   |   |   |   |   kmllayer.py
+|   |   |   |   |   libkml.py
+|   |   |   |   |   lifewaylayer.py
+|   |   |   |   |   markerlayer.py
+|   |   |   |   |   messagelayer.py
+|   |   |   |   |   osmgps.py
+|   |   |   |   |   placeselection.py
+|   |   |   |   |   selectionlayer.py
+|   |   |   |   |   __init__.py
+|   |   |   |   |   
+|   |   |   |   \---__pycache__
+|   |   |   |           cairoprint.cpython-314.pyc
+|   |   |   |           constants.cpython-314.pyc
+|   |   |   |           datelayer.cpython-314.pyc
+|   |   |   |           dummylayer.cpython-314.pyc
+|   |   |   |           dummynogps.cpython-314.pyc
+|   |   |   |           geography.cpython-314.pyc
+|   |   |   |           kmllayer.cpython-314.pyc
+|   |   |   |           libkml.cpython-314.pyc
+|   |   |   |           lifewaylayer.cpython-314.pyc
+|   |   |   |           markerlayer.cpython-314.pyc
+|   |   |   |           messagelayer.cpython-314.pyc
+|   |   |   |           osmgps.cpython-314.pyc
+|   |   |   |           placeselection.cpython-314.pyc
+|   |   |   |           selectionlayer.cpython-314.pyc
+|   |   |   |           __init__.cpython-314.pyc
+|   |   |   |           
+|   |   |   \---__pycache__
+|   |   |           libgrampsxml.cpython-314.pyc
+|   |   |           libpersonview.cpython-314.pyc
+|   |   |           libplaceview.cpython-314.pyc
+|   |   |           libsourceview.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---mapservices
+|   |   |       eniroswedenmap.py
+|   |   |       googlemap.py
+|   |   |       mapservice.gpr.py
+|   |   |       openstreetmap.py
+|   |   |       __init__.py
+|   |   |       
+|   |   +---quickview
+|   |   |   |   ageondate.py
+|   |   |   |   all_events.py
+|   |   |   |   all_relations.py
+|   |   |   |   attributematch.py
+|   |   |   |   filterbyname.py
+|   |   |   |   lineage.py
+|   |   |   |   linkreferences.py
+|   |   |   |   onthisday.py
+|   |   |   |   quickview.gpr.py
+|   |   |   |   references.py
+|   |   |   |   reporef.py
+|   |   |   |   samesurnames.py
+|   |   |   |   siblings.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---test
+|   |   |   |       all_relations_test.py
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           lineage.cpython-314.pyc
+|   |   |           
+|   |   +---rel
+|   |   |       relplugins.gpr.py
+|   |   |       rel_ca.py
+|   |   |       rel_cs.py
+|   |   |       rel_da.py
+|   |   |       rel_de.py
+|   |   |       rel_de_AT.py
+|   |   |       rel_es.py
+|   |   |       rel_fi.py
+|   |   |       rel_fr.py
+|   |   |       rel_he.py
+|   |   |       rel_hr.py
+|   |   |       rel_hu.py
+|   |   |       rel_is.py
+|   |   |       rel_it.py
+|   |   |       rel_nl.py
+|   |   |       rel_no.py
+|   |   |       rel_pl.py
+|   |   |       rel_pt.py
+|   |   |       rel_ru.py
+|   |   |       rel_sk.py
+|   |   |       rel_sl.py
+|   |   |       rel_sv.py
+|   |   |       rel_tr.py
+|   |   |       rel_uk.py
+|   |   |       __init__.py
+|   |   |       
+|   |   +---sidebar
+|   |   |   |   categorysidebar.py
+|   |   |   |   dropdownsidebar.py
+|   |   |   |   expandersidebar.py
+|   |   |   |   favoritessidebar.py
+|   |   |   |   sidebar.gpr.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           categorysidebar.cpython-314.pyc
+|   |   |           dropdownsidebar.cpython-314.pyc
+|   |   |           expandersidebar.cpython-314.pyc
+|   |   |           favoritessidebar.cpython-314.pyc
+|   |   |           
+|   |   +---test
+|   |   |       db_undo_and_signals_test.py
+|   |   |       exports_test.py
+|   |   |       imports_test.py
+|   |   |       reports_test.py
+|   |   |       schema_validation_test.py
+|   |   |       tools_test.py
+|   |   |       __init__.py
+|   |   |       
+|   |   +---textreport
+|   |   |       alphabeticalindex.py
+|   |   |       ancestorreport.py
+|   |   |       birthdayreport.py
+|   |   |       custombooktext.py
+|   |   |       descendreport.py
+|   |   |       detancestralreport.py
+|   |   |       detdescendantreport.py
+|   |   |       endoflinereport.py
+|   |   |       familygroup.py
+|   |   |       indivcomplete.py
+|   |   |       kinshipreport.py
+|   |   |       notelinkreport.py
+|   |   |       numberofancestorsreport.py
+|   |   |       placereport.py
+|   |   |       recordsreport.py
+|   |   |       simplebooktitle.py
+|   |   |       summary.py
+|   |   |       tableofcontents.py
+|   |   |       tagreport.py
+|   |   |       textplugins.gpr.py
+|   |   |       __init__.py
+|   |   |       
+|   |   +---thumbnailer
+|   |   |   |   gnomethumb.py
+|   |   |   |   imagethumb.py
+|   |   |   |   thumb.gpr.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           gnomethumb.cpython-314.pyc
+|   |   |           imagethumb.cpython-314.pyc
+|   |   |           
+|   |   +---tool
+|   |   |       changenames.glade
+|   |   |       changenames.py
+|   |   |       changetypes.glade
+|   |   |       changetypes.py
+|   |   |       check.glade
+|   |   |       check.py
+|   |   |       dateparserdisplaytest.py
+|   |   |       dumpgenderstats.py
+|   |   |       eventcmp.glade
+|   |   |       eventcmp.py
+|   |   |       eventnames.py
+|   |   |       finddupes.glade
+|   |   |       finddupes.py
+|   |   |       findloop.glade
+|   |   |       findloop.py
+|   |   |       mediamanager.py
+|   |   |       mergecitations.glade
+|   |   |       mergecitations.py
+|   |   |       notrelated.glade
+|   |   |       notrelated.py
+|   |   |       ownereditor.glade
+|   |   |       ownereditor.py
+|   |   |       patchnames.glade
+|   |   |       patchnames.py
+|   |   |       populatesources.py
+|   |   |       rebuild.py
+|   |   |       rebuildgenderstat.py
+|   |   |       rebuildrefmap.py
+|   |   |       relcalc.glade
+|   |   |       relcalc.py
+|   |   |       removespaces.glade
+|   |   |       removespaces.py
+|   |   |       removeunused.glade
+|   |   |       removeunused.py
+|   |   |       reorderids.glade
+|   |   |       reorderids.py
+|   |   |       sortevents.py
+|   |   |       testcasegenerator.py
+|   |   |       tools.gpr.py
+|   |   |       toolsdebug.gpr.py
+|   |   |       verify.glade
+|   |   |       verify.py
+|   |   |       __init__.py
+|   |   |       
+|   |   +---view
+|   |   |   |   citationlistview.py
+|   |   |   |   citationtreeview.py
+|   |   |   |   dashboardview.py
+|   |   |   |   eventview.py
+|   |   |   |   familyview.py
+|   |   |   |   fanchart2wayview.py
+|   |   |   |   fanchartdescview.py
+|   |   |   |   fanchartview.py
+|   |   |   |   geoclose.py
+|   |   |   |   geoevents.py
+|   |   |   |   geofamclose.py
+|   |   |   |   geofamily.py
+|   |   |   |   geography.gpr.py
+|   |   |   |   geomoves.py
+|   |   |   |   geoperson.py
+|   |   |   |   geoplaces.py
+|   |   |   |   mediaview.py
+|   |   |   |   noteview.py
+|   |   |   |   pedigreeview.py
+|   |   |   |   personlistview.py
+|   |   |   |   persontreeview.py
+|   |   |   |   placelistview.py
+|   |   |   |   placetreeview.py
+|   |   |   |   relview.py
+|   |   |   |   repoview.py
+|   |   |   |   sourceview.py
+|   |   |   |   view.gpr.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   \---__pycache__
+|   |   |           citationlistview.cpython-314.pyc
+|   |   |           citationtreeview.cpython-314.pyc
+|   |   |           dashboardview.cpython-314.pyc
+|   |   |           eventview.cpython-314.pyc
+|   |   |           familyview.cpython-314.pyc
+|   |   |           fanchart2wayview.cpython-314.pyc
+|   |   |           fanchartdescview.cpython-314.pyc
+|   |   |           fanchartview.cpython-314.pyc
+|   |   |           geoclose.cpython-314.pyc
+|   |   |           geoevents.cpython-314.pyc
+|   |   |           geofamclose.cpython-314.pyc
+|   |   |           geofamily.cpython-314.pyc
+|   |   |           geomoves.cpython-314.pyc
+|   |   |           geoperson.cpython-314.pyc
+|   |   |           geoplaces.cpython-314.pyc
+|   |   |           mediaview.cpython-314.pyc
+|   |   |           noteview.cpython-314.pyc
+|   |   |           pedigreeview.cpython-314.pyc
+|   |   |           personlistview.cpython-314.pyc
+|   |   |           persontreeview.cpython-314.pyc
+|   |   |           placelistview.cpython-314.pyc
+|   |   |           placetreeview.cpython-314.pyc
+|   |   |           relview.cpython-314.pyc
+|   |   |           repoview.cpython-314.pyc
+|   |   |           sourceview.cpython-314.pyc
+|   |   |           __init__.cpython-314.pyc
+|   |   |           
+|   |   +---webreport
+|   |   |       addressbook.py
+|   |   |       addressbooklist.py
+|   |   |       alphabeticindex.py
+|   |   |       basepage.py
+|   |   |       buchheim.py
+|   |   |       calendar.py
+|   |   |       citation.py
+|   |   |       common.py
+|   |   |       contact.py
+|   |   |       download.py
+|   |   |       event.py
+|   |   |       family.py
+|   |   |       heatmap.py
+|   |   |       home.py
+|   |   |       introduction.py
+|   |   |       layout.py
+|   |   |       media.py
+|   |   |       multilang.py
+|   |   |       multiselect.py
+|   |   |       narrativeweb.py
+|   |   |       person.py
+|   |   |       place.py
+|   |   |       repository.py
+|   |   |       source.py
+|   |   |       statistics.py
+|   |   |       surname.py
+|   |   |       surnamelist.py
+|   |   |       thumbnail.py
+|   |   |       updates.py
+|   |   |       webcal.py
+|   |   |       webplugins.gpr.py
+|   |   |       __init__.py
+|   |   |       
+|   |   +---webstuff
+|   |   |   |   index.html
+|   |   |   |   webstuff.gpr.py
+|   |   |   |   webstuff.py
+|   |   |   |   __init__.py
+|   |   |   |   
+|   |   |   +---img
+|   |   |   |       sel_classic.gif
+|   |   |   |       sel_vista.gif
+|   |   |   |       sel_win7.gif
+|   |   |   |       
+|   |   |   \---__pycache__
+|   |   |           webstuff.cpython-314.pyc
+|   |   |           
+|   |   \---__pycache__
+|   |           __init__.cpython-314.pyc
+|   |           
+|   +---test
+|   |   |   regrtest.py
+|   |   |   test_util.py
+|   |   |   __init__.py
+|   |   |   
+|   |   \---test
+|   |           test_util_test.py
+|   |           __init__.py
+|   |           
+|   \---__pycache__
+|           grampsapp.cpython-314.pyc
+|           version.cpython-314.pyc
+|           __init__.cpython-314.pyc
+|           
++---help
+|       ChangeLog
+|       COPYING-DOCS
+|       README-DOCS
+|       
++---images
+|   |   add-parent-existing-family.png
+|   |   add.png
+|   |   bad.png
+|   |   caution.png
+|   |   document.png
+|   |   down.png
+|   |   fs_logo.png
+|   |   good.png
+|   |   gramps-export.png
+|   |   gramps-import.png
+|   |   gramps-parents-add.png
+|   |   gramps-parents-open.png
+|   |   gramps-parents.png
+|   |   gramps-undo-history.png
+|   |   gramps-url.png
+|   |   gramps.png
+|   |   gramps.svg
+|   |   gtk-remove.png
+|   |   image-missing.png
+|   |   LICENSE
+|   |   logo.png
+|   |   next.png
+|   |   ped24.ico
+|   |   previous.png
+|   |   splash.jpg
+|   |   stock_index_24.png
+|   |   stock_link.png
+|   |   stock_new-html.png
+|   |   stock_notes.png
+|   |   text-editor.png
+|   |   up.png
+|   |   
+|   +---hicolor
+|   |   +---128x128
+|   |   |   \---apps
+|   |   |           org.gramps_project.Gramps.png
+|   |   |           
+|   |   +---16x16
+|   |   |   +---actions
+|   |   |   |       FS-BLA-16.png
+|   |   |   |       FS-G-16.png
+|   |   |   |       geo-fixed-zoom.png
+|   |   |   |       geo-free-zoom.png
+|   |   |   |       geo-place-add.png
+|   |   |   |       geo-place-link.png
+|   |   |   |       geo-show-event.png
+|   |   |   |       geo-show-family-down.png
+|   |   |   |       geo-show-family-up.png
+|   |   |   |       geo-show-family.png
+|   |   |   |       geo-show-person.png
+|   |   |   |       geo-show-place.png
+|   |   |   |       gramps-addon.png
+|   |   |   |       gramps-address.png
+|   |   |   |       gramps-attribute.png
+|   |   |   |       gramps-bookmark-delete.png
+|   |   |   |       gramps-bookmark-edit.png
+|   |   |   |       gramps-bookmark-new.png
+|   |   |   |       gramps-bookmark.png
+|   |   |   |       gramps-citation.png
+|   |   |   |       gramps-config.png
+|   |   |   |       gramps-date-edit.png
+|   |   |   |       gramps-date.png
+|   |   |   |       gramps-event.png
+|   |   |   |       gramps-family.png
+|   |   |   |       gramps-fanchart.png
+|   |   |   |       gramps-fanchart2way.png
+|   |   |   |       gramps-fanchartdesc.png
+|   |   |   |       gramps-font-bgcolor.png
+|   |   |   |       gramps-font-color.png
+|   |   |   |       gramps-font.png
+|   |   |   |       gramps-geo.png
+|   |   |   |       gramps-gramplet.png
+|   |   |   |       gramps-lock.png
+|   |   |   |       gramps-media.png
+|   |   |   |       gramps-merge.png
+|   |   |   |       gramps-notes.png
+|   |   |   |       gramps-parents-add.png
+|   |   |   |       gramps-parents-open.png
+|   |   |   |       gramps-parents.png
+|   |   |   |       gramps-pedigree.png
+|   |   |   |       gramps-person.png
+|   |   |   |       gramps-place.png
+|   |   |   |       gramps-preferences.png
+|   |   |   |       gramps-relation.png
+|   |   |   |       gramps-reports.png
+|   |   |   |       gramps-repository.png
+|   |   |   |       gramps-source.png
+|   |   |   |       gramps-spouse.png
+|   |   |   |       gramps-tag-new.png
+|   |   |   |       gramps-tag.png
+|   |   |   |       gramps-tools.png
+|   |   |   |       gramps-tree-group.png
+|   |   |   |       gramps-tree-list.png
+|   |   |   |       gramps-tree-select.png
+|   |   |   |       gramps-unlock.png
+|   |   |   |       gramps-view.png
+|   |   |   |       gramps-viewmedia.png
+|   |   |   |       gramps-zoom-best-fit.png
+|   |   |   |       gramps-zoom-fit-width.png
+|   |   |   |       gramps-zoom-in.png
+|   |   |   |       gramps-zoom-out.png
+|   |   |   |       
+|   |   |   +---apps
+|   |   |   |       org.gramps_project.Gramps.png
+|   |   |   |       
+|   |   |   \---source
+|   |   |           gramps-geo.svg
+|   |   |           gramps-tree-group.svg
+|   |   |           gramps-tree-list.svg
+|   |   |           gramps-tree-select.svg
+|   |   |           
+|   |   +---22x22
+|   |   |   +---actions
+|   |   |   |       geo-fixed-zoom.png
+|   |   |   |       geo-free-zoom.png
+|   |   |   |       geo-place-add.png
+|   |   |   |       geo-place-link.png
+|   |   |   |       geo-show-event.png
+|   |   |   |       geo-show-family-down.png
+|   |   |   |       geo-show-family-up.png
+|   |   |   |       geo-show-family.png
+|   |   |   |       geo-show-person.png
+|   |   |   |       geo-show-place.png
+|   |   |   |       gramps-addon.png
+|   |   |   |       gramps-address.png
+|   |   |   |       gramps-attribute.png
+|   |   |   |       gramps-bookmark-delete.png
+|   |   |   |       gramps-bookmark-edit.png
+|   |   |   |       gramps-bookmark-new.png
+|   |   |   |       gramps-bookmark.png
+|   |   |   |       gramps-citation.png
+|   |   |   |       gramps-config.png
+|   |   |   |       gramps-date-edit.png
+|   |   |   |       gramps-date.png
+|   |   |   |       gramps-event.png
+|   |   |   |       gramps-family.png
+|   |   |   |       gramps-fanchart.png
+|   |   |   |       gramps-fanchart2way.png
+|   |   |   |       gramps-fanchartdesc.png
+|   |   |   |       gramps-font-bgcolor.png
+|   |   |   |       gramps-font-color.png
+|   |   |   |       gramps-font.png
+|   |   |   |       gramps-geo-altmap.png
+|   |   |   |       gramps-geo-birth.png
+|   |   |   |       gramps-geo-death.png
+|   |   |   |       gramps-geo-mainmap.png
+|   |   |   |       gramps-geo-marriage.png
+|   |   |   |       gramps-geo.png
+|   |   |   |       gramps-gramplet.png
+|   |   |   |       gramps-lock.png
+|   |   |   |       gramps-media.png
+|   |   |   |       gramps-merge.png
+|   |   |   |       gramps-notes.png
+|   |   |   |       gramps-parents-add.png
+|   |   |   |       gramps-parents-open.png
+|   |   |   |       gramps-parents.png
+|   |   |   |       gramps-pedigree.png
+|   |   |   |       gramps-person.png
+|   |   |   |       gramps-place.png
+|   |   |   |       gramps-preferences.png
+|   |   |   |       gramps-relation.png
+|   |   |   |       gramps-reports.png
+|   |   |   |       gramps-repository.png
+|   |   |   |       gramps-source.png
+|   |   |   |       gramps-spouse.png
+|   |   |   |       gramps-tag-new.png
+|   |   |   |       gramps-tag.png
+|   |   |   |       gramps-tools.png
+|   |   |   |       gramps-tree-group.png
+|   |   |   |       gramps-tree-list.png
+|   |   |   |       gramps-tree-select.png
+|   |   |   |       gramps-unlock.png
+|   |   |   |       gramps-view.png
+|   |   |   |       gramps-viewmedia.png
+|   |   |   |       gramps-zoom-best-fit.png
+|   |   |   |       gramps-zoom-fit-width.png
+|   |   |   |       gramps-zoom-in.png
+|   |   |   |       gramps-zoom-out.png
+|   |   |   |       
+|   |   |   \---apps
+|   |   |           org.gramps_project.Gramps.png
+|   |   |           
+|   |   +---24x24
+|   |   |   +---actions
+|   |   |   |       geo-fixed-zoom.png
+|   |   |   |       geo-free-zoom.png
+|   |   |   |       geo-place-add.png
+|   |   |   |       geo-place-link.png
+|   |   |   |       geo-show-event.png
+|   |   |   |       geo-show-family-down.png
+|   |   |   |       geo-show-family-up.png
+|   |   |   |       geo-show-family.png
+|   |   |   |       geo-show-person.png
+|   |   |   |       geo-show-place.png
+|   |   |   |       gramps-addon.png
+|   |   |   |       gramps-address.png
+|   |   |   |       gramps-attribute.png
+|   |   |   |       gramps-bookmark-delete.png
+|   |   |   |       gramps-bookmark-edit.png
+|   |   |   |       gramps-bookmark-new.png
+|   |   |   |       gramps-bookmark.png
+|   |   |   |       gramps-citation.png
+|   |   |   |       gramps-config.png
+|   |   |   |       gramps-date-edit.png
+|   |   |   |       gramps-date.png
+|   |   |   |       gramps-event.png
+|   |   |   |       gramps-family.png
+|   |   |   |       gramps-fanchart.png
+|   |   |   |       gramps-fanchart2way.png
+|   |   |   |       gramps-fanchartdesc.png
+|   |   |   |       gramps-font-bgcolor.png
+|   |   |   |       gramps-font-color.png
+|   |   |   |       gramps-font.png
+|   |   |   |       gramps-geo-altmap.png
+|   |   |   |       gramps-geo-birth.png
+|   |   |   |       gramps-geo-death.png
+|   |   |   |       gramps-geo-mainmap.png
+|   |   |   |       gramps-geo-marriage.png
+|   |   |   |       gramps-geo.png
+|   |   |   |       gramps-gramplet.png
+|   |   |   |       gramps-lock.png
+|   |   |   |       gramps-media.png
+|   |   |   |       gramps-merge.png
+|   |   |   |       gramps-notes.png
+|   |   |   |       gramps-parents-add.png
+|   |   |   |       gramps-parents-open.png
+|   |   |   |       gramps-parents.png
+|   |   |   |       gramps-pedigree.png
+|   |   |   |       gramps-person.png
+|   |   |   |       gramps-place.png
+|   |   |   |       gramps-preferences.png
+|   |   |   |       gramps-relation.png
+|   |   |   |       gramps-reports.png
+|   |   |   |       gramps-repository.png
+|   |   |   |       gramps-source.png
+|   |   |   |       gramps-spouse.png
+|   |   |   |       gramps-tag-new.png
+|   |   |   |       gramps-tag.png
+|   |   |   |       gramps-tools.png
+|   |   |   |       gramps-tree-group.png
+|   |   |   |       gramps-tree-list.png
+|   |   |   |       gramps-tree-select.png
+|   |   |   |       gramps-unlock.png
+|   |   |   |       gramps-view.png
+|   |   |   |       gramps-viewmedia.png
+|   |   |   |       gramps-zoom-best-fit.png
+|   |   |   |       gramps-zoom-fit-width.png
+|   |   |   |       gramps-zoom-in.png
+|   |   |   |       gramps-zoom-out.png
+|   |   |   |       
+|   |   |   \---apps
+|   |   |           org.gramps_project.Gramps.png
+|   |   |           
+|   |   +---256x256
+|   |   |   \---apps
+|   |   |           org.gramps_project.Gramps.png
+|   |   |           
+|   |   +---48x48
+|   |   |   +---actions
+|   |   |   |       geo-fixed-zoom.png
+|   |   |   |       geo-free-zoom.png
+|   |   |   |       geo-place-add.png
+|   |   |   |       geo-place-link.png
+|   |   |   |       geo-show-event.png
+|   |   |   |       geo-show-family-down.png
+|   |   |   |       geo-show-family-up.png
+|   |   |   |       geo-show-family.png
+|   |   |   |       geo-show-person.png
+|   |   |   |       geo-show-place.png
+|   |   |   |       gramps-addon.png
+|   |   |   |       gramps-address.png
+|   |   |   |       gramps-attribute.png
+|   |   |   |       gramps-bookmark-delete.png
+|   |   |   |       gramps-bookmark-edit.png
+|   |   |   |       gramps-bookmark-new.png
+|   |   |   |       gramps-bookmark.png
+|   |   |   |       gramps-citation.png
+|   |   |   |       gramps-config.png
+|   |   |   |       gramps-date-edit.png
+|   |   |   |       gramps-date.png
+|   |   |   |       gramps-event.png
+|   |   |   |       gramps-family.png
+|   |   |   |       gramps-fanchart.png
+|   |   |   |       gramps-fanchart2way.png
+|   |   |   |       gramps-fanchartdesc.png
+|   |   |   |       gramps-font-bgcolor.png
+|   |   |   |       gramps-font-color.png
+|   |   |   |       gramps-font.png
+|   |   |   |       gramps-geo-altmap.png
+|   |   |   |       gramps-geo-birth.png
+|   |   |   |       gramps-geo-death.png
+|   |   |   |       gramps-geo-mainmap.png
+|   |   |   |       gramps-geo-marriage.png
+|   |   |   |       gramps-geo.png
+|   |   |   |       gramps-gramplet.png
+|   |   |   |       gramps-lock.png
+|   |   |   |       gramps-media.png
+|   |   |   |       gramps-merge.png
+|   |   |   |       gramps-notes.png
+|   |   |   |       gramps-parents-add.png
+|   |   |   |       gramps-parents-open.png
+|   |   |   |       gramps-parents.png
+|   |   |   |       gramps-pedigree.png
+|   |   |   |       gramps-person.png
+|   |   |   |       gramps-place.png
+|   |   |   |       gramps-preferences.png
+|   |   |   |       gramps-relation.png
+|   |   |   |       gramps-reports.png
+|   |   |   |       gramps-repository.png
+|   |   |   |       gramps-source.png
+|   |   |   |       gramps-spouse.png
+|   |   |   |       gramps-tag-new.png
+|   |   |   |       gramps-tag.png
+|   |   |   |       gramps-tools.png
+|   |   |   |       gramps-tree-group.png
+|   |   |   |       gramps-tree-list.png
+|   |   |   |       gramps-tree-select.png
+|   |   |   |       gramps-unlock.png
+|   |   |   |       gramps-view.png
+|   |   |   |       gramps-viewmedia.png
+|   |   |   |       gramps-zoom-best-fit.png
+|   |   |   |       gramps-zoom-fit-width.png
+|   |   |   |       gramps-zoom-in.png
+|   |   |   |       gramps-zoom-out.png
+|   |   |   |       
+|   |   |   +---apps
+|   |   |   |       org.gramps_project.Gramps.png
+|   |   |   |       
+|   |   |   \---mimetypes
+|   |   |           application-x-gedcom.png
+|   |   |           application-x-geneweb.png
+|   |   |           application-x-gramps-package.png
+|   |   |           application-x-gramps-xml.png
+|   |   |           application-x-gramps.png
+|   |   |           
+|   |   \---scalable
+|   |       +---actions
+|   |       |       add-parent-existing-family.svg
+|   |       |       format-text-subscript-symbolic.svg
+|   |       |       format-text-superscript-symbolic.svg
+|   |       |       geo-fixed-zoom.svg
+|   |       |       geo-free-zoom.svg
+|   |       |       geo-place-add.svg
+|   |       |       geo-place-link.svg
+|   |       |       geo-show-event.svg
+|   |       |       geo-show-family-down.svg
+|   |       |       geo-show-family-up.svg
+|   |       |       geo-show-family.svg
+|   |       |       geo-show-person.svg
+|   |       |       geo-show-place.svg
+|   |       |       gramps-addon.svg
+|   |       |       gramps-address.svg
+|   |       |       gramps-attribute.svg
+|   |       |       gramps-bookmark-delete.svg
+|   |       |       gramps-bookmark-edit.svg
+|   |       |       gramps-bookmark-new.svg
+|   |       |       gramps-bookmark.svg
+|   |       |       gramps-citation.svg
+|   |       |       gramps-config.svg
+|   |       |       gramps-date-edit.svg
+|   |       |       gramps-date.svg
+|   |       |       gramps-event.svg
+|   |       |       gramps-family.svg
+|   |       |       gramps-fanchart.svg
+|   |       |       gramps-fanchart2way.svg
+|   |       |       gramps-fanchartdesc.svg
+|   |       |       gramps-font-bgcolor.svg
+|   |       |       gramps-font-color.svg
+|   |       |       gramps-font.svg
+|   |       |       gramps-geo-altmap.svg
+|   |       |       gramps-geo-birth.svg
+|   |       |       gramps-geo-death.svg
+|   |       |       gramps-geo-mainmap.svg
+|   |       |       gramps-geo-marriage.svg
+|   |       |       gramps-geo.svg
+|   |       |       gramps-gramplet.svg
+|   |       |       gramps-lock.svg
+|   |       |       gramps-media.svg
+|   |       |       gramps-merge.svg
+|   |       |       gramps-notes.svg
+|   |       |       gramps-parents-add.svg
+|   |       |       gramps-parents-open.svg
+|   |       |       gramps-parents.svg
+|   |       |       gramps-pedigree.svg
+|   |       |       gramps-person.svg
+|   |       |       gramps-place.svg
+|   |       |       gramps-preferences.svg
+|   |       |       gramps-relation.svg
+|   |       |       gramps-reports.svg
+|   |       |       gramps-repository.svg
+|   |       |       gramps-source.svg
+|   |       |       gramps-spouse.svg
+|   |       |       gramps-tag-new.svg
+|   |       |       gramps-tag.svg
+|   |       |       gramps-tools.svg
+|   |       |       gramps-tree-group.svg
+|   |       |       gramps-tree-list.svg
+|   |       |       gramps-tree-select.svg
+|   |       |       gramps-unlock.svg
+|   |       |       gramps-view.svg
+|   |       |       gramps-viewmedia.svg
+|   |       |       gramps-zoom-best-fit.svg
+|   |       |       gramps-zoom-fit-width.svg
+|   |       |       gramps-zoom-in.svg
+|   |       |       gramps-zoom-out.svg
+|   |       |       
+|   |       +---apps
+|   |       |       org.gramps_project.Gramps.svg
+|   |       |       
+|   |       \---mimetypes
+|   |               application-x-gedcom.svg
+|   |               application-x-geneweb.svg
+|   |               application-x-gramps-package.svg
+|   |               application-x-gramps-xml.svg
+|   |               application-x-gramps.svg
+|   |               
+|   \---webstuff
+|           blank.gif
+|           crosshairs.png
+|           favicon.ico
+|           favicon2.ico
+|           gramps-geo-altmap.png
+|           gramps-geo-birth.png
+|           gramps-geo-death.png
+|           gramps-geo-mainmap.png
+|           gramps-geo-marriage.png
+|           somerights20.gif
+|           Web_Gender_Female.png
+|           Web_Gender_Male.png
+|           Web_Gender_Other.png
+|           Web_Mainz_Bkgd.png
+|           Web_Mainz_Header.png
+|           Web_Mainz_Mid.png
+|           Web_Mainz_MidLight.png
+|           
++---mac
+|   |   gramps.accel
+|   |   gramps.bundle
+|   |   gramps.icns
+|   |   gramps.modules
+|   |   gramps_launcher.py
+|   |   gtkrc
+|   |   Info.plist
+|   |   release.entitlements.plist
+|   |   settings.ini
+|   |   
+|   \---patches
+|           berkeleydb-4.8-atomic.patch
+|           berkeleydb-4.8-mutex.patch
+|           orjson-3.11.8-illegal-features.patch
+|           
++---po
+|   |   ar.po
+|   |   az.po
+|   |   ba.po
+|   |   bg.po
+|   |   br.po
+|   |   ca.po
+|   |   ChangeLog
+|   |   check_po
+|   |   cs.po
+|   |   cy.po
+|   |   da.po
+|   |   de.po
+|   |   de_AT.po
+|   |   el.po
+|   |   en_GB.po
+|   |   eo.po
+|   |   es.po
+|   |   fa.po
+|   |   fi.po
+|   |   fr.po
+|   |   ga.po
+|   |   gl.po
+|   |   gramps.pot
+|   |   he.po
+|   |   hr.po
+|   |   hu.po
+|   |   id.po
+|   |   is.po
+|   |   it.po
+|   |   ja.po
+|   |   ka.po
+|   |   ko.po
+|   |   LINGUAS
+|   |   ln.po
+|   |   lt.po
+|   |   lv.po
+|   |   mk.po
+|   |   mn.po
+|   |   nb.po
+|   |   ne.po
+|   |   nl.po
+|   |   nn.po
+|   |   oc.po
+|   |   pl.po
+|   |   POTFILES.in
+|   |   POTFILES.skip
+|   |   pt_BR.po
+|   |   pt_PT.po
+|   |   ro.po
+|   |   ru.po
+|   |   sk.po
+|   |   sl.po
+|   |   sq.po
+|   |   sr.po
+|   |   sr_Latn.po
+|   |   sv.po
+|   |   ta.po
+|   |   tr.po
+|   |   uk.po
+|   |   update_po.py
+|   |   vi.po
+|   |   zh_CN.po
+|   |   zh_HK.po
+|   |   zh_TW.po
+|   |   
+|   +---its
+|   |       holidays.its
+|   |       holidays.loc
+|   |       metainfo.its
+|   |       metainfo.loc
+|   |       shared-mime-info.its
+|   |       shared-mime-info.loc
+|   |       tips.its
+|   |       tips.loc
+|   |       
+|   \---test
+|           po_test.py
+|           
++---scripts
+|   |   build_hook.py
+|   |   gramps
+|   |   make_release_notes.py
+|   |   version_hook.py
+|   |   
+|   \---__pycache__
+|           build_hook.cpython-314.pyc
+|           version_hook.cpython-314.pyc
+|           
++---snap
+|       snapcraft.yaml
+|       
+\---test
+    |   blob_to_json_test.py
+    |   dates.sh
+    |   det_ancestor_report.sh
+    |   det_descendant_report.sh
+    |   impex.sh
+    |   LosHawlos_bsddb_test.py
+    |   LosHawlos_db_test.py
+    |   RunAllTests.py
+    |   runtest.sh
+    |   test_familysearch_sync_schema.py
+    |   tools.sh
+    |   
+    +---AncestorTree
+    |       AncestorTree.gramps
+    |       
+    \---GrampsLogger
+            ErrorReportAssistant_Test.py
+            GtkHandler_Test.py
+            

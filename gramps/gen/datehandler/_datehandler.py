@@ -48,8 +48,12 @@ from ._datedisplay import DateDisplay, DateDisplayEn, DateDisplayGB
 from ..constfunc import win
 from ..const import GRAMPS_LOCALE as glocale
 from ..utils.grampslocale import GrampsLocale
-
+# -- -----------------------------------------------------------------------
+# Vietnamese Lunar Calendar Handler for Gramps - by PTL 2026
 # -------------------------------------------------------------------------
+# from ._datevietnameselunar import DateVietnameseLunar
+# from .vietnamese_lunar import DateDisplay, DateParser, vietnamese_lunar_valid, gregorian_to_lunar, lunar_to_gregorian, LunarDate
+
 #
 # Constants
 #
@@ -147,4 +151,11 @@ register_datehandler(
 
 register_datehandler(
     ("en_US", "en", "English_United States", ("%m/%d/%y",)), DateParser, DateDisplayEn
+)
+# PTL 2026: Thêm đăng ký cho Lịch Âm Việt Nam
+# Cần bổ sung đăng ký trong _datehandler.py:
+register_datehandler(
+    ("vi_VN", "vi", "Vietnamese", ("%d/%m/%Y", "%Y-%m-%d")),
+    DateParser,
+    DateDisplay
 )

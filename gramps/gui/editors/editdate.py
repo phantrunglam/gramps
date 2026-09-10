@@ -98,6 +98,7 @@ CAL_TO_MONTHS_NAMES = {
     Date.CAL_PERSIAN: displayer.persian,
     Date.CAL_ISLAMIC: displayer.islamic,
     Date.CAL_SWEDISH: displayer.swedish,
+    Date.CAL_VIETNAMESE_LUNAR: displayer.short_months,  # <--- Bổ sung dòng này PTL 2026
 }
 
 WIKI_HELP_PAGE = URL_MANUAL_SECT1

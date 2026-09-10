@@ -77,6 +77,40 @@ class DateStrings:
         "December",
     )
 
+    # Tên tháng Âm lịch bằng tiếng Việt (chữ Nôm / từ Hán-Việt truyền thống)
+    vietnamese_lunar_VI = (
+        "",
+        "Giêng",
+        "Hai",
+        "Ba",
+        "Tư",
+        "Năm",
+        "Sáu",
+        "Bảy",
+        "Tám",
+        "Chín",
+        "Mười",
+        "Mười Một",
+        "Chạp",
+    )
+
+    # Tên tháng Âm lịch bằng tiếng Anh / Phiên âm (dùng khi locale là tiếng Anh)
+    vietnamese_lunar_EN = (
+        "",
+        "First",
+        "Second",
+        "Third",
+        "Fourth",
+        "Fifth",
+        "Sixth",
+        "Seventh",
+        "Eighth",
+        "Ninth",
+        "Tenth",
+        "Eleventh",
+        "Twelfth",
+    )
+
     def __init__(self, locale):
         _ = locale.translation.lexgettext
 
@@ -150,6 +184,7 @@ class DateStrings:
             _("Persian", "calendar"),
             _("Islamic", "calendar"),
             _("Swedish", "calendar"),
+            _("Âm lịch", "calendar"),  # <--- Bổ sung dòng này cho CAL_VIETNAMESE_LUNAR = 7
         )
         _ = locale.translation.lexgettext
 
@@ -235,6 +270,8 @@ class DateStrings:
             _("Esfand", "Persian month lexeme"),
         )
 
+        self.swedish = self.swedish_SV
+        
         self.modifiers = (
             "",
             # Translators: if the modifier is after the date

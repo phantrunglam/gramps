@@ -33,6 +33,10 @@ import logging
 import time
 
 # ------------------------------------------------------------------------
+# Vietnamese Lunar Calendar Handler for Gramps
+# ------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------
 #
 # Gramps modules
 #
@@ -56,7 +60,10 @@ from .gcalendar import (
     persian_ymd,
     swedish_sdn,
     swedish_ymd,
+    vietnameselunar_sdn,  # <--- THÊM DÒNG NÀY (Hàm chuyển Âm lịch -> JDN)
+    vietnameselunar_ymd,  # <--- THÊM DÒNG NÀY (Hàm chuyển JDN -> Âm lịch)
 )
+
 
 _ = glocale.translation.sgettext
 
@@ -603,7 +610,8 @@ class Date(BaseObject):
     CAL_PERSIAN = 4
     CAL_ISLAMIC = 5
     CAL_SWEDISH = 6
-    CALENDARS = range(7)
+    CAL_VIETNAMESE_LUNAR = 7  # <--- THÊM DÒNG NÀY ĐỂ HỖ TRỢ LỊCH ÂM VIỆT NAM
+    CALENDARS = range(8)
 
     NEWYEAR_JAN1 = 0  # CODE
     NEWYEAR_MAR1 = 1
@@ -630,6 +638,7 @@ class Date(BaseObject):
         persian_sdn,
         islamic_sdn,
         swedish_sdn,
+        vietnameselunar_sdn,  # <--- THÊM DÒNG NÀY (Hàm chuyển Âm lịch -> JDN)
     ]
 
     _calendar_change = [
@@ -640,6 +649,8 @@ class Date(BaseObject):
         persian_ymd,
         islamic_ymd,
         swedish_ymd,
+        vietnameselunar_ymd,  # <--- THÊM DÒNG NÀY (Hàm chuyển JDN -> Âm lịch)
+
     ]
 
     calendar_names = [
@@ -650,6 +661,7 @@ class Date(BaseObject):
         "Persian",
         "Islamic",
         "Swedish",
+        "Âm lịch",  # <--- Bổ sung vào vị trí index 7 - PTL2026
     ]
 
     ui_calendar_names = [
@@ -660,6 +672,7 @@ class Date(BaseObject):
         _("Persian", "calendar"),
         _("Islamic", "calendar"),
         _("Swedish", "calendar"),
+        _("Âm lịch","calendar"),  # <--- Bổ sung vào vị trí index 7 - PTL2026
     ]
 
     def __init__(self, *source):
@@ -1352,6 +1365,7 @@ class Date(BaseObject):
         CAL_PERSIAN    Persian calendar
         CAL_ISLAMIC    Islamic calendar
         CAL_SWEDISH    Swedish calendar 1700-03-01 -> 1712-02-30!
+        CAL_VIETNAMESE_LUNAR  Vietnamese Lunar calendar
         =============  ==========================================
         """
         return self.calendar

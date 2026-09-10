@@ -24,6 +24,12 @@ able to run gramps from the source directory without setting PYTHONPATH
 
 From this position, import gramps works great
 """
+""" import sys
+
+print("PYTHON EXECUTABLE =", sys.executable)
+print("PYTHON VERSION    =", sys.version)
+
+exit(1) """
 
 import gramps.grampsapp as app
 

@@ -31,6 +31,7 @@ date parsing class. The default base class provides parsing for English.
 #
 # -------------------------------------------------------------------------
 from __future__ import annotations
+from email.mime import text
 import re
 import calendar
 
@@ -116,6 +117,28 @@ def swedish_valid(date_tuple):
     else:
         return False
 
+def vietnamese_lunar_valid(date_tuple):
+    """
+    Kiểm tra date_tuple (day, month, year) có phải là ngày hợp lệ trong Lịch Âm Việt Nam hay không.
+    """
+    if not isinstance(date_tuple, (tuple, list)) or len(date_tuple) < 3:
+        return False
+
+    day, month, year = date_tuple[0], date_tuple[1], date_tuple[2]
+
+    # Năm 0 không hợp lệ trong hệ tọa độ ngày của Gramps
+    if year == 0:
+        return False
+
+    # Tháng Âm lịch phải từ 1 đến 12
+    if not (1 <= month <= 12):
+        return False
+
+    # Tháng Âm lịch chỉ có tối đa 30 ngày (ngày thiếu 29, ngày đủ 30)
+    if not (1 <= day <= 30):
+        return False
+
+    return True
 
 def french_valid(date_tuple):
     """Checks if date_tuple is a valid date in French Calendar"""
@@ -224,6 +247,27 @@ class DateParser:
     # seeded with __init_prefix_tables
     month_to_int: dict[str, int]
     swedish_to_int = month_to_int = {}
+
+    # PT2026: Thêm hằng số cho Lịch Âm Việt Nam
+    vietnamese_lunar_to_int = {
+        "giêng": 1, "gieng": 1,
+        "hai": 2,
+        "ba": 3,
+        "tư": 4, "tu": 4,
+        "năm": 5, "nam": 5,
+        "sáu": 6, "sau": 6,
+        "bảy": 7, "bay": 7,
+        "tám": 8, "tam": 8,
+        "chín": 9, "chin": 9,
+        "mười": 10, "muoi": 10,
+        "mười một": 11, "mưoi mot": 11, 
+        "chạp": 12, "chap": 12,
+
+        # Hỗ trợ dạng số nếu gõ "Tháng 1", "Tháng 8"...
+        "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6,
+        "7": 7, "8": 8, "9": 9, "10": 10, "11": 11, "12": 12,
+    }
+
     """
     Map Gregorian month names and their prefixes, wherever unambiguous,
     to the relevant integer index (1..12).
@@ -403,9 +447,39 @@ class DateParser:
         _build_prefix_table(
             DateParser.persian_to_int, _generate_variants(zip(ds.persian))
         )
+        # THÊM DÒNG NÀY PTL2026: Build bảng prefix cho tháng Âm lịch Việt Nam
+
+        DateParser.calendar_to_int.update({
+            # --- Bổ sung Lịch Âm Việt Nam ---
+            ("vietnamese lunar"): Date.CAL_VIETNAMESE_LUNAR,
+            ("lunar"): Date.CAL_VIETNAMESE_LUNAR,
+            "âm lịch": Date.CAL_VIETNAMESE_LUNAR,
+            "am lich": Date.CAL_VIETNAMESE_LUNAR,
+            "âm": Date.CAL_VIETNAMESE_LUNAR,
+            "am": Date.CAL_VIETNAMESE_LUNAR,
+            "(vietnamese lunar)": Date.CAL_VIETNAMESE_LUNAR,
+            "(âm lịch)": Date.CAL_VIETNAMESE_LUNAR,
+            "(am lich)": Date.CAL_VIETNAMESE_LUNAR,
+            "(âm)": Date.CAL_VIETNAMESE_LUNAR,
+        })
+        # _build_prefix_table(
+        #     DateParser.vietnamese_lunar_to_int, 
+        #     _generate_variants(zip(ds.vietnamese_lunar_VI))
+        # )
         _build_prefix_table(
             DateParser.calendar_to_int, _generate_variants(zip(ds.calendar))
         )
+
+        # # Bổ sung các từ khóa gõ tắt tiếng Việt vào bảng calendar_to_int
+        # DateParser.calendar_to_int.update({
+        #     "Âm": Date.CAL_VIETNAMESE_LUNAR,
+        #     "âm": Date.CAL_VIETNAMESE_LUNAR,
+        #     "am": Date.CAL_VIETNAMESE_LUNAR,
+        #     "âm lịch": Date.CAL_VIETNAMESE_LUNAR,
+        #     "Âm lịch": Date.CAL_VIETNAMESE_LUNAR,
+        #     "am lich": Date.CAL_VIETNAMESE_LUNAR,
+        #     "Am lich": Date.CAL_VIETNAMESE_LUNAR,
+        # })
 
     def __init__(self, plocale=None):
         """
@@ -432,6 +506,7 @@ class DateParser:
             Date.CAL_HEBREW: self._parse_hebrew,
             Date.CAL_ISLAMIC: self._parse_islamic,
             Date.CAL_SWEDISH: self._parse_swedish,
+            Date.CAL_VIETNAMESE_LUNAR: self._parse_vietnamese_lunar,  # <--- THÊM DÒNG NÀY PTL2026
         }
 
         match = self._dhformat_parse.match(self.dhformat.lower())
@@ -499,8 +574,33 @@ class DateParser:
         self._pmon_str = self.re_longest_first(list(self.persian_to_int.keys()))
         self._imon_str = self.re_longest_first(list(self.islamic_to_int.keys()))
         self._smon_str = self.re_longest_first(list(self.swedish_to_int.keys()))
+        self._vlmon_str = self.re_longest_first(list(self.vietnamese_lunar_to_int.keys()))  # <--- THÊM DÒNG NÀY PTL2026
         self._cal_str = self.re_longest_first(list(self.calendar_to_int.keys()))
         self._ny_str = self.re_longest_first(list(self.newyear_to_int.keys()))
+
+        # # 1. Khởi tạo từ điển ánh xạ tên tháng Âm lịch trước
+        # self.vietnamese_lunar_to_int = {
+        #     "giêng": 1, "gieng": 1,
+        #     "hai": 2,
+        #     "ba": 3,
+        #     "tư": 4, "tu": 4,
+        #     "năm": 5, "nam": 5,
+        #     "sáu": 6, "sau": 6,
+        #     "bảy": 7, "bay": 7,
+        #     "tám": 8, "tam": 8,
+        #     "chín": 9, "chin": 9,
+        #     "mười": 10, "muoi": 10,
+        #     "mười một": 11, "muoi mot": 11,
+        #     "chạp": 12, "chap": 12,
+        # }
+
+        # PT2026: Thêm _vltext và _vltext2 vào danh sách today_str
+        self._vltext = re.compile(
+            r"%s\.?\s+(\d+)?\s*,?\s*((\d+)(/\d+)?)?\s*$" % self._vlmon_str, re.IGNORECASE
+        )
+        self._vltext2 = re.compile(
+            r"(\d+)?\s+?%s\.?\s*((\d+)(/\d+)?)?\s*$" % self._vlmon_str, re.IGNORECASE
+        )
 
         self._today_str = self.re_longest_first(
             self.today
@@ -632,6 +732,100 @@ class DateParser:
         return self._parse_calendar(
             text, self._stext, self._stext2, self.swedish_to_int, swedish_valid
         )
+    
+    
+    def _parse_vietnamese_lunar(self, text):
+        """
+        Phân tích chuỗi ngày nhập vào cho Lịch Âm Việt Nam.
+        PTL2026: Parse chuỗi ngày Âm lịch.
+        """
+        # Nếu chuỗi rỗng
+        if not text:
+            return Date.EMPTY
+        
+        # Làm sạch chuỗi hậu tố lịch nếu còn sót lại
+        # for suffix in ["(Âm lịch)", "(âm lịch)","(am lich)", "(vietnamese lunar)", "(âm)", "(am)"]:
+        #     text = text.replace(suffix, "").strip()
+
+        # 1. Dọn dẹp sạch sẽ tất cả các đuôi/hậu tố hệ lịch phổ biến
+        # clean_text = text
+        # suffixes = [
+        #     "(vietnamese lunar)", "(âm lịch)", "(am lich)", "(âm)", "(am)",
+        #     "vietnamese lunar", "âm lịch", "am lich", "âm", "am"
+        # ]
+        # for sfx in suffixes:
+        #     # Xóa cả dạng có ngoặc và không ngoặc (không phân biệt hoa thường)
+        #     clean_text = re.sub(re.escape(sfx), "", clean_text, flags=re.IGNORECASE).strip()
+
+        # # Xóa các ký tự ngoặc đơn hoặc khoảng trắng còn dư thừa ở 2 đầu
+        # clean_text = clean_text.strip("() ").strip()
+        clean_text = re.sub(
+            r"\(?(âm lịch|am lich|vietnamese lunar|lunar|âm|am)\)?", 
+            "", 
+            text, 
+            flags=re.IGNORECASE
+        ).strip()
+
+        # Gọi bộ parse chuẩn của Gramps
+        # 2. Thử parse tên tháng bằng chữ (Chạp, Giêng...)
+        res = self._parse_calendar(
+            clean_text,
+            self._vltext,
+            self._vltext2,
+            DateParser.vietnamese_lunar_to_int,
+            vietnamese_lunar_valid,
+        )
+
+        # if res != Date.EMPTY:
+        #     return res
+
+        # Nếu parse chữ thành công và tìm thấy ngày
+        if res and res[4] != (0, 0, 0, False):
+            return (res[0], res[1], Date.CAL_VIETNAMESE_LUNAR, res[3], res[4], text)
+
+        # 3. Nếu không khớp tên chữ, thử parse tên tháng theo chuẩn _text / _text2 của Gramps
+        res = self._parse_calendar(
+            text,
+            self._text,
+            self._text2,
+            self.month_to_int,
+            vietnamese_lunar_valid,
+        )
+        if res != Date.EMPTY:
+            return res
+
+        # 4. Xử lý dạng số thuần (DD/MM/YYYY hoặc YYYY-MM-DD)
+        # Khớp dạng DD/MM/YYYY
+        match_dmy = re.match(r"^(\d{1,2})[/.-](\d{1,2})[/.-](\d{3,4})$", clean_text)
+        if match_dmy:
+            day, month, year = int(match_dmy.group(1)), int(match_dmy.group(2)), int(match_dmy.group(3))
+            if vietnamese_lunar_valid((day, month, year)):
+                return (day, month, year, False)
+    
+        # 5. Khớp dạng YYYY-MM-DD
+        match_ymd = re.match(r"^(\d{3,4})[/.-](\d{1,2})[/.-](\d{1,2})$", clean_text)
+        if match_ymd:
+            year, month, day = int(match_ymd.group(1)), int(match_ymd.group(2)), int(match_ymd.group(3))
+            if vietnamese_lunar_valid((day, month, year)):
+                return (day, month, year, False)
+
+        return Date.EMPTY
+
+        # # Đảm bảo cờ Calendar luôn được gán chính xác là CAL_VIETNAMESE_LUNAR (7)
+        # if res and len(res) >= 5:
+        #     qual, mod, cal, way, date_tuple = res[0], res[1], res[2], res[3], res[4]
+        #     # Ép lịch về Date.CAL_VIETNAMESE_LUNAR
+        #     return (qual, mod, Date.CAL_VIETNAMESE_LUNAR, way, date_tuple, text)
+
+        # return res
+
+        # return self._parse_calendar(
+        #     text,
+        #     DateStrings.vietnamese_lunar_VI,            # Danh sách tên tháng chính
+        #     DateStrings.vietnamese_lunar_VI,            # Danh sách tên tháng viết tắt (dùng chung)
+        #     self.vietnamese_lunar_to_int,   # Từ điển chuyển đổi tên tháng sang số
+        #     vietnamese_lunar_valid          # Hàm kiểm tra ngày hợp lệ (1-30 ngày)
+        # )
 
     def _parse_calendar(self, text, regex1, regex2, mmap, check=None):
         match = regex1.match(text.lower())
@@ -721,6 +915,8 @@ class DateParser:
 
         elif subparser == self._parse_french:
             check = french_valid
+        elif subparser == self._parse_vietnamese_lunar:  # <--- PTL2026 BỔ SUNG DÒNG NÀY
+            check = vietnamese_lunar_valid
         else:
             check = None
 
