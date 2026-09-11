@@ -83,12 +83,17 @@ class DbGUIElement:
         Use _change_db method if you need to remove the callbacks because the
         database has changed
         """
-        database = self.callman.database
-        if database.is_open():
-            # a closed database has disconnected all signals
-            self.callman.disconnect_all()
-        # set a new callback manager
-        self.callman = CallbackManager(database)
+        # remove all callbacks and all registered handles
+        # PTL-2026: Ensure that the callman is connected to the current database before disconnecting
+        # Thêm kiểm tra an toàn cho self.callman
+        if self.callman is not None:
+            database = self.callman.database
+        
+            if database is not None and database.is_open():
+                # a closed database has disconnected all signals
+                self.callman.disconnect_all()
+            # set a new callback manager
+            self.callman = CallbackManager(database)
 
     def _change_db(self, database):
         """

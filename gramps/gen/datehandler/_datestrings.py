@@ -150,6 +150,7 @@ class DateStrings:
             _("Persian", "calendar"),
             _("Islamic", "calendar"),
             _("Swedish", "calendar"),
+            _("Âm lịch VN"),  # <--- PTL-2026: Add Vietnamese Lunar calendar
         )
         _ = locale.translation.lexgettext
 

@@ -233,7 +233,11 @@ class EditReference(ManagedWindow, DbGUIElement):
         self.callman = None
 
     def close(self, *obj):
-        self._cleanup_db_connects()
+        try:
+            self._cleanup_db_connects()
+        except AttributeError as e:
+            pass  # self.callman may not exist if the window was never fully initialized
+       
         self._cleanup_connects()
         ManagedWindow.close(self)
         self._cleanup_on_exit()

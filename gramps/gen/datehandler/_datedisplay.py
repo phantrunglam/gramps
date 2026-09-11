@@ -138,6 +138,7 @@ class DateDisplay:
             self._display_persian,
             self._display_islamic,
             self._display_swedish,
+            self._display_vietnamese_lunar,  # <--- PTL-2026
         ]
         self._mod_str = self._ds.modifiers
         self._qual_str = self._ds.qualifiers
@@ -571,6 +572,32 @@ class DateDisplay:
 
     # Julian and Swedish date display is the same as Gregorian
     _display_julian = _display_swedish = _display_gregorian
+
+    # PTL-2026: Add Vietnamese Lunar calendar display
+    def _display_vietnamese_lunar(self, date_val, inflect="", **kwargs):
+        """
+        PTL2026: Định dạng chuỗi ngày Âm lịch Việt Nam ra giao diện.
+        """
+        # Trích xuất giá trị ngày, tháng, năm và cờ tháng nhuận từ date_val
+        day, month, year = date_val[0], date_val[1], date_val[2]
+        is_leap = bool(date_val[3]) if len(date_val) > 3 else False
+        leap_str = " " + self._("Nhuận") if is_leap else ""
+
+        # Trường hợp ngày/tháng không đầy đủ
+        if day == 0 and month == 0:
+            return self._get_localized_year(str(year))
+        elif day == 0:
+            return f"Tháng {month}{leap_str}, {year}"
+
+        # Trường hợp ngày tháng đầy đủ
+        # Tự lắp ráp chuỗi định dạng (YYYY-MM-DD hoặc DD/MM/YYYY tùy bạn chọn)
+        # KHÔNG nối thêm "(Âm lịch)" ở đây để tránh bị trùng lặp với hậu tố tự động
+        if day > 0 and month > 0 and year > 0:
+            base_str = f"{year:04d}-{month:02d}-{day:02d}"
+            return f"{base_str}{leap_str}"
+                        
+        # Gọi mặc định nếu không khớp các điều kiện trên
+        return self._display_gregorian(date_val, inflect=inflect, **kwargs)
 
     def format_long_month_year(self, month, year, inflect, long_months):
         if not hasattr(long_months[1], "forms"):  # not a Lexeme: no inflection

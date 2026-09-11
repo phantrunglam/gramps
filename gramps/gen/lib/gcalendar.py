@@ -653,3 +653,15 @@ def swedish_ymd(sdn):
     if sdn >= 2361390:
         return gregorian_ymd(sdn)
     return julian_ymd(sdn)
+
+# PTL 2026
+# Bổ sung vào cuối file gramps/gen/lib/gcalendar.py
+
+def vietnameselunar_sdn(year, month, day, leap=False):
+    from gramps.gen.datehandler.vietnamese_lunar import vietnamese_sdn
+    return vietnamese_sdn(year, month, day, leap=leap)
+
+
+def vietnameselunar_ymd(jdn):
+    from gramps.gen.datehandler.vietnamese_lunar import vietnamese_ymd
+    return vietnamese_ymd(jdn)

@@ -116,6 +116,28 @@ def swedish_valid(date_tuple):
     else:
         return False
 
+def vietnamese_lunar_valid(date_tuple):
+    """
+    Kiểm tra date_tuple (day, month, year) có phải là ngày hợp lệ trong Lịch Âm Việt Nam hay không.
+    """
+    if not isinstance(date_tuple, (tuple, list)) or len(date_tuple) < 3:
+        return False
+
+    day, month, year = date_tuple[0], date_tuple[1], date_tuple[2]
+
+    # Năm 0 không hợp lệ trong hệ tọa độ ngày của Gramps
+    if year == 0:
+        return False
+
+    # Tháng Âm lịch phải từ 1 đến 12
+    if not (1 <= month <= 12):
+        return False
+
+    # Tháng Âm lịch chỉ có tối đa 30 ngày (ngày thiếu 29, ngày đủ 30)
+    if not (1 <= day <= 30):
+        return False
+
+    return True
 
 def french_valid(date_tuple):
     """Checks if date_tuple is a valid date in French Calendar"""
@@ -432,6 +454,7 @@ class DateParser:
             Date.CAL_HEBREW: self._parse_hebrew,
             Date.CAL_ISLAMIC: self._parse_islamic,
             Date.CAL_SWEDISH: self._parse_swedish,
+            Date.CAL_VIETNAMESE_LUNAR: self._parse_vietnamese_lunar,  # <--- PTL-2026
         }
 
         match = self._dhformat_parse.match(self.dhformat.lower())
@@ -631,6 +654,16 @@ class DateParser:
     def _parse_swedish(self, text):
         return self._parse_calendar(
             text, self._stext, self._stext2, self.swedish_to_int, swedish_valid
+        )
+
+# PTL-2026: Add Vietnamese Lunar Calendar parsing   
+    def _parse_vietnamese_lunar(self, text):
+        """
+        Phân tích chuỗi ngày Âm lịch Việt Nam đầu vào.
+        """
+        # Phân tích định dạng YYYY-MM-DD hoặc DD/MM/YYYY kết hợp với từ khóa "Nhuận"
+        return self._parse_calendar(
+            text, self._text, self._text2, self.month_to_int
         )
 
     def _parse_calendar(self, text, regex1, regex2, mmap, check=None):
