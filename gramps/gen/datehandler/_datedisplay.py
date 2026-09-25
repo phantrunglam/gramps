@@ -569,8 +569,6 @@ class DateDisplay:
             date_val, self.long_months, self.short_months, **kwargs
         )
 
-    # Julian and Swedish date display is the same as Gregorian
-    _display_julian = _display_swedish = _display_gregorian
 
     def format_long_month_year(self, month, year, inflect, long_months):
         if not hasattr(long_months[1], "forms"):  # not a Lexeme: no inflection

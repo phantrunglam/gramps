@@ -27,7 +27,8 @@ Provide calendar to sdn (serial date number) conversion.
 #
 # -------------------------------------------------------------------------
 import math
-
+# PTL 2026
+# adding Vietnamese Lunar Calendar
 # -------------------------------------------------------------------------
 #
 # Constants
@@ -653,3 +654,13 @@ def swedish_ymd(sdn):
     if sdn >= 2361390:
         return gregorian_ymd(sdn)
     return julian_ymd(sdn)
+
+# PTL 2026
+# adding Vietnamese Lunar Calendar
+from .vietnamese_lunar import vietnamese_sdn, vietnamese_ymd
+def vietnameselunar_sdn(year, month, day, leap=False):
+    return vietnamese_sdn(year, month, day, leap=leap)
+
+
+def vietnameselunar_ymd(jdn):
+    return vietnamese_ymd(jdn)
