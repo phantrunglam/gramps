@@ -570,8 +570,6 @@ class DateDisplay:
             date_val, self.long_months, self.short_months, **kwargs
         )
 
-    # Julian and Swedish date display is the same as Gregorian
-    _display_julian = _display_swedish = _display_gregorian
 
     
     def _display_vietnamese_lunar(self, date_val, inflect="", **kwargs):
