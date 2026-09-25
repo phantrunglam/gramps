@@ -184,7 +184,7 @@ class DateStrings:
             _("Persian", "calendar"),
             _("Islamic", "calendar"),
             _("Swedish", "calendar"),
-            _("Âm lịch", "calendar"),  # <--- Bổ sung dòng này cho CAL_VIETNAMESE_LUNAR = 7
+            _("Vietnamese Lunar", "calendar"),      # <--- PTL-2026: Add Vietnamese Lunar Calendar support  
         )
         _ = locale.translation.lexgettext
 
@@ -228,6 +228,24 @@ class DateStrings:
             _("Thermidor", "French month lexeme"),
             _("Fructidor", "French month lexeme"),
             _("Extra", "French month lexeme"),
+        )
+# ----
+# PTL-2026: Add Vietnamese Lunar Calendar support
+# ----
+        self.vietnameselunar = (
+            "",
+            _("Tháng Giêng", "Vietnamese lunar month lexeme"),
+            _("Tháng Hai", "Vietnamese lunar month lexeme"),
+            _("Tháng Ba", "Vietnamese lunar month lexeme"),
+            _("Tháng Tư", "Vietnamese lunar month lexeme"),
+            _("Tháng Năm", "Vietnamese lunar month lexeme"),
+            _("Tháng Sáu", "Vietnamese lunar month lexeme"),
+            _("Tháng Bảy", "Vietnamese lunar month lexeme"),
+            _("Tháng Tám", "Vietnamese lunar month lexeme"),
+            _("Tháng Chín", "Vietnamese lunar month lexeme"),
+            _("Tháng Mười", "Vietnamese lunar month lexeme"),
+            _("Tháng Một", "Vietnamese lunar month lexeme"),
+            _("Tháng Chạp", "Vietnamese lunar month lexeme"),
         )
 
         self.islamic = (

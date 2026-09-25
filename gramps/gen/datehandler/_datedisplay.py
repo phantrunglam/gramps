@@ -130,6 +130,7 @@ class DateDisplay:
         self.french = self._ds.french
         self.persian = self._ds.persian
         self.islamic = self._ds.islamic
+        self.vietnameselunar = self._ds.vietnameselunar
         self.display_cal = [
             self._display_gregorian,
             self._display_julian,
@@ -571,31 +572,6 @@ class DateDisplay:
         )
 
 
-    
-    def _display_vietnamese_lunar(self, date_val, inflect="", **kwargs):
-        """
-        PTL2026: Định dạng chuỗi ngày Âm lịch Việt Nam ra giao diện.
-        """
-        # Trích xuất giá trị ngày, tháng, năm và cờ tháng nhuận từ date_val
-        day, month, year = date_val[0], date_val[1], date_val[2]
-        is_leap = bool(date_val[3]) if len(date_val) > 3 else False
-        leap_str = " " + self._("Nhuận") if is_leap else ""
-
-        # Trường hợp ngày/tháng không đầy đủ
-        if day == 0 and month == 0:
-            return self._get_localized_year(str(year))
-        elif day == 0:
-            return f"Tháng {month}{leap_str}, {year}"
-
-        # Trường hợp ngày tháng đầy đủ
-        # Tự lắp ráp chuỗi định dạng (YYYY-MM-DD hoặc DD/MM/YYYY tùy bạn chọn)
-        # KHÔNG nối thêm "(Âm lịch)" ở đây để tránh bị trùng lặp với hậu tố tự động
-        if day > 0 and month > 0 and year > 0:
-            return f"{year:04d}-{month:02d}-{day:02d}{leap_str}"
-        
-        # Gọi mặc định nếu không khớp các điều kiện trên
-        return self._display_gregorian(date_val, inflect=inflect, **kwargs)
-
     def format_long_month_year(self, month, year, inflect, long_months):
         if not hasattr(long_months[1], "forms"):  # not a Lexeme: no inflection
             return "{long_month} {year}".format(
@@ -855,6 +831,8 @@ class DateDisplay:
     def _display_islamic(self, date_val, **kwargs):
         return self._display_calendar(date_val, self.islamic, **kwargs)
 
+    def _display_vietnameselunar(self, date_val, **kwargs):
+        return self._display_calendar(date_val, self.vietnameselunar, **kwargs)
 
 class DateDisplayEn(DateDisplay):
     """
