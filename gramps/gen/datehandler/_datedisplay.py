@@ -570,7 +570,9 @@ class DateDisplay:
         return self._display_calendar(
             date_val, self.long_months, self.short_months, **kwargs
         )
-
+    
+    # Julian and Swedish date display is the same as Gregorian
+    _display_julian = _display_swedish = _display_gregorian
 
     def format_long_month_year(self, month, year, inflect, long_months):
         if not hasattr(long_months[1], "forms"):  # not a Lexeme: no inflection
@@ -833,6 +835,7 @@ class DateDisplay:
 
     def _display_vietnameselunar(self, date_val, **kwargs):
         return self._display_calendar(date_val, self.vietnameselunar, **kwargs)
+
 
 class DateDisplayEn(DateDisplay):
     """

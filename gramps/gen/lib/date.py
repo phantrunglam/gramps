@@ -610,7 +610,8 @@ class Date(BaseObject):
     CAL_PERSIAN = 4
     CAL_ISLAMIC = 5
     CAL_SWEDISH = 6
-    CALENDARS = range(7)
+    CAL_VIETNAMESE_LUNAR = 7    # PTL 2026: Add Vietnamese Lunar Calendar support
+    CALENDARS = range(8)
 
     NEWYEAR_JAN1 = 0  # CODE
     NEWYEAR_MAR1 = 1
@@ -637,6 +638,7 @@ class Date(BaseObject):
         persian_sdn,
         islamic_sdn,
         swedish_sdn,
+        vietnameselunar_sdn,  # PTL 2026: Add Vietnamese Lunar Calendar support 
     ]
 
     _calendar_change = [
@@ -647,6 +649,7 @@ class Date(BaseObject):
         persian_ymd,
         islamic_ymd,
         swedish_ymd,
+        vietnameselunar_ymd,  # PTL 2026: Add Vietnamese Lunar Calendar support
     ]
 
     calendar_names = [
@@ -657,6 +660,7 @@ class Date(BaseObject):
         "Persian",
         "Islamic",
         "Swedish",
+        "Vietnamese Lunar",  # PTL 2026: Add Vietnamese Lunar Calendar support
     ]
 
     ui_calendar_names = [
@@ -667,6 +671,7 @@ class Date(BaseObject):
         _("Persian", "calendar"),
         _("Islamic", "calendar"),
         _("Swedish", "calendar"),
+        _("Vietnamese Lunar", "calendar"),  # PTL 2026: Add Vietnamese Lunar Calendar support
     ]
 
     def __init__(self, *source):

@@ -40,10 +40,27 @@ class LunarDate:
     is_leap_month: bool = False
 
 
+# Returned for input that cannot be converted (e.g. the (-4712, 1, 1)
+# default of an uninitialised Date). Kept as a single instance so callers
+# can compare against it directly if needed.
+EMPTY_LUNAR_DATE = LunarDate(0, 0, 0, False)
+
 def _int(value: float) -> int:
     """Return the mathematical floor of a number."""
     return floor(value)
 
+# -------------------------------------------------------------------------
+#
+# Gregorian <-> SDN bridge
+#
+# These two functions used to contain an independent, hand-rolled
+# reimplementation of the Ho Ngoc Duc Gregorian/Julian <-> Julian Day
+# formulas. They now delegate to Gramps' own ``gregorian_sdn``/
+# ``gregorian_ymd`` (see the module docstring for why). The argument and
+# return order below (day, month, year) is kept as-is so the astronomical
+# functions further down do not need to change.
+#
+# -------------------------------------------------------------------------
 
 def _jd_from_date(day: int, month: int, year: int) -> int:
     """Convert a Gregorian date to Julian day number.
@@ -460,7 +477,6 @@ def vietnamese_sdn(year: int, month: int, day: int, leap: bool = False) -> int:
         gregorian_date.year,
     )
     
-
 
 def vietnamese_ymd(sdn: int) -> tuple[int, int, int]:
     """Convert a serial day number to a Vietnamese lunar date."""

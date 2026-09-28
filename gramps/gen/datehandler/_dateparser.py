@@ -50,7 +50,7 @@ log = logging.getLogger(".DateParser")
 #
 # -------------------------------------------------------------------------
 from ..lib.date import Date, DateError, Today
-from ..lib.vietnamese_lunar import vietnamese_lunar_valid 
+from ..lib.vietnamese_lunar import vietnamese_lunar_valid # PT2026: Add Vietnamese Lunar Calendar support
 from ..const import GRAMPS_LOCALE as glocale
 from ..utils.grampslocale import GrampsLocale
 from ._datestrings import DateStrings
@@ -464,7 +464,6 @@ class DateParser:
         _build_prefix_table(
                     DateParser.vietnamese_lunar_to_int, _generate_variants(zip(ds.vietnameselunar)),
         )
-
         _build_prefix_table(
             DateParser.french_to_int, _generate_variants(zip(ds.french))
         )
@@ -474,21 +473,20 @@ class DateParser:
         _build_prefix_table(
             DateParser.persian_to_int, _generate_variants(zip(ds.persian))
         )
-        # THÊM DÒNG NÀY PTL2026: Build bảng prefix cho tháng Âm lịch Việt Nam
-
-        DateParser.calendar_to_int.update({
-            # --- Bổ sung Lịch Âm Việt Nam ---
-            ("vietnamese lunar"): Date.CAL_VIETNAMESE_LUNAR,
-            ("lunar"): Date.CAL_VIETNAMESE_LUNAR,
-            "âm lịch": Date.CAL_VIETNAMESE_LUNAR,
-            "am lich": Date.CAL_VIETNAMESE_LUNAR,
-            "âm": Date.CAL_VIETNAMESE_LUNAR,
-            "am": Date.CAL_VIETNAMESE_LUNAR,
-            "(vietnamese lunar)": Date.CAL_VIETNAMESE_LUNAR,
-            "(âm lịch)": Date.CAL_VIETNAMESE_LUNAR,
-            "(am lich)": Date.CAL_VIETNAMESE_LUNAR,
-            "(âm)": Date.CAL_VIETNAMESE_LUNAR,
-        })
+        # # THÊM DÒNG NÀY PTL2026: Build bảng prefix cho tháng Âm lịch Việt Nam
+        # DateParser.calendar_to_int.update({
+        #     # --- Bổ sung Lịch Âm Việt Nam ---
+        #     ("vietnamese lunar"): Date.CAL_VIETNAMESE_LUNAR,
+        #     ("lunar"): Date.CAL_VIETNAMESE_LUNAR,
+        #     "âm lịch": Date.CAL_VIETNAMESE_LUNAR,
+        #     "am lich": Date.CAL_VIETNAMESE_LUNAR,
+        #     "âm": Date.CAL_VIETNAMESE_LUNAR,
+        #     "am": Date.CAL_VIETNAMESE_LUNAR,
+        #     "(vietnamese lunar)": Date.CAL_VIETNAMESE_LUNAR,
+        #     "(âm lịch)": Date.CAL_VIETNAMESE_LUNAR,
+        #     "(am lich)": Date.CAL_VIETNAMESE_LUNAR,
+        #     "(âm)": Date.CAL_VIETNAMESE_LUNAR,
+        # })
         # _build_prefix_table(
         #     DateParser.vietnamese_lunar_to_int, 
         #     _generate_variants(zip(ds.vietnamese_lunar_VI))
@@ -704,8 +702,8 @@ class DateParser:
         self._stext2 = re.compile(
             r"(\d+)?\s+?%s\.?\s*((\d+)(/\d+)?)?\s*$" % self._smon_str, re.IGNORECASE
         )
-        
-
+        # PTL-2026: optional literal "Thang"/"Tháng" before the month name
+        # (non-capturing, so group indices used by _parse_calendar are unchanged)        
         self._vtext = re.compile(
             r"(?:th[aá]ng\s+)?%s\.?\s+(\d+)?\s*,?\s*((\d+)(/\d+)?)?\s*$" % self._vmon_str,
             re.IGNORECASE,
