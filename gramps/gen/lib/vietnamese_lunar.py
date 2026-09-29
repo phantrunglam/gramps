@@ -396,15 +396,25 @@ def lunar_to_gregorian(lunar_date: LunarDate) -> date:
 
 
 def vietnamese_sdn(year: int, month: int, day: int, leap: bool = False) -> int:
-    """Convert a Vietnamese lunar date to a serial day number (SDN)."""
+    """Convert a Vietnamese lunar date to a serial day number (SDN).
+    Returns 0 for any input that cannot be converted (out-of-range year,
+    non-existent lunar day, invalid leap-month combination...), instead of
+    raising. This mirrors every other Gramps calendar's sdn function, all
+    of which are total functions that never raise - Date._calc_sort_value()
+    calls this unconditionally, including while the user is still typing
+    a provisional/incomplete date in the GUI, so it must never crash.
+    Use lunar_to_gregorian() directly if you need the ValueError instead.
+    """
     lunar_date = LunarDate(
         year=year,
         month=month,
         day=day,
         is_leap_month=leap,
     )
-
-    gregorian_date = lunar_to_gregorian(lunar_date)
+    try:
+        gregorian_date = lunar_to_gregorian(lunar_date)
+    except ValueError:
+        return 0
 
     return _jd_from_date(
         gregorian_date.day,

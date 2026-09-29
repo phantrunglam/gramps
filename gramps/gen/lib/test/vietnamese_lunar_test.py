@@ -167,6 +167,25 @@ class TestInvalidInput(unittest.TestCase):
         self.assertFalse(vietnamese_lunar_valid("not a tuple"))
         self.assertFalse(vietnamese_lunar_valid((1, 1)))  # thieu phan tu
 
+    def test_vietnamese_sdn_never_raises(self):
+        """
+        Regression: GUI goi vietnamese_sdn() lien tuc khi nguoi dung con
+        dang go do (Date._calc_sort_value goi khong dieu kien). Ham nay
+        phai la total function nhu moi lich khac trong Gramps, khong duoc
+        crash voi bat ky input nao.
+        """
+        for year, month, day in [
+            (0, 1, 1),
+            (9999, 12, 30),
+            (5000, 12, 30),
+            (2024, 13, 40),
+            (-4712, 1, 1),
+        ]:
+            with self.subTest(y=year, m=month, d=day):
+                # Khong duoc nem ngoai le, du ket qua co the la 0
+                result = vietnamese_sdn(year, month, day)
+                self.assertIsInstance(result, int)
+
 
 class TestLeapMonth(unittest.TestCase):
     """
@@ -243,6 +262,7 @@ class TestDateClassIntegration(unittest.TestCase):
             (d_back.get_year(), d_back.get_month(), d_back.get_day()),
             (d.get_year(), d.get_month(), d.get_day()),
         )
+
 
 
 if __name__ == "__main__":
