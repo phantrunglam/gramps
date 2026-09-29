@@ -90,6 +90,22 @@ QUAL_TEXT = (
     (Date.QUAL_CALCULATED, _("Calculated")),
 )
 
+VIETNAMESE_LUNAR_MONTHS = (
+    "",
+    "Tháng Giêng",
+    "Tháng Hai",
+    "Tháng Ba",
+    "Tháng Tư",
+    "Tháng Năm",
+    "Tháng Sáu",
+    "Tháng Bảy",
+    "Tháng Tám",
+    "Tháng Chín",
+    "Tháng Mười",
+    "Tháng Một",
+    "Tháng Chạp",
+)
+
 CAL_TO_MONTHS_NAMES = {
     Date.CAL_GREGORIAN: displayer.short_months,
     Date.CAL_JULIAN: displayer.short_months,
@@ -98,6 +114,7 @@ CAL_TO_MONTHS_NAMES = {
     Date.CAL_PERSIAN: displayer.persian,
     Date.CAL_ISLAMIC: displayer.islamic,
     Date.CAL_SWEDISH: displayer.swedish,
+    Date.CAL_VIETNAMESE_LUNAR: VIETNAMESE_LUNAR_MONTHS,
 }
 
 WIKI_HELP_PAGE = URL_MANUAL_SECT1
