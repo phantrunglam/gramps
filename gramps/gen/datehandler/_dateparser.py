@@ -49,6 +49,7 @@ log = logging.getLogger(".DateParser")
 #
 # -------------------------------------------------------------------------
 from ..lib.date import Date, DateError, Today
+from ..lib.vietnamese_lunar import vietnamese_lunar_valid  # PTL-2026
 from ..const import GRAMPS_LOCALE as glocale
 from ..utils.grampslocale import GrampsLocale
 from ._datestrings import DateStrings
@@ -285,6 +286,26 @@ class DateParser:
         "ell": 13,
     }
 
+    # PTL-2026: Vietnamese Lunar month lexemes (static, like hebrew_to_int).
+    # Further variants from ds.vietnameselunar are merged in by
+    # __init_prefix_tables.
+    vietnamese_lunar_to_int = {
+        "giêng": 1, "gieng": 1,
+        "hai": 2,
+        "ba": 3,
+        "tư": 4, "tu": 4,
+        "năm": 5, "nam": 5,
+        "sáu": 6, "sau": 6,
+        "bảy": 7, "bay": 7,
+        "tám": 8, "tam": 8,
+        "chín": 9, "chin": 9,
+        "mười": 10, "muoi": 10,
+        "mười một": 11, "muoi mot": 11,
+        "chạp": 12, "chap": 12,
+        "1": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6,
+        "7": 7, "8": 8, "9": 9, "10": 10, "11": 11, "12": 12,
+    }
+
     french_to_int = {
         # the long ones are seeded with __init_prefix_tables
         # GEDCOM months
@@ -406,6 +427,10 @@ class DateParser:
         _build_prefix_table(
             DateParser.calendar_to_int, _generate_variants(zip(ds.calendar))
         )
+        _build_prefix_table(
+            DateParser.vietnamese_lunar_to_int,
+            _generate_variants(zip(ds.vietnameselunar)),
+        )
 
     def __init__(self, plocale=None):
         """
@@ -432,6 +457,7 @@ class DateParser:
             Date.CAL_HEBREW: self._parse_hebrew,
             Date.CAL_ISLAMIC: self._parse_islamic,
             Date.CAL_SWEDISH: self._parse_swedish,
+            Date.CAL_VIETNAMESE_LUNAR: self._parse_vietnamese_lunar,  # <--- PTL-2026
         }
 
         match = self._dhformat_parse.match(self.dhformat.lower())
@@ -499,6 +525,9 @@ class DateParser:
         self._pmon_str = self.re_longest_first(list(self.persian_to_int.keys()))
         self._imon_str = self.re_longest_first(list(self.islamic_to_int.keys()))
         self._smon_str = self.re_longest_first(list(self.swedish_to_int.keys()))
+        self._vmon_str = self.re_longest_first(
+            list(self.vietnamese_lunar_to_int.keys())
+        )
         self._cal_str = self.re_longest_first(list(self.calendar_to_int.keys()))
         self._ny_str = self.re_longest_first(list(self.newyear_to_int.keys()))
 
@@ -578,6 +607,17 @@ class DateParser:
         self._stext2 = re.compile(
             r"(\d+)?\s+?%s\.?\s*((\d+)(/\d+)?)?\s*$" % self._smon_str, re.IGNORECASE
         )
+        # PTL-2026: optional literal "Thang"/"Tháng" before the month name
+        # (non-capturing, so group indices used by _parse_calendar are unchanged)
+        self._vtext = re.compile(
+            r"(?:th[aá]ng\s+)?%s\.?\s+(\d+)?\s*,?\s*((\d+)(/\d+)?)?\s*$"
+            % self._vmon_str,
+            re.IGNORECASE,
+        )
+        self._vtext2 = re.compile(
+            r"(\d+)?\s+?(?:th[aá]ng\s+)?%s\s*((\d+)(/\d+)?)?\s*$" % self._vmon_str,
+            re.IGNORECASE,
+        )
         self._numeric = re.compile(r"((\d+)[/\.]\s*)?((\d+)[/\.]\s*)?(\d+)\s*$")
         self._iso = re.compile(r"(\d+)(/(\d+))?-(\d+)(-(\d+))?\s*$")
         self._isotimestamp = re.compile(
@@ -631,6 +671,19 @@ class DateParser:
     def _parse_swedish(self, text):
         return self._parse_calendar(
             text, self._stext, self._stext2, self.swedish_to_int, swedish_valid
+        )
+
+    def _parse_vietnamese_lunar(self, text):
+        """
+        PTL-2026: parse a Vietnamese Lunar date using its own month-name
+        tables (NOT the Gregorian ones) and validate it.
+        """
+        return self._parse_calendar(
+            text,
+            self._vtext,
+            self._vtext2,
+            self.vietnamese_lunar_to_int,
+            vietnamese_lunar_valid,
         )
 
     def _parse_calendar(self, text, regex1, regex2, mmap, check=None):
@@ -721,6 +774,9 @@ class DateParser:
 
         elif subparser == self._parse_french:
             check = french_valid
+
+        elif subparser == self._parse_vietnamese_lunar:  # PTL-2026
+            check = vietnamese_lunar_valid
         else:
             check = None
 
