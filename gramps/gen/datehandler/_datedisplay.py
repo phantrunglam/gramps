@@ -130,6 +130,7 @@ class DateDisplay:
         self.french = self._ds.french
         self.persian = self._ds.persian
         self.islamic = self._ds.islamic
+        self.vietnameselunar = self._ds.vietnameselunar
         self.display_cal = [
             self._display_gregorian,
             self._display_julian,
@@ -138,6 +139,7 @@ class DateDisplay:
             self._display_persian,
             self._display_islamic,
             self._display_swedish,
+            self._display_vietnameselunar,
         ]
         self._mod_str = self._ds.modifiers
         self._qual_str = self._ds.qualifiers
@@ -830,6 +832,9 @@ class DateDisplay:
 
     def _display_islamic(self, date_val, **kwargs):
         return self._display_calendar(date_val, self.islamic, **kwargs)
+
+    def _display_vietnameselunar(self, date_val, **kwargs):
+        return self._display_calendar(date_val, self.vietnameselunar, **kwargs)
 
 
 class DateDisplayEn(DateDisplay):
