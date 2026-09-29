@@ -653,3 +653,27 @@ def swedish_ymd(sdn):
     if sdn >= 2361390:
         return gregorian_ymd(sdn)
     return julian_ymd(sdn)
+
+
+# -------------------------------------------------------------------------
+#
+# Vietnamese Lunar calendar
+#
+# -------------------------------------------------------------------------
+# NOTE: keep this import at the END of the module, after gregorian_sdn()
+# and gregorian_ymd() are defined. vietnamese_lunar.py imports those two
+# functions back from this module, so placing this import at the top would
+# fail with "cannot import name 'gregorian_sdn' from partially initialized
+# module" (circular import).
+# pylint: disable=wrong-import-position
+from .vietnamese_lunar import vietnamese_sdn, vietnamese_ymd
+
+
+def vietnameselunar_sdn(year, month, day, leap=False):
+    """Convert a Vietnamese Lunar calendar date to an SDN number."""
+    return vietnamese_sdn(year, month, day, leap=leap)
+
+
+def vietnameselunar_ymd(sdn):
+    """Convert an SDN number to a Vietnamese Lunar calendar date."""
+    return vietnamese_ymd(sdn)
